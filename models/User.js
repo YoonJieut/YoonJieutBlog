@@ -1,25 +1,26 @@
+// 파일 경로 : models/User.js
 // User 테이블 정의
-const { Sequelize } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../utils/database");
 
 const User = sequelize.define("user", {
   user_index: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
   },
   user_id: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   user_pw: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
-  user_command: Sequelize.STRING,
+  user_command: DataTypes.STRING,
   user_admin_status: {
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
 });
