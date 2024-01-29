@@ -1,5 +1,5 @@
 // User 테이블 정의
-const Sequelize = require("sequelize");
+const { Sequelize } = require("sequelize");
 const sequelize = require("../utils/database");
 
 const User = sequelize.define("user", {

@@ -1,9 +1,25 @@
-// import Image from "next/image";
+"use client";
+import React, { useState } from "react";
 
 export default function Main() {
+  const [posts, setPosts] = useState([]);
+
+  const fetchPosts = () => {
+    fetch("/api/posts")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setPosts(data);
+      })
+      .catch((err) => console.log("fetchPost err : ", err)); // TODO: handle error
+  };
+
   return (
-    <main className=" flex min-h-screen flex-col items-center justify-center">
-      <div className="w1/2 h-1/2 border border-slate-500">안녕하세요</div>
-    </main>
+    <div>
+      <button onClick={fetchPosts}>Fetch Posts</button>
+      {/* {posts.map((post) => (
+        <div key={post.id}>{post.title}</div>
+      ))} */}
+    </div>
   );
 }
