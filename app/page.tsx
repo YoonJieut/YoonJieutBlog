@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { CustomInputArea } from "@/views/testing/CustomInputArea";
+import { CustomInputArea } from "@/views/welcomePart/CustomInputArea";
 
 export default function Home() {
   return (
