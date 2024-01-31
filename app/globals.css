@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --collection-1-color: rgba(255, 255, 255, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
 }
 
 @layer utilities {
