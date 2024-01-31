@@ -1,7 +1,6 @@
 // import Image from "next/image";
+import StartMain from "../views/startComponent/startMain";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center"></main>
-  );
+  return <main className="homeComponent"></main>;
 }
