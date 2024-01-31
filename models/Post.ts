@@ -1,5 +1,3 @@
-const sequelize = require("../utils/database");
-
 const Post = sequelize.define("post", {
   post_index: {
     type: DataTypes.INTEGER,

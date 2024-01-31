@@ -1,7 +1,5 @@
 // 파일 경로 : models/User.js
 // User 테이블 정의
-const { DataTypes } = require("sequelize");
-const sequelize = require("../utils/database");
 
 const User = sequelize.define("user", {
   user_index: {
