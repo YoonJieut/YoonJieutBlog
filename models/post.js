@@ -4,7 +4,7 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {}
 
-  Posts.init(
+  Post.init(
     {
       post_index: {
         type: DataTypes.INTEGER,
@@ -31,9 +31,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "posts",
+      modelName: "Post",
     }
   );
 
-  return Posts;
+  return Post;
 };

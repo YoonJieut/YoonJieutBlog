@@ -46,18 +46,21 @@ Object.keys(db).forEach((modelName) => {
 });
 
 // * 모델 관계 설정
+
 // * 실제 데이터 베이스에서 컬럼을 수정해야 한다.
-// db.User.hasMany(db.Post, { foreignKey: "user_index", sourceKey: "user_index" });
-// db.Post.belongsTo(db.User, {
-//   foreignKey: "user_index",
-//   targetKey: "user_index",
-// });
+db.User.hasMany(db.Post, {
+  foreignKey: "user_index",
+  sourceKey: "user_index",
+});
+db.Post.belongsTo(db.User, {
+  foreignKey: "user_index",
+  targetKey: "user_index",
+});
 
 // * 예시2 ) 모델 관계 설정
-// const { User, Post } = db;
 
-// User.hasMany(Post, { foreignKey: 'user_index' });
-// Post.belongsTo(User, { foreignKey: 'user_index' });
+// User.hasMany(posts, { foreignKey: "user_index" });
+// Post.belongsTo(users, { foreignKey: "user_index" });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
