@@ -18,13 +18,13 @@ export default function handler(req: NextRequest, res: NextResponse) {
   }
   // 사용자 정보 수정 함수
   else if (req.method === "PUT") {
-    const { id } = req.params;
+    const { user_index } = req.params;
     const { user_id, user_pw } = req.body;
     updateUser(req, res);
   }
   // 사용자 삭제 함수
   else if (req.method === "DELETE") {
-    const { id } = req.params;
+    const { user_index } = req.params;
     deleteUser(req, res);
   } else {
     res.status(405).end();
