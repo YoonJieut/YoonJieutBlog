@@ -1,5 +1,3 @@
-const sequelize = require("../../api/utils/database");
-
 // 시퀄라이즈 인증, 확인 코드
 sequelize
   .authenticate()
