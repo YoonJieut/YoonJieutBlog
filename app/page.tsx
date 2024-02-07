@@ -1,6 +1,6 @@
 // import Image from "next/image";
-import { CustomInputArea } from "@/views/welcomePart/CustomInputArea";
-import { ResponseBox } from "@/views/welcomePart/ResponseBox";
+import { CustomInputArea } from "@/app/components/welcomePart/CustomInputArea";
+import { ResponseBox } from "@/app/components/welcomePart/ResponseBox";
 
 export default function Home() {
   return (
