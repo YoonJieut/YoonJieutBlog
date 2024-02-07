@@ -6,7 +6,8 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    // "module": "esnext", 기본 설정 ,ts-node를 설치한 후 commonjs로 변경
+    "module": "commonjs",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
