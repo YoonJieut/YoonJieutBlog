@@ -1,5 +1,3 @@
-import Answer from "../../public/images/answer.svg";
-
 import React from "react";
 
 export const ResponseBox = (): JSX.Element => {
@@ -10,7 +8,7 @@ export const ResponseBox = (): JSX.Element => {
           test
         </div>
         <div className="w-[42px] left-[259px] absolute h-[42px] top-0 bg-[#d9d9d9] flex justify-center items-center">
-          <Answer />
+          {/* <Answer /> */}
         </div>
       </div>
     </div>
