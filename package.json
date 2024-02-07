@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "nodemon --exec ts-node server.ts",
     "nextDev": "next dev",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
@@ -15,7 +15,6 @@
     "express": "^4.18.2",
     "mysql": "^2.18.1",
     "next": "14.1.0",
-    "nodemon": "^3.0.3",
     "pg": "^8.11.3",
     "pg-connection-string": "^2.6.2",
     "pg-hstore": "^2.3.4",
@@ -32,9 +31,11 @@
     "autoprefixer": "^10.4.17",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "nodemon": "^3.0.3",
     "postcss": "^8.4.33",
     "sequelize-cli": "^6.6.2",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
