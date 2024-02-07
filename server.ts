@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import next from "next";
 // import path from "path";
+import mysql from "mysql";
 
 const port = parseInt(process.env.PORT || "3000", 10);
 const dev = process.env.NODE_ENV !== "production";
@@ -8,6 +9,13 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 //app.use(app.getRequestHandler()); 이것도 가능하다.
 // * getRequestHandler() 함수는 Next.js 프레임워크에서 제공되는 함수로, Next.js 애플리케이션의 라우팅 및 페이지 처리를 담당합니다. 이 함수는 Express 애플리케이션과 함께 사용될 때, Express의 미들웨어로 동작하여 Next.js의 라우팅을 처리합니다.
+
+const db = mysql.createPool({
+  host: "localhost",
+  user: "yourUsername",
+  password: "yourPassword",
+  database: "yourDatabase",
+});
 
 // * 서버 라우팅 로직 규칙
 // 1.  API 경로와 페이지 경로를 명확히 구분하고, API 라우트는 주로 /api/ 경로 아래에 위치시키는 것이 일반적이다.
@@ -25,6 +33,25 @@ app.prepare().then(() => {
   server.get("/api/hello", (req: Request, res: Response) => {
     console.log("api/hello 요청");
     res.json({ message: "Hello, World!" });
+  });
+
+  // 사용자 목록 조회 API
+  server.get("/api/users", (req, res) => {
+    db.query("SELECT * FROM users", (err, results) => {
+      if (err) return res.status(500).send("Server error");
+      res.status(200).json(results);
+    });
+  });
+
+  // 포스트 생성 API
+  server.post("/api/posts", (req, res) => {
+    const { title, content, authorId } = req.body;
+    const query =
+      "INSERT INTO posts (title, content, authorId) VALUES (?, ?, ?)";
+    db.query(query, [title, content, authorId], (err, results) => {
+      if (err) return res.status(500).send("Server error");
+      res.status(201).json({ message: "Post created successfully" });
+    });
   });
 
   // 나머지 모든 요청은 Next.js 핸들러로 전달
