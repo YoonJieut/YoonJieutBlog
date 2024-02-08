@@ -25,6 +25,7 @@ app.prepare().then(() => {
   server.use(express.json()); // JSON 요청 본문 파싱을 위해 express.json() 미들웨어를 사용합니다.
   console.log("server.ts 시작");
 
+  // ------------------- API 테스트 라우트 -------------------
   // 데이터베이스 연결 확인 API
   server.get("/api/db-check", async (req, res) => {
     try {
@@ -48,6 +49,51 @@ app.prepare().then(() => {
   server.get("/api/hello", (req: Request, res: Response) => {
     console.log("api/hello 요청");
     res.json({ message: "Hello, World!" });
+  });
+
+  // ------------------- API 라우트 -------------------
+
+  // 유저 조회 API
+  server.get("/api/users", async (req: Request, res: Response) => {
+    try {
+      const users = await dbQuery("SELECT * FROM users");
+      res.status(200).json(users);
+    } catch (error) {
+      console.error("Database query error", error);
+      res
+        .status(500)
+        .json({ message: "Error retrieving users from the database" });
+    }
+  });
+
+  // 포스트 조회 API
+  server.get("/api/posts", async (req: Request, res: Response) => {
+    try {
+      const posts = await dbQuery("SELECT * FROM posts");
+      res.status(200).json(posts);
+    } catch (error) {
+      console.error("Database query error", error);
+      res
+        .status(500)
+        .json({ message: "Error retrieving posts from the database" });
+    }
+  });
+
+  // 포스트 등록 API
+  server.post("/api/posts", async (req: Request, res: Response) => {
+    const { title, content, authorId } = req.body;
+    try {
+      await dbQuery(
+        "INSERT INTO posts (title, content, authorId) VALUES (?, ?, ?)",
+        [title, content, authorId]
+      );
+      res.status(201).json({ message: "Post created successfully" });
+    } catch (error) {
+      console.error("Database insert error", error);
+      res
+        .status(500)
+        .json({ message: "Error creating a new post in the database" });
+    }
   });
 
   // 나머지 모든 요청은 Next.js 핸들러로 전달
