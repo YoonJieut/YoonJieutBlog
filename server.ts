@@ -79,6 +79,23 @@ app.prepare().then(() => {
     }
   });
 
+  //포스트 id로 조회 API
+  server.get("/api/posts/:id", async (req: Request, res: Response) => {
+    const { id } = req.params;
+    // 단일값 문자열로 전달된다.
+
+    try {
+      const post = await dbQuery("SELECT * FROM posts WHERE id = ?", [id]);
+      //*[id]는 동적으로 변하는 값을 나타내는 URL 매개변수, 단일 값으로 전달 된다.
+      res.status(200).json(post);
+    } catch (error) {
+      console.error("Database query error", error);
+      res
+        .status(500)
+        .json({ message: "Error retrieving the post from the database" });
+    }
+  });
+
   // 포스트 등록 API
   server.post("/api/posts", async (req: Request, res: Response) => {
     const { title, content, authorId } = req.body;
