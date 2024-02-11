@@ -13,7 +13,7 @@
  */
 export const fetchPost = async (postId: string | string[] | undefined) => {
   try {
-    const response = await fetch(`/api/posts/${postId}`);
+    const response = await fetch(`http://localhost/api/posts/${postId}`);
     const data = await response.json();
     console.log("data : ", data);
     console.log("data 타입 : ", typeof data);
