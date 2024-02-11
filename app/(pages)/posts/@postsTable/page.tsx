@@ -37,14 +37,24 @@ export default function PostsTable() {
       </thead>
       <tbody>
         {posts.map((post) => (
-          <Link href={`/posts/${post.id}`} key={post.id} className="block">
-            <tr key={post.id}>
-              <td>{post.id}</td>
-              <td>{post.title}</td>
-              <td>{post.content}</td>
-              <td>{post.authorId}</td>
-            </tr>
-          </Link>
+          <tr key={post.id}>
+            <td>
+              <Link href={`/posts/${post.id}`} key={post.id} className="block">
+                {post.id}
+              </Link>
+            </td>
+            <td>
+              <Link href={`/posts/${post.id}`} key={post.id} className="block">
+                {post.title}
+              </Link>
+            </td>
+            <td>
+              <Link href={`/posts/${post.id}`} key={post.id} className="block">
+                {post.content}
+              </Link>
+            </td>
+            <td>{post.authorId}</td>
+          </tr>
         ))}
       </tbody>
     </table>
