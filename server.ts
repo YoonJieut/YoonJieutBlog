@@ -1,8 +1,10 @@
 console.log("server.ts 시작");
 
-import express, { Request, Response } from "express";
+import express from "express";
+import { Request, Response } from "express";
 import dbQuery from "./app/utils/dbConnect";
 import next from "next";
+import getTableAllData from "./app/utils/getTableAllData";
 // import path from "path";
 
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -55,28 +57,12 @@ app.prepare().then(() => {
 
   // 유저 조회 API
   server.get("/api/users", async (req: Request, res: Response) => {
-    try {
-      const users = await dbQuery("SELECT * FROM users");
-      res.status(200).json(users);
-    } catch (error) {
-      console.error("Database query error", error);
-      res
-        .status(500)
-        .json({ message: "Error retrieving users from the database" });
-    }
+    getTableAllData(req, res, "users");
   });
 
   // 포스트 조회 API
   server.get("/api/posts", async (req: Request, res: Response) => {
-    try {
-      const posts = await dbQuery("SELECT * FROM posts");
-      res.status(200).json(posts);
-    } catch (error) {
-      console.error("Database query error", error);
-      res
-        .status(500)
-        .json({ message: "Error retrieving posts from the database" });
-    }
+    getTableAllData(req, res, "posts");
   });
 
   //포스트 id로 조회 API
