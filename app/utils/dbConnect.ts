@@ -14,6 +14,12 @@ console.log("process.env.DB_PASS", process.env.DB_PASS);
 console.log("process.env.DB_NAME", process.env.DB_NAME);
 
 // 데이터베이스 연결 풀을 사용하여 쿼리를 실행하는 함수
+/**
+ * 데이터베이스 연결 풀을 사용하여 쿼리를 실행하는 함수
+ * @param query {string} 쿼리
+ * @param ?values {any[]} 쿼리에 바인딩할 값
+ * @returns {Promise<any>}
+ */
 const dbQuery = (query: string, values?: any[]) => {
   return new Promise((resolve, reject) => {
     pool.query(query, values, (error, results) => {
