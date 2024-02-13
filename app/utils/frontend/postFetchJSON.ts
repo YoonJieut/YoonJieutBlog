@@ -6,7 +6,7 @@
 
 /**
  * 지정된 엔드포인트로 제공된 데이터와 함께 POST 요청을 보냅니다.
- * ! 이 함수의 post에 담길 파라미터들은 useState의 값들로 상태를 관리 한 후 넣어줘야 합니다.
+ * ! 이 함수의 post에 담길 파라미터들은 useState의 값들로 상태를 관리 한 후 넣어줘야 합니다. 2
  * @param {string} endPoint - 요청을 보낼 엔드포인트입니다.
  * @param {string} title - 게시물의 제목입니다.
  * @param {string} content - 게시물의 내용입니다.

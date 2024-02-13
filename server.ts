@@ -3,10 +3,12 @@ console.log("server.ts 시작");
 import express from "express";
 import { Request, Response } from "express";
 import next from "next";
-import getTableAllData from "./app/utils/getTableAllData";
-import getTableForIndex from "./app/utils/getTableIndexData";
-import dbChecker from "./app/utils/dbChecker";
-import postPostsContent from "./app/utils/postPostsContent";
+import getTableAllData from "./app/utils/backend/getTableAllData";
+import getTableForIndex from "./app/utils/backend/getTableIndexData";
+import dbChecker from "./app/utils/backend/dbChecker";
+import postPostsContent from "./app/utils/backend/postPostsContent";
+import patchPostContent from "./app/utils/backend/patchPostContent";
+import deletePostData from "./app/utils/backend/deletePostData";
 // import path from "path";
 
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -36,16 +38,24 @@ app.prepare().then(() => {
     dbChecker(req, res);
   });
 
-  // * ------------------- API 라우트 -------------------
+  // * ------------------- USER TABLE 관련 API 라우트 -------------------
 
   // 유저 조회 API
   server.get("/api/users", async (req: Request, res: Response) => {
     getTableAllData(req, res, "users");
   });
 
+  // * ------------------- POSTS TABLE 관련 API 라우트 -------------------S
+
   // 포스트 조회 API
   server.get("/api/posts", async (req: Request, res: Response) => {
     getTableAllData(req, res, "posts");
+  });
+
+  // 포스트 등록 API
+  // 요청 본문에서 title, content, authorId를 받아오면 작동합니다.
+  server.post("/api/posts", async (req: Request, res: Response) => {
+    postPostsContent(req, res);
   });
 
   //포스트 id로 조회 API
@@ -53,10 +63,30 @@ app.prepare().then(() => {
     getTableForIndex(req, res);
   });
 
-  // 포스트 등록 API
-  // 요청 본문에서 title, content, authorId를 받아오면 작동합니다.
-  server.post("/api/posts", async (req: Request, res: Response) => {
-    postPostsContent(req, res);
+  // 포스트 수정 API
+  // 내용을 업데이트합니다.
+  server.patch("/api/posts/:id", async (req: Request, res: Response) => {
+    const postId = req.params.id;
+    const { title, content } = req.body;
+
+    try {
+      await patchPostContent(postId, title, content);
+      res.status(200).json({ message: "Post content updated successfully" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Failed to update post content" });
+    }
+  });
+
+  // 포스트 삭제 API
+  // 해당 id의 포스트를 삭제합니다.
+  server.delete("/api/posts/:id", async (req: Request, res: Response) => {
+    const postId = req.params.id;
+    try {
+      await deletePostData(req, res, postId);
+    } catch (error) {
+      console.error("server 에러 콘솔 : ", error);
+    }
   });
 
   // 나머지 모든 요청은 Next.js 핸들러로 전달

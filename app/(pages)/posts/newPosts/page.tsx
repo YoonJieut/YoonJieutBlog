@@ -3,7 +3,7 @@
 
 "use client";
 
-import postFetchJSON from "@/app/utils/postFetchJSON";
+import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
 import { useState } from "react";
 export default function NewPostsPage() {
   const [title, setTitle] = useState<string>("");

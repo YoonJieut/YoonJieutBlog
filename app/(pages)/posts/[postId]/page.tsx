@@ -2,7 +2,7 @@
 // 해당 컴포넌트는 게시물 상세 페이지를 구성합니다.
 // 목표 : ssr 방식으로 작성해본다.
 
-import fetchJSON from "@/app/utils/fetchJson";
+import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import urlMaker from "@/app/utils/urlMaker";
 
 // todo1. : url 파라미터로 게시물 ID를 받아 해당 게시물을 조회합니다.

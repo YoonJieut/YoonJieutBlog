@@ -1,4 +1,4 @@
-import dbQuery from "./dbConnect";
+import dbQuery from "../dbConnect";
 import { Request, Response } from "express";
 
 /**
