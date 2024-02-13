@@ -29,4 +29,47 @@ npm run dev
 | 배포         | AWS Elastic Beanstalk, AWS RDS for MySQL | AWS Elastic Beanstalk, AWS RDS for MySQL       |
 | 추가 기능    | -                                        | 챗봇 기능 (Python 오픈소스 AI 라이브러리 활용) |
 
-02/07 일정
+---
+
+# 테스트 커맨드 정리
+
+### 포스트 조회 API 테스트
+
+```
+Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method GET
+```
+
+### 포스트 등록 API 테스트
+
+안될 때는 이와 같이 Json으로 바꾸는 명령어를 작성하도록 한다.
+
+```
+$body = @{
+    title = "test title"
+    content = "test content"
+    authorId = 1
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://localhost:3000/api/posts" -Method POST -Body $body -ContentType "application/json; charset=utf-8"
+```
+
+### 포스트 수정 API 테스트
+
+필수 : title, content, postId
+
+```
+$body = @{
+  title = "updated title"
+  content = "updated content 자 한글은 될까?"
+  postId = "10"
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method PATCH -Body $body -ContentType "application/json; charset=utf-8"
+
+```
+
+### 포스트 삭제 API 테스트
+
+```
+Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method DELETE
+```
