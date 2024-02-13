@@ -5,6 +5,7 @@ import { Request, Response } from "express";
 import dbQuery from "./app/utils/dbConnect";
 import next from "next";
 import getTableAllData from "./app/utils/getTableAllData";
+import getTableForIndex from "./app/utils/getTableIndexData";
 // import path from "path";
 
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -67,19 +68,7 @@ app.prepare().then(() => {
 
   //포스트 id로 조회 API
   server.get("/api/posts/:id", async (req: Request, res: Response) => {
-    const { id } = req.params;
-    // 단일값 문자열로 전달된다.
-
-    try {
-      const post = await dbQuery("SELECT * FROM posts WHERE id = ?", [id]);
-      //*[id]는 동적으로 변하는 값을 나타내는 URL 매개변수, 단일 값으로 전달 된다.
-      res.status(200).json(post);
-    } catch (error) {
-      console.error("Database query error", error);
-      res
-        .status(500)
-        .json({ message: "Error retrieving the post from the database" });
-    }
+    getTableForIndex(req, res);
   });
 
   // 포스트 등록 API

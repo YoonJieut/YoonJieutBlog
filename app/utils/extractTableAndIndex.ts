@@ -15,7 +15,7 @@
 const extractTableAndIndex = (url: string) => {
   const regex = /\/api\/([^\/]+)\/([^\/]+)/;
   const match = url.match(regex);
-  return match ? { tableName: match[1], id: match[2] } : null;
+  return match ? { tableName: match[1], index: match[2] } : null;
 };
 
 export default extractTableAndIndex;

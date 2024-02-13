@@ -4,25 +4,32 @@
 import dbQuery from "./dbConnect";
 import { Request, Response } from "express";
 import extractTableAndIndex from "./extractTableAndIndex";
+
 /**
- * 해당 테이블의 모든 데이터를 가져오는 함수
+ * 테이블과 인덱스를 기반으로 데이터를 가져오는 함수입니다.
  *
- * @param req
- * @param res
- * @param table {string} 테이블 이름
- * @returns {Promise<Response>} 응답
+ * @param {Request} req - Express의 Request 객체
+ * @param {Response} res - Express의 Response 객체
+ * @returns {Promise<void>} - 데이터를 가져오는 비동기 함수
+ * @throws {Response} - 데이터베이스 쿼리 오류가 발생하면 500 상태 코드로 응답합니다.
+ * @ 결과 예시 : { id: 1, name: "John Doe", age: 30 }
+ *
+ * @의존성 : dbQuery, extractTableAndIndex
  */
-async function getTableAllData(req: Request, res: Response) {
-  const { tableName, id } = extractTableAndIndex(req.url);
-  if (!tableName || !id) {
-    return res.status(400).json({ message: "Invalid URL structure" });
+async function getTableForIndex(req: Request, res: Response) {
+  const result = extractTableAndIndex(req.originalUrl);
+  if (result === null) {
+    return res
+      .status(400)
+      .json({ message: "테이블 이름과 인덱스를 추출할 수 없습니다." });
   }
 
+  const { tableName, index } = result;
   try {
     // 파라미터화된 쿼리 사용
     const data = await dbQuery("SELECT * FROM ?? WHERE id = ?", [
       tableName,
-      id,
+      index,
     ]); // 수정된 부분: 쿼리 문자열
     return res.status(200).json(data);
   } catch (error) {
@@ -33,4 +40,4 @@ async function getTableAllData(req: Request, res: Response) {
   }
 }
 
-export default getTableAllData;
+export default getTableForIndex;
