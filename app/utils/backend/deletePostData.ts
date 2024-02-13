@@ -22,10 +22,12 @@ async function deletePostData(
 ) {
   try {
     await dbQuery("DELETE FROM posts WHERE id = ?", [postId]);
-    res.status(200).json({ message: "Post deleted successfully" });
+    res.status(200).json({ message: "포스트가 성공적으로 삭제되었습니다" });
+    console.log(postId, "번 삭제 성공");
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Failed to delete post" });
+    res.status(500).json({ message: "포스트 삭제에 실패했습니다" });
+    console.log(postId, "번 삭제 성공");
   }
 }
 

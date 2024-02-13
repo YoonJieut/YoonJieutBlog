@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function NewPostsPage() {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
-  const [authorId, setAuthorId] = useState<number>(1);
+  const [authorId, setAuthorId] = useState<number>(2);
 
   const onSubmitButtonEvent = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

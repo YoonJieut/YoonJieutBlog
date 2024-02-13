@@ -1,5 +1,5 @@
 // app/utils/backend/postPostsContent.ts
-// 해당 코드는 게시물 내용을 수정하는 함수입니다.
+// 해당 코드는 게시물 내용을 등록하는 함수입니다.
 
 import dbQuery from "../dbConnect";
 import { Request, Response } from "express";
