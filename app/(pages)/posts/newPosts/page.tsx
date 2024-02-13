@@ -3,40 +3,17 @@
 
 "use client";
 
+import postFetchJSON from "@/app/utils/postFetchJSON";
 import { useState } from "react";
 export default function NewPostsPage() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [authorId, setAuthorId] = useState(1);
+  const [title, setTitle] = useState<string>("");
+  const [content, setContent] = useState<string>("");
+  const [authorId, setAuthorId] = useState<number>(1);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitButtonEvent = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const post = {
-      title,
-      content,
-      authorId,
-    };
-
-    try {
-      const response = await fetch("/api/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: JSON.stringify(post),
-      });
-
-      if (response.ok) {
-        // Post created successfully
-        console.log("Post created!");
-      } else {
-        // Error creating post
-        console.error("Failed to create post");
-      }
-    } catch (error) {
-      console.error("An error occurred", error);
-    }
+    postFetchJSON("/api/posts", title, content, authorId);
   };
 
   return (
@@ -44,7 +21,7 @@ export default function NewPostsPage() {
       <h1>게시물</h1>
       <p>게시물을 등록하는 페이지입니다.</p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmitButtonEvent}>
         <label className="text-2xl font-bold text-gray-800">
           Title:
           <input
@@ -68,10 +45,10 @@ export default function NewPostsPage() {
           type="submit"
           className="bg-blue-500 border border-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={() => {
-            handleSubmit;
+            onSubmitButtonEvent;
           }}
         >
-          Create Post
+          게시물 등록하기
         </button>
       </form>
     </div>
