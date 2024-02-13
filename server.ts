@@ -2,10 +2,11 @@ console.log("server.ts 시작");
 
 import express from "express";
 import { Request, Response } from "express";
-import dbQuery from "./app/utils/dbConnect";
 import next from "next";
 import getTableAllData from "./app/utils/getTableAllData";
 import getTableForIndex from "./app/utils/getTableIndexData";
+import dbChecker from "./app/utils/dbChecker";
+import postPostsContent from "./app/utils/postPostsContent";
 // import path from "path";
 
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -28,33 +29,14 @@ app.prepare().then(() => {
   server.use(express.json()); // JSON 요청 본문 파싱을 위해 express.json() 미들웨어를 사용합니다.
   console.log("server.ts 시작");
 
-  // ------------------- API 테스트 라우트 -------------------
+  // ! ------------------- API 테스트 라우트 -------------------
+  // server는 nextjs에서 제공하는 서버 인스턴스라고 한다.
   // 데이터베이스 연결 확인 API
   server.get("/api/db-check", async (req, res) => {
-    try {
-      // 데이터베이스 연결 테스트를 위해 1을 SELECT 합니다.
-      const result = await dbQuery("SELECT 1");
-      res.json({
-        success: true,
-        message: "Database connection is successful",
-        result,
-      });
-    } catch (error) {
-      console.error("Database connection error", error);
-      res
-        .status(500)
-        .json({ success: false, message: "Database connection failed", error });
-    }
+    dbChecker(req, res);
   });
 
-  // Express에서 처리할 API 라우트 예시
-  // server는 nextjs에서 제공하는 서버 인스턴스라고 한다.
-  server.get("/api/hello", (req: Request, res: Response) => {
-    console.log("api/hello 요청");
-    res.json({ message: "Hello, World!" });
-  });
-
-  // ------------------- API 라우트 -------------------
+  // * ------------------- API 라우트 -------------------
 
   // 유저 조회 API
   server.get("/api/users", async (req: Request, res: Response) => {
@@ -72,20 +54,9 @@ app.prepare().then(() => {
   });
 
   // 포스트 등록 API
+  // 요청 본문에서 title, content, authorId를 받아오면 작동합니다.
   server.post("/api/posts", async (req: Request, res: Response) => {
-    const { title, content, authorId } = req.body;
-    try {
-      await dbQuery(
-        "INSERT INTO posts (title, content, authorId) VALUES (?, ?, ?)",
-        [title, content, authorId]
-      );
-      res.status(201).json({ message: "Post created successfully" });
-    } catch (error) {
-      console.error("Database insert error", error);
-      res
-        .status(500)
-        .json({ message: "Error creating a new post in the database" });
-    }
+    postPostsContent(req, res);
   });
 
   // 나머지 모든 요청은 Next.js 핸들러로 전달

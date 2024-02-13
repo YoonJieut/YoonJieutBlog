@@ -6,7 +6,8 @@ import { Request, Response } from "express";
 import extractTableAndIndex from "./extractTableAndIndex";
 
 /**
- * 테이블과 인덱스를 기반으로 데이터를 가져오는 함수입니다.
+ * 엔드포인트를 기반으로 테이블과 인덱스를 자동으로 참조, 해당 데이터를 가져오는 함수
+ * 엔드포인트 예시: /api/테이블이름/인덱스값
  *
  * @param {Request} req - Express의 Request 객체
  * @param {Response} res - Express의 Response 객체
