@@ -70,7 +70,7 @@ app.prepare().then(() => {
     const { title, content } = req.body;
 
     try {
-      await patchPostContent(postId, title, content);
+      await patchPostContent(title, content, postId);
       res.status(200).json({ message: "Post content updated successfully" });
     } catch (error) {
       console.error(error);
@@ -82,6 +82,7 @@ app.prepare().then(() => {
   // 해당 id의 포스트를 삭제합니다.
   server.delete("/api/posts/:id", async (req: Request, res: Response) => {
     const postId = req.params.id;
+    console.log("삭제 라우트 -postId : ", postId);
     try {
       await deletePostData(req, res, postId);
     } catch (error) {
