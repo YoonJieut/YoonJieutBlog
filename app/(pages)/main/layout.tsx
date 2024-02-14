@@ -1,4 +1,5 @@
 import IntroduceLayout from "@/app/components/main/IntroduceLayout";
+import MenuNav from "../../components/main/MenuNav";
 
 export default function RootLayout({
   children,
@@ -6,10 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="mainPageRoot w-screen h-screen p-3">
+    <div className="mainPageRoot w-screen p-3">
       <IntroduceLayout />
       <main className="outline outline-1">{children}</main>
-      <footer className="outline outline-1">푸터</footer>
+      <MenuNav />
     </div>
   );
 }
