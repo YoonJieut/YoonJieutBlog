@@ -1,4 +1,3 @@
-import HeaderComp from "../../components/main/HeaderComp";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -6,7 +5,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <HeaderComp />
       <main>{children}</main>
       <footer>푸터</footer>
     </>
