@@ -4,13 +4,20 @@ interface ImgCardProps {
   imgUrl: string;
   imgTitle: string;
   imgSub: string;
+  className?: string;
 }
 
-const ImgCard: React.FC<ImgCardProps> = ({ imgUrl, imgTitle, imgSub }) => {
+const ImgCard: React.FC<ImgCardProps> = ({
+  imgUrl,
+  imgTitle,
+  imgSub,
+  className,
+}) => {
+  const classNameProps = `imgCard ${className}`;
   return (
-    <div className="imgCard outline outline-1">
+    <div className={classNameProps}>
       <div className="imgArea">
-        <Image src={imgUrl} alt={imgTitle} width={100} height={200} />
+        <Image src={imgUrl} alt={imgTitle} width={200} height={200} />
       </div>
       <ul className="imgSubBar flex justify-between items-center h-8 outline outline-1 ">
         <li className="imgSubBarTitle text-left">{imgTitle}</li>
