@@ -7,9 +7,6 @@ const nextConfig = {
     });
     return config; // Add this line to return the modified config object
   },
-  images: {
-    domains: ["via.placeholder.com"],
-  },
 };
 
 export default nextConfig;
