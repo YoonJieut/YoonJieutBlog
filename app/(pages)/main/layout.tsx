@@ -1,6 +1,8 @@
+"use client";
 import IntroduceLayout from "@/app/components/main/IntroduceLayout";
 import MenuNav from "../../components/main/MenuNav";
 import PostsListContainer from "./@postListContainer/page";
+import ParallaxComponent from "@/app/components/animation/ParallaxComponent";
 
 export default function RootLayout({
   children,
@@ -14,6 +16,7 @@ export default function RootLayout({
         {children}
       </main>
       <PostsListContainer />
+      <ParallaxComponent />
       <MenuNav />
     </div>
   );
