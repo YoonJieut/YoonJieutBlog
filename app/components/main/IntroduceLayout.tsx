@@ -11,14 +11,16 @@ export default function IntroduceLayout() {
       <div className="introLeft w-1/2 h-[450px] flex justify-center items-center">
         <Image src="" alt="Profile" width={300} height={400} />
       </div>
-      <div className="introRight w-1/2 h-[450px] flex justify-center items-center flex-col">
-        <h3 className="text-left w-full mb-2">나를 소개합니다.</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Necessitatibus placeat dolorem quos nulla. Ipsam eos molestiae
-          explicabo amet pariatur cupiditate magni, fugit rerum id omnis facilis
-          facere, nulla itaque aut.
-        </p>
+      <div className="introRight w-1/2 h-[450px] flex justify-end items-center ">
+        <div className="w-2/3 h-fit">
+          <h3 className="text-left w-full mb-2">나를 소개합니다.</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Necessitatibus placeat dolorem quos nulla. Ipsam eos molestiae
+            explicabo amet pariatur cupiditate magni, fugit rerum id omnis
+            facilis facere, nulla itaque aut.
+          </p>
+        </div>
       </div>
     </div>
   );
