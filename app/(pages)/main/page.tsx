@@ -40,6 +40,7 @@ export default function MainPage() {
       </section>
       <section className="textArea w-full h-28 flex items-center justify-center">
         <p className="opacity-50">
+          {/* 로딩창 처럼 랜덤하게 면접관 또는 나를 찾는 사람에게 말을 건내보자 */}
           여기에 내가 하고 싶은 말을 마음껏 하면 어떨까?
         </p>
       </section>
