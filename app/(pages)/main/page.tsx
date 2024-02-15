@@ -11,6 +11,7 @@ export default function MainPage() {
         <h1 className="text-3xl font-bold">
           안녕하세요, 저는 이런 사람입니다.
         </h1>
+        {/* 예시 텍스트 추가 */}
         {Array(15)
           .fill("")
           .map((_, index) => (
