@@ -4,6 +4,8 @@ import ModalBtn from "../../components/ui/ModalBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
+// todo : 나중에 링크나 엑션을 구현해야 한다.
+
 interface ViewMoreBtnProps {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
