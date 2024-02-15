@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description: "YoonJieut의 개인 블로그입니다.",
 };
 
+// import Font Awesome CSS
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 export default function RootLayout({
   children,
 }: Readonly<{
