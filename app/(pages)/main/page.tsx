@@ -7,7 +7,19 @@ import GithubBtn from "../../components/ui/GithubBtn";
 export default function MainPage() {
   return (
     <>
-      <div className="twoCardLayout flex space-x-2 justify-between px-2 w-full">
+      <div className="introduceText flex flex-col space-y-10 py-20">
+        <h1 className="text-3xl font-bold">
+          안녕하세요, 저는 이런 사람입니다.
+        </h1>
+        {Array(15)
+          .fill("")
+          .map((_, index) => (
+            <p key={index} className="text-lg">
+              내용 {index + 1}
+            </p>
+          ))}
+      </div>
+      <section className="twoCardLayout flex space-x-2 justify-between w-full">
         <ImgCard
           imgUrl="/images/textCursor.png"
           imgTitle="Lorem Ipsum"
@@ -20,26 +32,34 @@ export default function MainPage() {
           imgUrl="/images/textCursor.png"
           imgTitle="Lorem 2"
           imgSub="이건 저의 무언가입니다."
-          imgWidth={500}
+          imgWidth={700}
           imgHeight={500}
           className="w-2/3"
         />
-      </div>
-      <div className="oneCardLayout w-full h-96 flex space-x-2 justify-center overflow-x-hidden ">
-        {/* <ImgCard
+      </section>
+      <section className="textArea w-full h-28 flex items-center justify-center">
+        <p className="opacity-50">
+          여기에 내가 하고 싶은 말을 마음껏 하면 어떨까?
+        </p>
+      </section>
+      <section className="oneCardLayout w-full flex flex-col space-y-10 justify-center ">
+        <ImgCard
+          className="w-full"
           imgUrl="/images/textCursor.png"
-          imgTitle="Lorem 2"
+          imgTitle="나를 표현할 수 있는 무언가"
           imgSub="이건 저의 무언가입니다."
-          imgWidth={1100}
-          imgHeight={1100}
-        /> */}
-      </div>
-      {/* <ViewMoreBtn
-        onClick={() => {
-          console.log("hello world입니다ㅏㅏㅏ");
-        }}
-      />
-      <GithubBtn /> */}
+          imgWidth={400}
+          imgHeight={500}
+        />
+        <div className="btnArea flex space-x-20 justify-end">
+          <ViewMoreBtn
+            onClick={() => {
+              console.log("hello world입니다ㅏㅏㅏ");
+            }}
+          />
+          <GithubBtn />
+        </div>
+      </section>
     </>
   );
 }
