@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function IntroduceLayout() {
   return (
-    <div className="introLayout flex justify-between items-center outline outline-1 mb-3">
+    <div className="introLayout flex justify-between items-center outline outline-1 mb-3 overflow-x-hidden">
       <div className="introLeft w-1/2 h-[450px] flex justify-center items-center">
         <Image src="" alt="Profile" width={300} height={400} />
       </div>
