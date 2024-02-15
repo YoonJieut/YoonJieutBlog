@@ -9,7 +9,9 @@ export default function RootLayout({
   return (
     <div className="mainPageRoot w-screen h-screen overflow-x-hidden p-3 ">
       <IntroduceLayout />
-      <main className="outline outline-1 flex flex-col">{children}</main>
+      <main className="outline outline-1 flex flex-col space-y-8">
+        {children}
+      </main>
       <MenuNav />
     </div>
   );

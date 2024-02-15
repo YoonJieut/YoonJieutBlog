@@ -28,7 +28,7 @@ const ImgCard: React.FC<ImgCardProps> = ({
           height={imgHeight}
         />
       </div>
-      <ul className="imgSubBar flex justify-between items-center h-8 ">
+      <ul className="imgSubBar flex justify-between items-center h-8 border-t border-t-zinc-900">
         <li className="imgSubBarTitle text-left opacity-45  active:opacity-100 duration-200">
           {imgTitle}
         </li>
