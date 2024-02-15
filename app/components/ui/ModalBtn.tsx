@@ -15,7 +15,7 @@ interface ModalBtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const ModalBtn = ({ content, children, ...props }: ModalBtnProps) => {
   return (
     <button
-      className="modalBtn flex items-center justify-center space-x-12 w-52 h-14  outline outline-1"
+      className="modalBtn flex items-center justify-between px-8 w-52 h-14  outline outline-1"
       {...props}
     >
       <p>{content}</p>
