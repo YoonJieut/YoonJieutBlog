@@ -2,9 +2,11 @@
 import ImgCard from "@/app/components/ui/ImgCard";
 import ViewMoreBtn from "@/app/components/ui/ViewMoreBtn";
 import GithubBtn from "../../components/ui/GithubBtn";
-// 모달버튼은 이벤트를 전달할 때, 부모 client 컴포넌트로 교체해야 한다.
+import { useState } from "react";
 
 export default function MainPage() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <div className="introduceText flex flex-col space-y-10 py-20">
@@ -21,19 +23,32 @@ export default function MainPage() {
           ))}
       </div>
       <section className="twoCardLayout flex space-x-2 justify-between w-full">
-        <ImgCard
-          imgUrl="/images/textCursor.png"
-          imgTitle="Lorem Ipsum"
-          imgSub="안녕하세요 반갑습니다."
-          imgWidth={400}
-          imgHeight={300}
-          className="w-1/3"
-        />
+        <div className="w-1/3">
+          <ImgCard
+            imgUrl="/images/textCursor.png"
+            imgTitle="나를 표현할 수 있는 무언가"
+            imgSub="이건 저의 무언가입니다."
+            imgWidth={400}
+            imgHeight={400}
+          />
+          <div className="btnArea flex space-x-20 justify-end">
+            {isHovered && (
+              <>
+                <ViewMoreBtn
+                  onClick={() => {
+                    console.log("hello world입니다ㅏㅏㅏ");
+                  }}
+                />
+                <GithubBtn />
+              </>
+            )}
+          </div>
+        </div>
         <ImgCard
           imgUrl="/images/textCursor.png"
           imgTitle="Lorem 2"
           imgSub="이건 저의 무언가입니다."
-          imgWidth={700}
+          imgWidth={650}
           imgHeight={500}
           className="w-2/3"
         />
