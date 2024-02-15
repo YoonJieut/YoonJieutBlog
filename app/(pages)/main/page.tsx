@@ -2,10 +2,17 @@
 import ImgCard from "@/app/components/ui/ImgCard";
 import ViewMoreBtn from "@/app/components/ui/ViewMoreBtn";
 import GithubBtn from "../../components/ui/GithubBtn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
   const [isHovered, setIsHovered] = useState(false);
+  // 스위치
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <>
@@ -23,7 +30,11 @@ export default function MainPage() {
           ))}
       </div>
       <section className="twoCardLayout flex space-x-2 justify-between w-full">
-        <div className="w-1/3">
+        <div
+          className="w-1/3 h-fit relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <ImgCard
             imgUrl="/images/textCursor.png"
             imgTitle="나를 표현할 수 있는 무언가"
@@ -31,17 +42,17 @@ export default function MainPage() {
             imgWidth={400}
             imgHeight={400}
           />
-          <div className="btnArea flex space-x-20 justify-end">
-            {isHovered && (
-              <>
-                <ViewMoreBtn
-                  onClick={() => {
-                    console.log("hello world입니다ㅏㅏㅏ");
-                  }}
-                />
-                <GithubBtn />
-              </>
-            )}
+          <div
+            className={`btnArea flex space-x-10 justify-end absolute bottom-20 right-0 duration-150 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <ViewMoreBtn
+              onClick={() => {
+                console.log("hello world입니다ㅏㅏㅏ");
+              }}
+            />
+            <GithubBtn />
           </div>
         </div>
         <ImgCard
