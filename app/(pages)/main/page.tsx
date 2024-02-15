@@ -7,7 +7,9 @@ export default function MainPage() {
   return (
     <>
       <ImgCard imgUrl="/images/textCursor.png" imgTitle="dksd" imgSub="sub" />
-      <ModalBtn>모달버튼</ModalBtn>
+      <ModalBtn content="view more">
+        <FontAwesomeIcon icon="fa-solid fa-check" />
+      </ModalBtn>
     </>
   );
 }
