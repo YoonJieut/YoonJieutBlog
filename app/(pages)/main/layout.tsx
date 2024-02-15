@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <div className="mainPageRoot w-screen h-screen overflow-x-hidden p-3 ">
       <IntroduceLayout />
-      <main className="outline outline-1 flex flex-col space-y-8">
+      <main className="outline outline-1 flex flex-col space-y-40">
         {children}
       </main>
       <PostsListContainer />
