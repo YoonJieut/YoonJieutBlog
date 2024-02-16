@@ -5,13 +5,19 @@ import { useEffect, useState } from "react";
 import { Post } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
 import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
+import fetchJSON from "@/app/utils/frontend/fetchJSON";
 
-export default function AdminPostsView() {
-  const [posts, setPosts] = useState<Post[]>([]);
+export default function AdminPostsView({
+  posts,
+  setPosts,
+}: {
+  posts: Post[];
+  setPosts: React.Dispatch<React.SetStateAction<Post[]>>;
+}) {
+  // const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("/api/posts")
-      .then((response) => response.json())
+    fetchJSON("/api/posts")
       .then((data) => setPosts(data))
       .catch((error) => console.error(error));
   }, []);
