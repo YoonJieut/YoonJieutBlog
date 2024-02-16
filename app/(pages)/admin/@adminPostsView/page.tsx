@@ -7,7 +7,7 @@ import Btn from "@/app/components/Atom/Btn";
 import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
 
-export default function AdminPostsView({
+export default function AdminPostsPage({
   posts,
   setPosts,
 }: {

@@ -3,10 +3,9 @@
 "use client";
 
 import { useState } from "react";
-import AdminPostsView from "./@adminPostsView/page";
 import NewPostsPage from "./@newPosts/page";
-import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import { Post } from "@/app/_interfaces/PostTableProps";
+import AdminPostsPage from "./@adminPostsView/page";
 
 export default function AdminPage() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -17,7 +16,7 @@ export default function AdminPage() {
       <section className="adminMainSection flex w-full h-full gap-4 border border-1 p-4">
         <ul className="w-1/2 h-full flex flex-col space-y-3 ">
           <li className="flex-1 overflow-x-hidden">
-            <AdminPostsView posts={posts} setPosts={setPosts} />
+            <AdminPostsPage posts={posts} setPosts={setPosts} />
           </li>
         </ul>
         <ul className="w-1/2 h-full flex flex-col space-y-3">
