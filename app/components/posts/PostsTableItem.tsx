@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 
 interface Post {
   id: number;
@@ -19,7 +21,7 @@ const PostsTableItem: React.FC<PostsTableProps> = ({ post }) => {
       <Link
         href={`/posts/${post.id}`}
         key={post.id}
-        className="flex justify-between items-start gap-2 leading-6 pt-2"
+        className="flex justify-between items-start gap-2 leading-6 pt-4"
       >
         <div className="w-1/12">{post.id}.</div>
         <div className="w-1/3 font-bold hover:underline text-2xl">
@@ -27,8 +29,11 @@ const PostsTableItem: React.FC<PostsTableProps> = ({ post }) => {
         </div>
         <div className="w-full">{post.content}</div>
         <div className="w-1/4">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Go
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded border border-zinc-900"
+            title="Go to Post"
+          >
+            <FontAwesomeIcon icon={faArrowRight} style={{ color: "#c1c1c1" }} />
           </button>
         </div>
       </Link>

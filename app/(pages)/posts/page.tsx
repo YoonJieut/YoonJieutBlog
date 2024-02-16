@@ -21,6 +21,9 @@ export default function PostsPage() {
       </div>
       <main className="postsMain flex justify-between h-2/3 ">
         <div className="postsSideBar w-1/3 h-full pl-4">
+          <h1 className="text-2xl font-bold text-gray-800 mb-5">
+            | 게시물 분류
+          </h1>
           <ul>
             <li>게시물 파일1</li>
             <li>게시물 파일2</li>
