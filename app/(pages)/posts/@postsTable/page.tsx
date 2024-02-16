@@ -8,6 +8,7 @@ import {
   PostTitleProps,
 } from "@/app/_interfaces/PostTableProps";
 import Link from "next/link";
+import PostsTableItem from "@/app/components/posts/PostsTableItem";
 
 export interface Post
   extends PostIdProps,
@@ -26,37 +27,10 @@ export default function PostsTable() {
   }, []);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Content</th>
-          <th>Author ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        {posts.map((post) => (
-          <tr key={post.id}>
-            <td>
-              <Link href={`/posts/${post.id}`} key={post.id} className="block">
-                {post.id}
-              </Link>
-            </td>
-            <td>
-              <Link href={`/posts/${post.id}`} key={post.id} className="block">
-                {post.title}
-              </Link>
-            </td>
-            <td>
-              <Link href={`/posts/${post.id}`} key={post.id} className="block">
-                {post.content}
-              </Link>
-            </td>
-            <td>{post.authorId}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <ul className="postsTable w-2/3 h-full flex flex-col space-y-14 overflow-y-scroll overflow-x-hidden">
+      {posts.map((post) => (
+        <PostsTableItem key={post.id} post={post} />
+      ))}
+    </ul>
   );
 }
