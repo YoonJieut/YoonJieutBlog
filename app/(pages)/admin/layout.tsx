@@ -8,7 +8,7 @@ export default function AdminRootLayout({
       <section className="outline outline-1 w-1/12 h-full">
         sidebar area
       </section>
-      <main className="w-4/5 h-full">{children}</main>
+      <main className="w-full h-full">{children}</main>
     </div>
   );
 }
