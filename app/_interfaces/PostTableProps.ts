@@ -20,3 +20,9 @@ export interface PostContentProps {
 export interface PostAuthorIdProps {
   authorId: number;
 }
+
+export interface Post
+  extends PostIdProps,
+    PostTitleProps,
+    PostContentProps,
+    PostAuthorIdProps {}
