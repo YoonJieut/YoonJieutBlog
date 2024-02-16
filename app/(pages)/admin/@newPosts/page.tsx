@@ -7,15 +7,15 @@ import Btn from "@/app/components/Atom/Btn";
 import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
 import { useState } from "react";
 
-export default function NewPostsPage() {
+export default function NewPostsPage({ addEvent }: { addEvent: () => void }) {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
-  const [authorId, setAuthorId] = useState<number>(2);
+  // const [authorId, setAuthorId] = useState<number>(2);
 
   const onSubmitButtonEvent = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    postFetchJSON("/api/posts", title, content, authorId);
+    addEvent();
   };
 
   return (

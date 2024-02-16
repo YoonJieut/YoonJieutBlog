@@ -16,12 +16,6 @@ export default function AdminPostsPage({
 }) {
   // const [posts, setPosts] = useState<Post[]>([]);
 
-  useEffect(() => {
-    fetchJSON("/api/posts")
-      .then((data) => setPosts(data))
-      .catch((error) => console.error(error));
-  }, []);
-
   const handleDelete = async (postId: number) => {
     console.log("삭제 버튼 클릭 - postId : ", postId);
     try {
