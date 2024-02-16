@@ -4,19 +4,26 @@ import DetailLine from "@/app/components/ui/DetailLine";
 import { useEffect, useState } from "react";
 import { Post } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
+import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
 
 export default function AdminPostsView() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("api/posts")
+    fetch("/api/posts")
       .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((error) => console.error(error));
   }, []);
 
-  const handleDelete = (postId: number) => {
-    // TODO: Implement delete functionality
+  const handleDelete = async (postId: number) => {
+    console.log("삭제 버튼 클릭 - postId : ", postId);
+    try {
+      await deleteFetchJSON("/api/posts", postId);
+      console.log(`ID가 ${postId}인 게시물이 성공적으로 삭제되었습니다!`);
+    } catch (error) {
+      console.error("게시물 삭제 중 오류가 발생했습니다:", error);
+    }
   };
 
   return (
