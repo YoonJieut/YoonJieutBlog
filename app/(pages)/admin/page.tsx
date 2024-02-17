@@ -11,16 +11,26 @@ import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
 
 export default function AdminPage() {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [title, content, authorId] = posts;
 
   // ? 부모에서 등록하고 상태관리하는 함수를 따로 정의하는 이유는 뭘까? = "중앙화"
   // 부모에서 상태를 관리하고, 자식에서는 상태를 변경하는 함수만을 정의하여 부모에서 상태를 변경할 수 있도록 하기 위함이다.
+  
+  // 새로운 포스트를 리스트에 추가하는 함수
   const addToPosts = async (newPost: Post) => {
-    // 서버 데이터 등록
-    // 인자는 4개가 필요하다. (endpoint, title, content, authorId)
-    // postFetchJSON("/api/posts", title, content, authorId);
-    // 리스트 상태 업데이트
-    // setPosts([...posts, newPost]);
+    try {
+      const { title, content, authorId } = newPost;
+      // `await` 키워드를 사용하여 비동기 함수의 결과를 기다림
+      const createdPost = await postFetchJSON(
+        "/api/posts",
+        title,
+        content,
+        authorId
+      );
+      // 서버로부터 받은 데이터로 상태 업데이트
+      setPosts((prevPosts) => [...prevPosts, createdPost]);
+    } catch (error) {
+      console.error("Post 등록 중 오류가 발생했습니다:", error);
+    }
   };
 
   // 기존 게시물 목록을 불러오는 함수
