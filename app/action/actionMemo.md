@@ -1,4 +1,4 @@
-# NextJs action 컴포넌트
+# NextJs action 컴포넌트 공부 메모
 
 서버 사이드 컴포넌트의 생성
 
