@@ -4,7 +4,6 @@
 
 import {
   InteractPost,
-  NewPostsPageProps,
   NewPostsPageProps1,
 } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";

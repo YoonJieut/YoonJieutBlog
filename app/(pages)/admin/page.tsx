@@ -34,6 +34,8 @@ export default function AdminPage() {
       );
       // 서버로부터 받은 데이터로 상태 업데이트
       setPosts((prevPosts) => [...prevPosts, createdPost]);
+      console.log("새로운 Post가 성공적으로 등록되었습니다!");
+      console.log("새로운 Post : ", posts);
     } catch (error) {
       console.error("Post 등록 중 오류가 발생했습니다:", error);
     }
