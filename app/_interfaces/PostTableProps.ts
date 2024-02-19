@@ -1,8 +1,9 @@
-export interface PostTableProps {
+export interface PostDataProps {
   id: number;
   title: string;
   content: string;
   authorId: number;
+  createdAt: string;
 }
 
 export interface PostIdProps {
@@ -26,6 +27,13 @@ export interface Post
     PostTitleProps,
     PostContentProps,
     PostAuthorIdProps {}
+
+export interface PostTableProps {
+  id: number;
+  title: string;
+  content: string;
+  authorId: number;
+}
 
 // 이 인터페이스는 데이터와 상호작용할 때 쓰이는 인터페이스입니다.
 export interface InteractPost

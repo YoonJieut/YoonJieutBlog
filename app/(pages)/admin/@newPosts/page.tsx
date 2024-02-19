@@ -17,6 +17,12 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
     setTitle(event.target.value); // title 상태 업데이트
   };
 
+  function handleContentChange(
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ): void {
+    setContent(event.target.value); // content 상태 업데이트
+  }
+
   const handleSubmit = (
     event: React.FormEvent<HTMLFormElement>,
     title: string,
@@ -26,12 +32,6 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
     event.preventDefault();
     addEvent(title, content, authorId);
   };
-
-  function handleContentChange(
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ): void {
-    setContent(event.target.value); // content 상태 업데이트
-  }
 
   return (
     <form
