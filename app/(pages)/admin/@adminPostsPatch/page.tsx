@@ -3,15 +3,9 @@
 
 "use client";
 
-import {
-  Post,
-  PostAuthorIdProps,
-  PostContentProps,
-  PostTitleProps,
-} from "@/app/_interfaces/PostTableProps";
+import { Post } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
-import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
-import { useState } from "react";
+import customFetchJSON from "@/app/utils/frontend/customFetchJSON";
 
 // Props 타입을 정의하여 TypeScript의 타입 체킹 기능을 활용합니다.
 interface PatchPostsPageProps {
@@ -19,45 +13,8 @@ interface PatchPostsPageProps {
 }
 
 export default function PatchPostsPage({ addEvent }: PatchPostsPageProps) {
-  const [title, setTitle] = useState<string>("");
-  const [content, setContent] = useState<string>("");
-  const [authorId, setAuthorId] = useState<number | null>(2);
-
   const onSubmitButtonEvent = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // 1. input의 값을 모두 가져와 객체에 저장합니다. (state를 활용)
-    const updatedPost = {
-      title,
-      content,
-      authorId,
-    };
-
-    // 2. fetchAPI를 활용해서 patch 방식으로 body에 담아 보낸다.
-    try {
-      const response = await fetch("/api/posts", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedPost),
-      });
-
-      if (response.ok) {
-        // 성공적으로 업데이트된 게시물을 추가합니다.
-        addEvent(updatedPost);
-        // 업데이트 후에는 입력 필드를 초기화합니다.
-        setTitle("");
-        setContent("");
-        setAuthorId(null);
-      } else {
-        // 업데이트에 실패한 경우, 오류 메시지를 처리합니다.
-        const errorData = await response.json();
-        console.error("Failed to update post:", errorData);
-      }
-    } catch (error) {
-      console.error("Failed to update post:", error);
-    }
   };
 
   return (
@@ -92,7 +49,7 @@ export default function PatchPostsPage({ addEvent }: PatchPostsPageProps) {
             onSubmitButtonEvent;
           }}
         >
-          게시물 등록하기
+          Fix Post
         </Btn>
       </form>
     </div>
