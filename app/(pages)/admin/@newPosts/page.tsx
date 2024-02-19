@@ -2,16 +2,14 @@
 // 해당 페이지는 게시물 목록을 보여주는 페이지입니다.
 "use client";
 
-import {
-  InteractPost,
-  NewPostsPageProps1,
-} from "@/app/_interfaces/PostTableProps";
+import { NewPostsPageProps } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
 
-const NewPostsPage: React.FC<NewPostsPageProps1> = ({
+const NewPostsPage: React.FC<NewPostsPageProps> = ({
   addEvent,
   title,
   content,
+  authorId,
   setTitle, // setTitle 매개변수 추가
   setContent, // setContent 매개변수 추가
 }) => {
@@ -19,24 +17,28 @@ const NewPostsPage: React.FC<NewPostsPageProps1> = ({
     setTitle(event.target.value); // title 상태 업데이트
   };
 
-  const handleContentChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
+  const handleSubmit = (
+    event: React.FormEvent<HTMLFormElement>,
+    title: string,
+    content: string,
+    authorId: number
   ) => {
-    setContent(event.target.value); // content 상태 업데이트
+    event.preventDefault();
+    addEvent(title, content, authorId);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const newPost: InteractPost = {
-      title,
-      content,
-      authorId: 2,
-    };
-    addEvent(newPost);
-  };
+  function handleContentChange(
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ): void {
+    setContent(event.target.value); // content 상태 업데이트
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={(event: React.FormEvent<HTMLFormElement>) =>
+        handleSubmit(event, title, content, authorId)
+      }
+    >
       <div>
         <label htmlFor="title">Title:</label>
         <input

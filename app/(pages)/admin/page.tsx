@@ -21,21 +21,24 @@ export default function AdminPage() {
   // ? 부모에서 등록하고 상태관리하는 함수를 따로 정의하는 이유는 뭘까? = "중앙화"
   // 부모에서 상태를 관리하고, 자식에서는 상태를 변경하는 함수만을 정의하여 부모에서 상태를 변경할 수 있도록 하기 위함이다.
 
+  // ? 그럼 posts만 보내주면 되는 거 아닌가...?
+
   // 새로운 포스트를 리스트에 추가하는 함수
-  const addToPosts = async (newPost: InteractPost) => {
+  const addToPosts = async (
+    title: string,
+    content: string,
+    authorId: number
+  ) => {
     try {
-      const { title, content, authorId } = newPost;
       // `await` 키워드를 사용하여 비동기 함수의 결과를 기다림
-      const createdPost = await postFetchJSON(
-        "/api/posts",
-        title,
-        content,
-        authorId
-      );
-      // 서버로부터 받은 데이터로 상태 업데이트
-      setPosts((prevPosts) => [...prevPosts, createdPost]);
+      await postFetchJSON("/api/posts", title, content, authorId);
       console.log("새로운 Post가 성공적으로 등록되었습니다!");
-      console.log("새로운 Post : ", posts);
+      // 서버로부터 받은 데이터로 상태 업데이트
+      await fetchJSON("/api/posts")
+        .then((data) => setPosts(data))
+        .then(() => {
+          console.log("posts : ", posts);
+        });
     } catch (error) {
       console.error("Post 등록 중 오류가 발생했습니다:", error);
     }
