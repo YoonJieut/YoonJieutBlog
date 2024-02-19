@@ -32,3 +32,25 @@ export interface InteractPost
   extends PostTitleProps,
     PostContentProps,
     PostAuthorIdProps {}
+
+// app/admin/@newPosts/page.tsx
+// Props 타입을 정의하여 TypeScript의 타입 체킹 기능을 활용합니다.
+export interface NewPostsPageProps {
+  addEvent: (newPost: InteractPost) => void;
+  title: string;
+  content: string;
+  authorId: number | null;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+  setContent: React.Dispatch<React.SetStateAction<string>>;
+  setAuthorId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+export interface NewPostsPageProps1 {
+  addEvent: (newPost: InteractPost) => void;
+  title: string;
+  content: string;
+  authorId: number;
+  setTitle: (title: string) => void; // Add the parameter for the title
+  setContent: (content: string) => void; // Add the parameter for the content
+  setAuthorId: (authorId: number) => void; // Add the parameter for the authorId
+}
