@@ -1,11 +1,9 @@
 "use client";
 
 import DetailLine from "@/app/components/ui/DetailLine";
-import { useEffect, useState } from "react";
 import { Post } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
 import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
-import getEndIndex from "@/app/utils/frontend/getEndIndex";
 
 export default function AdminPostsPage({
   posts,
@@ -19,7 +17,7 @@ export default function AdminPostsPage({
     try {
       await deleteFetchJSON("/api/posts", postId);
       console.log(`ID가 ${postId}인 게시물이 성공적으로 삭제되었습니다!`);
-      // post 배열 상태 업데이트
+      // post 배열 상태 업데이트 (콜백함수로 해당 id를 제외한 배열을 반환)
       setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
     } catch (error) {
       console.error("게시물 삭제 중 오류가 발생했습니다:", error);
