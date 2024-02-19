@@ -3,19 +3,13 @@
 
 "use client";
 
-import {
-  Post,
-  PostAuthorIdProps,
-  PostContentProps,
-  PostTitleProps,
-} from "@/app/_interfaces/PostTableProps";
+import { InteractPost } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
-import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
 import { useState } from "react";
 
 // Props 타입을 정의하여 TypeScript의 타입 체킹 기능을 활용합니다.
 interface NewPostsPageProps {
-  addEvent: (newPost: Post) => void; // addEvent는 새로운 Post 객체를 매개변수로 받는 함수입니다.
+  addEvent: (newPost: InteractPost) => void; // addEvent는 새로운 Post 객체를 매개변수로 받는 함수입니다.
 }
 
 export default function NewPostsPage({ addEvent }: NewPostsPageProps) {
@@ -34,7 +28,7 @@ export default function NewPostsPage({ addEvent }: NewPostsPageProps) {
     };
 
     // 부모 컴포넌트의 함수를 호출하여 새 포스트를 추가
-    // addEvent(newPost);
+    addEvent(newPost);
 
     // 폼 입력을 초기화
     setTitle("");

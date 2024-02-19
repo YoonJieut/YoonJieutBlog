@@ -26,3 +26,9 @@ export interface Post
     PostTitleProps,
     PostContentProps,
     PostAuthorIdProps {}
+
+// 이 인터페이스는 데이터와 상호작용할 때 쓰이는 인터페이스입니다.
+export interface InteractPost
+  extends PostTitleProps,
+    PostContentProps,
+    PostAuthorIdProps {}
