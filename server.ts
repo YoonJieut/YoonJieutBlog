@@ -68,6 +68,9 @@ app.prepare().then(() => {
   server.patch("/api/posts/:id", async (req: Request, res: Response) => {
     const postId = req.params.id;
     const { title, content } = req.body;
+    console.log("수정 라우트 -postId : ", postId);
+    console.log("수정 라우트 -title : ", title);
+    console.log("수정 라우트 -content : ", content);
 
     try {
       await patchPostContent(title, content, postId);
