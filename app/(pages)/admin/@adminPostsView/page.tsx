@@ -8,9 +8,11 @@ import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
 export default function AdminPostsPage({
   posts,
   setPosts,
+  setSelectedPost,
 }: {
   posts: Post[];
   setPosts: React.Dispatch<React.SetStateAction<Post[]>>;
+  setSelectedPost: React.Dispatch<React.SetStateAction<Post>>;
 }) {
   const handleDelete = async (postId: number) => {
     console.log("삭제 버튼 클릭 - postId : ", postId);
@@ -31,7 +33,13 @@ export default function AdminPostsPage({
       <ul className="adminPostUl flex flex-col space-y-4">
         {posts.map((post, index) => (
           <li key={index} className="flex w-full justify-between">
-            <span className="contentPart flex space-x-4">
+            <span
+              className="cursor-pointer contentPart flex space-x-4"
+              onClick={() => {
+                setSelectedPost(post);
+                console.log("선택된 포스트 : ", post);
+              }}
+            >
               <h2>{post.title}</h2>
               <p>|</p>
               <p>{post.content}</p>
