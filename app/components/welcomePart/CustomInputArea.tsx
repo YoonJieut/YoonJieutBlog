@@ -1,9 +1,8 @@
 "use client";
 
-import getAdminCommands from "@/app/utils/backend/getCmdArray";
 import { checkWordInArray } from "@/app/utils/checkWordInArray";
-import customFetchJSON from "@/app/utils/frontend/customFetchJSON";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const placeholders = [" Type here.", " Type here..", " Type here..."];
@@ -13,6 +12,14 @@ export const CustomInputArea = (): JSX.Element => {
 
   // todo : 나중에 인풋 내용에 따라 라우팅을 다르게 해야 한다.
   const [inputValue, setInputValue] = useState("관리자");
+
+  // 라우트 전용
+
+  const router = useRouter();
+  function moveToPage(page: string) {
+    // 다른 페이지로 이동
+    router.push(page);
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,14 +36,17 @@ export const CustomInputArea = (): JSX.Element => {
     height: "100%",
     outline: "none",
     background: "transparent",
-    fontSize: "calc(100vw / 10)",
+    fontSize: "calc(100vw / 6)",
     padding: "4px 8px",
+    textAlign: "center",
+    letterSpacing: "-0.03em",
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      //엔터 이벤트를 여기서 처리
+      // 디버깅용 콘솔로그
       console.log("Enter");
+      console.log(inputValue);
 
       // 페치로 배열가져오기
       fetchJSON("/api/cmdArray")
@@ -44,7 +54,10 @@ export const CustomInputArea = (): JSX.Element => {
           console.log(data);
           if (checkWordInArray(inputValue, data)) {
             // 관리자 명령어가 있는 경우
-            window.location.href = "/admin";
+            // todo : 보안적 측면으로 이 url이 나타나지 않는 형태로 한다.
+            moveToPage("/admin");
+          } else {
+            moveToPage("/main");
           }
         })
         .catch((error) => {
