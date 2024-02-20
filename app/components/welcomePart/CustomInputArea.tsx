@@ -11,7 +11,7 @@ export const CustomInputArea = (): JSX.Element => {
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
 
   // todo : 나중에 인풋 내용에 따라 라우팅을 다르게 해야 한다.
-  const [inputValue, setInputValue] = useState("관리자");
+  const [inputValue, setInputValue] = useState("");
 
   // 라우트 전용
 

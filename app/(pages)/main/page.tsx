@@ -16,7 +16,7 @@ export default function MainPage() {
 
   return (
     <>
-      <div className="introduceText flex flex-col space-y-10 py-20">
+      <div className="introduceText flex flex-col space-y-20 py-40">
         <h1 className="text-3xl font-bold">
           안녕하세요, 저는 이런 사람입니다.
         </h1>
