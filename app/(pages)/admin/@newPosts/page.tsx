@@ -4,6 +4,7 @@
 
 import { NewPostsPageProps } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
+import DetailLine from "@/app/components/ui/DetailLine";
 
 const NewPostsPage: React.FC<NewPostsPageProps> = ({
   addEvent,
@@ -35,30 +36,35 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
 
   return (
     <form
+      className="w-full h-full p-4 flex flex-col space-y-4"
       onSubmit={(event: React.FormEvent<HTMLFormElement>) =>
         handleSubmit(event, title, content, authorId)
       }
     >
-      <div>
-        <label htmlFor="title">Title:</label>
+      <h3 className="text-xl font-bold text-blue-500 mb-1">New Posts</h3>
+      <DetailLine className="w-12" />
+      <div className="w-full">
+        <label htmlFor="title" className="block">
+          Title :
+        </label>
         <input
-          className="text-zinc-900 border border-1 border-black"
+          className="text-zinc-900 border border-1 border-black w-2/3"
           type="text"
           id="title"
           value={title}
           onChange={handleTitleChange}
         />
       </div>
-      <div>
+      <div className="flex flex-col">
         <label htmlFor="content">Content:</label>
         <textarea
           id="content"
           value={content}
           onChange={handleContentChange}
-          className="text-zinc-900 border border-1 border-black"
+          className="text-zinc-900 border border-1 border-black block h-full"
         />
       </div>
-      <Btn type="submit" className="outline outline-1">
+      <Btn type="submit" className="border border-zinc-900 px-4 py-2">
         Add Post
       </Btn>
     </form>

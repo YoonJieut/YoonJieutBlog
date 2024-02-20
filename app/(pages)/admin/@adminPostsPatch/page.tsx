@@ -2,6 +2,7 @@
 
 import { PostDataProps } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
+import DetailLine from "@/app/components/ui/DetailLine";
 import { useEffect, useState } from "react";
 
 interface patchPostContentProps {
@@ -42,14 +43,19 @@ export default function PatchPostsPage({
 
   return (
     <form
+      className="w-full h-full p-4 flex flex-col space-y-4"
       onSubmit={(event: React.FormEvent<HTMLFormElement>) =>
         handleSubmit(event)
       }
     >
+      <h3 className="text-xl font-bold text-blue-500 mb-1 ">Post Lists</h3>
+      <DetailLine className="w-12" />
       <div>
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="title" className="block">
+          Title:
+        </label>
         <input
-          className="text-zinc-900 border border-1 border-black"
+          className="text-zinc-900 border border-1 border-black w-2/3"
           type="text"
           id="title"
           value={tempTitle}
@@ -65,7 +71,7 @@ export default function PatchPostsPage({
           className="text-zinc-900 border border-1 border-black"
         />
       </div>
-      <Btn type="submit" className="outline outline-1">
+      <Btn type="submit" className="border border-zinc-900 px-4 py-2">
         Update Post
       </Btn>
     </form>
