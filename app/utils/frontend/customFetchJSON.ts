@@ -2,6 +2,8 @@ import { Data } from "@/app/_interfaces/DataAnyType";
 
 /**
  * 지정된 엔드포인트로 요청을 보내고 JSON 데이터를 가져오는 함수입니다.
+ * patch, post과 같이 body가 필요한 경우 사용
+ *
  * @param endPoint - 요청을 보낼 엔드포인트 URL입니다.
  * @param method - 요청의 HTTP 메서드입니다.
  * @param data - 요청에 포함할 데이터입니다.
