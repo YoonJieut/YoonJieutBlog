@@ -9,6 +9,7 @@ import dbChecker from "./app/utils/backend/dbChecker";
 import postPostsContent from "./app/utils/backend/postPostsContent";
 import patchPostContent from "./app/utils/backend/patchPostContent";
 import deletePostData from "./app/utils/backend/deletePostData";
+import getAdminCommands from "./app/utils/backend/getCmdArray";
 // import path from "path";
 
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -38,7 +39,12 @@ app.prepare().then(() => {
     dbChecker(req, res);
   });
 
-  // * ------------------- USER TABLE 관련 API 라우트 -------------------
+  // * ------------------- COMMANDS TABLE 관련 API 라우트 -------------------
+
+  // 관리자 명령어 조회 API
+  server.get("/api/cmdArray", async (req: Request, res: Response) => {
+    getAdminCommands(req, res);
+  });
 
   // 유저 조회 API
   server.get("/api/users", async (req: Request, res: Response) => {
