@@ -48,7 +48,7 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
           Title :
         </label>
         <input
-          className="text-zinc-900 border border-1 border-black w-2/3"
+          className="text-zinc-900 border border-1 border-black w-2/3 p-1"
           type="text"
           id="title"
           value={title}
@@ -61,10 +61,13 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
           id="content"
           value={content}
           onChange={handleContentChange}
-          className="text-zinc-900 border border-1 border-black block h-full"
+          className="text-zinc-900 border border-1 border-black block h-64 p-1"
         />
       </div>
-      <Btn type="submit" className="border border-zinc-900 px-4 py-2">
+      <Btn
+        type="submit"
+        className="border border-zinc-900 px-4 py-2 hover:bg-stone-300 hover:text-zinc-900 duration-200"
+      >
         Add Post
       </Btn>
     </form>

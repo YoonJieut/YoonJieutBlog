@@ -1,9 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { PostDataProps } from "@/app/_interfaces/PostTableProps";
 import Btn from "@/app/components/Atom/Btn";
 import DetailLine from "@/app/components/ui/DetailLine";
-import { useEffect, useState } from "react";
 
 interface patchPostContentProps {
   selectedPost: PostDataProps;
@@ -48,30 +48,33 @@ export default function PatchPostsPage({
         handleSubmit(event)
       }
     >
-      <h3 className="text-xl font-bold text-blue-500 mb-1 ">Post Lists</h3>
+      <h3 className="text-xl font-bold text-blue-500 mb-1 ">Edit Post</h3>
       <DetailLine className="w-12" />
       <div>
         <label htmlFor="title" className="block">
           Title:
         </label>
         <input
-          className="text-zinc-900 border border-1 border-black w-2/3"
+          className="text-zinc-900 border border-1 border-black w-2/3 p-1"
           type="text"
           id="title"
           value={tempTitle}
           onChange={handleTitleChange}
         />
       </div>
-      <div>
+      <div className="flex flex-col">
         <label htmlFor="content">Content:</label>
         <textarea
           id="content"
           value={tempContent}
           onChange={handleContentChange}
-          className="text-zinc-900 border border-1 border-black"
+          className="text-zinc-900 border border-1 border-black block h-64 p-1"
         />
       </div>
-      <Btn type="submit" className="border border-zinc-900 px-4 py-2">
+      <Btn
+        type="submit"
+        className="border border-zinc-900 px-4 py-2 hover:bg-stone-300 hover:text-zinc-900 duration-200"
+      >
         Update Post
       </Btn>
     </form>
