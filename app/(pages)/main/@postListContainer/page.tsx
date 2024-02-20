@@ -11,6 +11,8 @@ import {
 import { shuffleArray } from "@/app/utils/suffleArray";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import PostItem from "@/app/components/main/PostListContainer/PostItem";
+import DetailLine from "@/app/components/ui/DetailLine";
+import Link from "next/link";
 
 interface Post
   extends PostIdProps,
@@ -33,10 +35,20 @@ export default function PostsListContainer() {
   const shuffledPosts = shuffleArray(posts);
 
   return (
-    <ul className="py-20 flex flex-col space-y-7 text-xl">
-      {shuffledPosts.slice(0, 5).map((post) => (
-        <PostItem key={post.id} post={post} />
-      ))}
-    </ul>
+    <section className="PostListsContainer flex flex-col space-y-4 py-40">
+      <div className="titleArea w-1/6">
+        <h1 className="font-serif text-4xl">
+          <Link href="/posts">Random Posts</Link>
+        </h1>
+        <DetailLine className="w-1/12" />
+      </div>
+      <ul className=" flex flex-col space-y-7 text-xl">
+        {shuffledPosts.slice(0, 5).map((post) => (
+          <Link href={`/posts/${post.id}`} key={post.id}>
+            <PostItem post={post} />
+          </Link>
+        ))}
+      </ul>
+    </section>
   );
 }
