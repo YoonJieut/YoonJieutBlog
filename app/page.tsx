@@ -5,7 +5,7 @@ import { ResponseBox } from "@/app/components/welcomePart/ResponseBox";
 export default function Home() {
   return (
     <main className="flexCenter min-h-screen flex-col ">
-      <ResponseBox />
+      {/* <ResponseBox /> */}
       <CustomInputArea />
     </main>
   );
