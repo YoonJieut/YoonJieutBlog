@@ -72,3 +72,9 @@ body {
 *:hover {
   scrollbar-color: #1c1c1c transparent; /* 호버 시 메인 색상으로 변경 */
 }
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
