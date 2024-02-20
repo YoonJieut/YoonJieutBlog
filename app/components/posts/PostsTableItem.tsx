@@ -24,11 +24,11 @@ const PostsTableItem: React.FC<PostsTableProps> = ({ post }) => {
         className="flex justify-between items-start gap-2 leading-6 pt-4"
       >
         <div className="w-1/12">{post.id}.</div>
-        <div className="w-1/3 font-bold hover:underline text-2xl">
+        <div className="w-1/3 font-bold hover:underline text-xl">
           {post.title}
         </div>
         <div className="w-full">{post.content}</div>
-        <div className="w-1/4">
+        <div className="w-1/4 flexCenter">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded border border-zinc-900"
             title="Go to Post"
