@@ -25,7 +25,7 @@ const getAdminCommands = async (req: Request, res: Response) => {
     res.status(200).json(adminCommands);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Failed to get admin commands" });
+    res.status(500).json({ message: "어드민 커맨드를 가져오는데 실패 했습니다." });
   }
 };
 export default getAdminCommands;

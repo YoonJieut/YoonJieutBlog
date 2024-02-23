@@ -32,6 +32,9 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
   ) => {
     event.preventDefault();
     addEvent(title, content, authorId);
+    // form 초기화
+    setTitle(""); // title 초기화
+    setContent(""); // content 초기화
   };
 
   return (
