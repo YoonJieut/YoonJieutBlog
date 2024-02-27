@@ -89,3 +89,19 @@ body {
   line-height: -50em;
   font-size: 440px;
 }
+
+.Noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.Anta {
+  font-family: "Anta", sans-serif;
+}
+
+.Imbue {
+  font-family: "Imbue", sans-serif;
+}
+
+.Oswald {
+  font-family: "Oswald", sans-serif;
+}
