@@ -84,3 +84,8 @@ body {
 .OutLine {
   outline: 1px solid purple;
 }
+
+.LogoText {
+  line-height: -50em;
+  font-size: 440px;
+}
