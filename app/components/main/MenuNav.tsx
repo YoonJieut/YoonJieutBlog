@@ -15,6 +15,7 @@ export default function MenuNav() {
           <Link href="/admin">Admin도 그냥 살펴보세용</Link>
         </li>
       </ul>
+      <p>©copyright All rights reserved.</p>
       <ul className="menuNavRight flex gap-6">
         <li>
           <Link href="/contact">Contact Me</Link>
