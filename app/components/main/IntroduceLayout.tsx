@@ -26,7 +26,6 @@ export default function IntroduceLayout() {
       </div>
       <div className="OutLine w-5/6 h-1/4 self-end flex items-end">
         <LargeText />
-        <LargeText />
       </div>
     </div>
   );

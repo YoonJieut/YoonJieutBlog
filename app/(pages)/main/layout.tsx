@@ -1,3 +1,5 @@
+import FlowAni from "../../components/ui/testUi/FlowAni";
+import LargeText from "../../components/ui/LargeText";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,9 +10,6 @@ export default function RootLayout({
       <main className="outline outline-1 flex flex-col space-y-40">
         {children}
       </main>
-      <div className="Testing OutLine w-screen h-screen">
-        
-      </div>
     </div>
   );
 }
