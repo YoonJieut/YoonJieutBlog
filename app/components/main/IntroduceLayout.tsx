@@ -5,6 +5,7 @@
 
 import Image from "next/image";
 import LargeText from "../ui/LargeText";
+import FlowAni from "../animation/FlowAni";
 
 export default function IntroduceLayout() {
   return (
@@ -24,8 +25,12 @@ export default function IntroduceLayout() {
           </div>
         </div>
       </div>
-      <div className="OutLine w-5/6 h-1/4 self-end flex items-end">
-        <LargeText />
+      <div className="OutLine w-5/6 h-1/4 self-end flex items-end overflow-hidden pb-12 opacity-40">
+        <FlowAni>
+          <LargeText />
+          <LargeText />
+          <LargeText />
+        </FlowAni>
       </div>
     </div>
   );

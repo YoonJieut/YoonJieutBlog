@@ -1,4 +1,4 @@
-import FlowAni from "../../components/ui/testUi/FlowAni";
+import FlowAni from "../../components/animation/FlowAni";
 import LargeText from "../../components/ui/LargeText";
 export default function RootLayout({
   children,
