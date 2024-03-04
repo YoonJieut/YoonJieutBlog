@@ -11,10 +11,12 @@ export default function IntroduceLayoutTest() {
   return (
     <div className="introLayout w-full h-screen flex justify-between outline outline-1 mb-3 overflow-hidden">
       <div className="introLeft w-1/6 h-full flex-col flex OutLine relative">
-        <div className="introTextArea w-full h-1/4 absolute left-full flex items-end OutLine">
+        <div className="introTextArea w-full h-1/3 absolute left-full flex items-end OutLine">
           안녕하세요! 저는 윤준현이라고 합니다. <br />
           현재 프론트엔드 개발자 지망생이며 <br />
           주로 쓰는 기술은 Reat, Next.js, express 등 입니다.
+          <br />
+          `이곳에 인풋 value가 들어갑니다.`
         </div>
         <div className="w-full h-1/3"></div>
         <div className="imgCardArea w-3/4 h-1/3 OutLine self-end">
@@ -27,9 +29,9 @@ export default function IntroduceLayoutTest() {
       </div>
       <div className="OutLine w-5/6 h-1/4 self-end flex items-end overflow-hidden pb-12 opacity-40">
         <FlowAni>
-          <LargeTextTest text="Visitor" />
-          <LargeTextTest text="Visitor" />
-          <LargeTextTest text="Visitor" />
+          <LargeTextTest />
+          <LargeTextTest />
+          <LargeTextTest />
         </FlowAni>
       </div>
     </div>
