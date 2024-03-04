@@ -106,3 +106,7 @@ body {
 .Oswald {
   font-family: "Oswald", sans-serif;
 }
+
+.h-1\/12 {
+  height: 8.333333%;
+}
