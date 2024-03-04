@@ -1,3 +1,11 @@
+"use client";
+
+import IntroduceLayoutTest from "@/app/components/ui/testUi/IntroduceLayoutTest";
+
 export default function MainTestPage() {
-  return <main className="w-full h-full">main 파튼</main>;
+  return (
+    <>
+      <IntroduceLayoutTest />
+    </>
+  );
 }
