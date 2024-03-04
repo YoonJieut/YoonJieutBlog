@@ -45,8 +45,8 @@ export const CustomInputArea = (): JSX.Element => {
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       // 디버깅용 콘솔로그
-      console.log("Enter");
-      console.log(inputValue);
+      // console.log("Enter");
+      // console.log(inputValue);
 
       // 페치로 배열가져오기
       fetchJSON("/api/cmdArray")
@@ -57,7 +57,7 @@ export const CustomInputArea = (): JSX.Element => {
             // todo : 보안적 측면으로 이 url이 나타나지 않는 형태로 한다.
             moveToPage("/admin");
           } else {
-            moveToPage("/main");
+            moveToPage("/mainTest");
           }
         })
         .catch((error) => {
