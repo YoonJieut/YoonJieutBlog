@@ -1,5 +1,7 @@
+import PfList from "@/app/components/ui/Molecules/PfList";
+
 const PortFolioPage = () => {
-  return <div>hello</div>;
+  return <PfList />;
 };
 
 export default PortFolioPage;
