@@ -1,10 +1,6 @@
 "use client";
 import React, { ReactNode, ButtonHTMLAttributes } from "react";
 
-// type ModalBtnProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-//   children: ReactNode;
-// };
-
 interface ModalBtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   content?: string;
   children: ReactNode;
