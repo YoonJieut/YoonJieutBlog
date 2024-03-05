@@ -15,7 +15,7 @@ interface H3Props {
  * <H3 text="제목입니다." className="text-red-500" />
  */
 const H3: React.FC<H3Props> = ({ text, className }) => {
-  return <h3 className={`text-3xl font-bold ${className}`}>{text}</h3>;
+  return <h3 className={`text-2xl font-bold ${className}`}>{text}</h3>;
 };
 
 export default H3;

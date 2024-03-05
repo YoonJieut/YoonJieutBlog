@@ -3,10 +3,12 @@ import Div from "../Atom/Div";
 import DetailLine from "../DetailLine";
 import H1 from "../Atom/H1";
 import H3 from "../Atom/H3";
+import H5 from "../Atom/H5";
 
 interface TextAreaProps {
   h1Text?: string;
   h3Text?: string;
+  h5Text?: string;
   children: React.ReactNode;
   textAreaClassName?: string;
   divClassName?: string;
@@ -31,6 +33,7 @@ interface TextAreaProps {
 const TextArea: React.FC<TextAreaProps> = ({
   h1Text,
   h3Text,
+  h5Text,
   children,
   textAreaClassName,
   divClassName,
@@ -38,9 +41,24 @@ const TextArea: React.FC<TextAreaProps> = ({
   const divClass = `textArea ${divClassName}`;
   return (
     <div className={divClass}>
-      {h1Text && <H1 text={h1Text} />}
-      {h3Text && <H3 text={h3Text} />}
-      <DetailLine className="w-1/6" />
+      {h1Text && (
+        <>
+          <H1 text={h1Text} />
+          <DetailLine className="w-1/4" />
+        </>
+      )}
+      {h3Text && (
+        <>
+          <H3 text={h3Text} />
+          <DetailLine className="w-1/6" />
+        </>
+      )}
+      {h5Text && (
+        <>
+          <H5 text={h5Text} />
+          <DetailLine className="w-1/12" />
+        </>
+      )}
       <Div className={textAreaClassName}>{children}</Div>
     </div>
   );
