@@ -80,3 +80,19 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method PATCH -Body 
 ```
 Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method DELETE
 ```
+
+### 기존 레이아웃 브랜치 만들어보기
+
+```
+브랜치 이름 : routeOnly
+```
+
+#### 생성 컴포넌트
+
+1. minimal footer
+2. 자기소개 ui
+3. 인적사항 ui
+   3-1. 스택 list
+4. 작업물 목록
+   4-1. 포폴 요약 컴포넌트
+   4-2. 작은 스택 ui

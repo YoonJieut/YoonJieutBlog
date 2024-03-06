@@ -26,7 +26,7 @@
 5. ui 가장 기초적으로 구현 (레이아웃)
 
 - 엔트리 페이지 - 완료
-- 메인 페이지
+- 메인 페이지 - 작업 중
 - 어드민 페이지
   -- view - 완료
   -- post - 완료
@@ -46,8 +46,11 @@
 # 레이아웃에 대한 연구
 
 매일 감상 적고, 맘에드는 것 만들어보기
+브랜치 이름 : layout\* ...
 
 ## TAILWIND CDN
 
-- <script src="https://cdn.tailwindcss.com"></script>
-- 라이브서버 형식으로 간단하게
+```
+<script src="https://cdn.tailwindcss.com"></script>
+라이브서버 형식으로 간단하게
+```
