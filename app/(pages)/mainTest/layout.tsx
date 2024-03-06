@@ -1,4 +1,4 @@
-import FooterTest from "@/app/components/ui/testUi/FooterTest";
+import FooterTest from "@/app/components/ui/Organism/Footer/FooterTest";
 
 export default function MainTestLayout({
   children,

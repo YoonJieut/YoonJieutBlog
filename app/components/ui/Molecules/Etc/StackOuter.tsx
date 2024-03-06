@@ -1,4 +1,4 @@
-import Div from "@/app/components/ui/Atom/Div";
+import Div from "@/app/components/ui/atom/Basic/Div";
 
 // ! 단순 태그나 라벨은 p태그로 seo로 영향을 줄 것 같진 않다. 그러나 선택은 주도록 함
 interface StackOuterProps {

@@ -1,6 +1,6 @@
 "use client";
 import React, { MouseEvent } from "react";
-import ModalBtn from "../../components/ui/ModalBtn";
+import ModalBtn from "@/app/components/ui/Molecules/Buttons/ModalBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 

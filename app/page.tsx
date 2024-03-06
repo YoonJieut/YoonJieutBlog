@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { CustomInputArea } from "@/app/components/welcomePart/CustomInputArea";
+import { CustomInputArea } from "@/app/components/ui/Molecules/FetchInput/CustomInputArea";
 
 export default function Home() {
   return (

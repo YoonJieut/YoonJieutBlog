@@ -1,5 +1,5 @@
 import FlowAni from "../../components/animation/FlowAni";
-import LargeText from "../../components/ui/LargeText";
+import LargeText from "../../components/ui/atom/Logo/LargeText";
 export default function RootLayout({
   children,
 }: Readonly<{

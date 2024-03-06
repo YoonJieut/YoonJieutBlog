@@ -1,4 +1,4 @@
-import AboutMeTest from "../../../components/ui/testUi/AboutMeTest";
+import AboutMeTest from "../../../components/ui/Organism/VerticalSection/AboutMeTest";
 
 export default function AboutMeTestPage() {
   return (

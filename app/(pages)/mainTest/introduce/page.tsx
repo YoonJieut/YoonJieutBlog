@@ -1,4 +1,4 @@
-import ImgCard from "@/app/components/ui/ImgCard";
+import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
 export default function IntroduceTestPage() {
   return (
     <main className="h-full w-full OutLine flexCenter gap-10">

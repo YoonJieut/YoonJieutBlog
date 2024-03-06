@@ -1,4 +1,4 @@
-import PortfolioTemp from "../../../components/ui/Temp/PortfolioTemp";
+import PortfolioTemp from "../../../components/ui/Organism/Main/PortfolioMain";
 
 const PortFolioPage = () => {
   return (

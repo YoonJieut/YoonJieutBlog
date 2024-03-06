@@ -1,11 +1,11 @@
 "use client";
-import ImgCard from "@/app/components/ui/ImgCard";
-import ViewMoreBtn from "@/app/components/ui/ViewMoreBtn";
-import GithubBtn from "../../components/ui/GithubBtn";
+import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
+import ViewMoreBtn from "@/app/components/ui/Molecules/Buttons/ViewMoreBtn";
+import GithubBtn from "../../components/ui/Molecules/Buttons/GithubBtn";
 import { useState } from "react";
 import PostsListContainer from "./@postListContainer/page";
-import MenuNav from "@/app/components/main/MenuNav";
-import IntroduceLayout from "@/app/components/main/IntroduceLayout";
+import MenuNav from "@/app/components/ui/Organism/Footer/MenuNav";
+import IntroduceLayout from "@/app/components/ui/Temp/IntroduceLayout";
 
 export default function MainPage() {
   const [isHovered, setIsHovered] = useState(false);

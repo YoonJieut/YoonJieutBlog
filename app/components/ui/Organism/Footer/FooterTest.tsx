@@ -1,5 +1,5 @@
 "use client";
-import TextLogo from "./TextLogo";
+import TextLogo from "../../testUi/TextLogo";
 
 const FooterTest: React.FC = () => {
   return (

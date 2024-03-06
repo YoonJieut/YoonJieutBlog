@@ -8,6 +8,7 @@ import urlMaker from "@/app/utils/urlMaker";
 // todo1. : url 파라미터로 게시물 ID를 받아 해당 게시물을 조회합니다.
 // todo2. : 게시물 조회 API를 호출합니다.
 // todo3. : 게시물 정보를 표시합니다.
+// todo4. : modal 형식으로 로드할 수도 있을가?
 
 export default async function PostDetailPage({
   params: { postId },

@@ -1,9 +1,9 @@
 import React from "react";
-import Div from "../Atom/Div";
-import DetailLine from "../DetailLine";
-import H1 from "../Atom/H1";
-import H3 from "../Atom/H3";
-import H5 from "../Atom/H5";
+import Div from "../../atom/Basic/Div";
+import DetailLine from "../Etc/DetailLine";
+import H1 from "../../atom/Basic/H1";
+import H3 from "../../atom/Basic/H3";
+import H5 from "../../atom/Basic/H5";
 
 interface TextAreaProps {
   h1Text?: string;

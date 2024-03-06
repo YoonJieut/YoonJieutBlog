@@ -1,7 +1,7 @@
-import H3 from "../Atom/H3";
-import Li from "../Atom/Li";
-import Ul from "../Atom/Ul";
-import StackOuter from "./StackOuter";
+import H3 from "../../atom/Basic/H3";
+import Li from "../../atom/Basic/Li";
+import Ul from "../../atom/Basic/Ul";
+import StackOuter from "../Etc/StackOuter";
 
 interface PortfolioTempProps {
   index: number;

@@ -1,6 +1,6 @@
-import Section from "../Atom/Section";
-import TextArea from "../Molecules/TextArea";
-import DetailLine from "@/app/components/ui/DetailLine";
+import Section from "../../atom/Basic/Section";
+import TextArea from "../../Molecules/Text/TextArea";
+import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
 const AboutMeTest: React.FC = () => {
   return (
     <div className="aboutMe flex gap-2 w-full h-full">

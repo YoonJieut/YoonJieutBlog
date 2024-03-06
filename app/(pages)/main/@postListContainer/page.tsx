@@ -10,8 +10,8 @@ import {
 // import Link from "next/link";
 import { shuffleArray } from "@/app/utils/suffleArray";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
-import PostItem from "@/app/components/main/PostListContainer/PostItem";
-import DetailLine from "@/app/components/ui/DetailLine";
+import PostItem from "@/app/components/ui/Molecules/Lists/PostItem";
+import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
 import Link from "next/link";
 
 interface Post

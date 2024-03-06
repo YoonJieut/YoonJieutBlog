@@ -1,7 +1,7 @@
-import PfList from "@/app/components/ui/Molecules/PfList";
+import PfList from "@/app/components/ui/Molecules/Lists/PfList";
 import pfListData from "@/public/json/pfListData.json";
 
-const PortfolioTemp = () => {
+const PortfolioMain = () => {
   console.log("testing - ", pfListData.pfListData);
   const data = pfListData.pfListData;
 
@@ -27,4 +27,4 @@ const PortfolioTemp = () => {
   );
 };
 
-export default PortfolioTemp;
+export default PortfolioMain;
