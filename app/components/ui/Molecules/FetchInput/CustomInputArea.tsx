@@ -1,5 +1,6 @@
 "use client";
 
+import TestPage from "@/app/(pages)/test/page";
 import { checkWordInArray } from "@/app/utils/checkWordInArray";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import { useRouter } from "next/navigation";
@@ -43,10 +44,6 @@ export const CustomInputArea = (): JSX.Element => {
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      // 디버깅용 콘솔로그
-      // console.log("Enter");
-      // console.log(inputValue);
-
       // 페치로 배열가져오기
       fetchJSON("/api/cmdArray")
         .then((data) => {

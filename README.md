@@ -5,9 +5,13 @@
 현재 다양한 경험을 위해 디자인에 대한 연구를 하는 중
 
 컨셉 : 미니멀 | 정렬과 간격, 기본기를 다질 수 있으며 나의 성향과 가장 닮았다.
+
 시스템 : router 형식 | nextjs의 작성법, 사용법에 대해 익히며 ui 생성과정에 대해 익숙해질 수 있다.
+
 구조 :
+
 [페이지 넘김(routerOnly 브랜치 | router 활용 방안) 관련 ui] - ui 관련한 것은 Atomic Design을 참고하여 컴포넌트를 쪼개보는 연습을 한다.
+
 [스크롤 방식(main 브랜치 | 스크롤 활용 방안) 관련 ui ] - page에 따라 ui 컴포넌트를 저장
 
 ## 현재 작업 관련 내용
@@ -98,11 +102,17 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method DELETE
 #### 생성 컴포넌트
 
 1. minimal footer [done : mainTest layout.tsx]
+
 2. 자기소개 ui [done : mainTest/introduce page.tsx]
-3. 인적사항 ui [done : mainTest/aboutme page.tsx]
+
+3. 인적사항 ui [done : mainTest/aboutme page.tsx]\
+
    3-1. 스택 list [done : ui/Molecules PfList.tsx]
+
 4. 작업물 목록 [ done : mainTest/portfolio page.tsx]
+
    4-1. 포폴 요약 컴포넌트 [ done : ui/Temp PortfolioTemp.tsx]
+
    4-2. 작은 스택 ui [done : ui/Molecules StackOuter.tsx]
 
 ### 테스트 layout 작성
