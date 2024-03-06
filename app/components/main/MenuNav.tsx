@@ -9,7 +9,7 @@ export default function MenuNav() {
           <Link href="/main">Home</Link>
         </li>
         <li>
-          <Link href="/post">Post</Link>
+          <Link href="/posts">Post</Link>
         </li>
         <li>
           <Link href="/admin">Admin도 그냥 살펴보세용</Link>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-white bg-zinc-900">
+    <div
+      id="root"
+      class="h-screen w-screen flex flex-col justify-end relative overflow-hidden"
+    >
+      <div
+        class="circle -z-10"
+        style="
+          width: 100vh;
+          height: 100vh;
+          border-radius: 50%;
+          background-color: red;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      ></div>
+      <div class="bottomText flex justify-center items-center relative transition-all"
+        style="transition: justify-content 1s"
+      >
+        <h1 class="Imbue" style="font-size: 300px; line-height: 0.78">Hello</h1>
+        <p
+          class="Anta absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0"
+          style="transition: opacity 1s"
+        >
+          Lorem ipsum dolor sit amet consectetur <br />
+          adipisicing elit. Provident veritatis eius<br />
+          minus corrupti repellendus architecto.
+        </p>
+        <h1 class="Imbue" style="font-size: 300px; line-height: 0.78">ImYun</h1>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM is loaded");
+        setTimeout(() => {
+          const bottomText = document.querySelector(".bottomText");
+          bottomText.classList.replace("justify-center", "justify-between");
+          console.log(bottomText);
+        }, 1000);
+
+        setTimeout(() => {
+          const pTag = document.querySelector(".Anta");
+          pTag.classList.replace("opacity-0", "opacity-1");
+          console.log(pTag);
+        }, 2000);
+      });
+      </script>
+    </div>
+  </body>
+</html>
