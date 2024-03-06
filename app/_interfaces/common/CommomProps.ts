@@ -5,3 +5,7 @@ export interface ClassNameProps {
 export interface ChildrenProps {
   children: React.ReactNode;
 }
+
+export interface OnClickProps {
+  onClick?: () => void;
+}
