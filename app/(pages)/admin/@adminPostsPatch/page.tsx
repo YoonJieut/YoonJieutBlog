@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { PostDataProps } from "@/app/_interfaces/PostTableProps";
-import Btn from "@/app/components/Atom/Btn";
-import DetailLine from "@/app/components/ui/DetailLine";
+import Btn from "@/app/components/ui/Atom/Basic/Btn";
+import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
 
 interface patchPostContentProps {
   selectedPost: PostDataProps;

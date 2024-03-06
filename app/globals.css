@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Imbue:opsz,wght@10..100,100..900&family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -81,4 +83,30 @@ body {
 
 .OutLine {
   outline: 1px solid purple;
+}
+
+.LogoText {
+  line-height: -50em;
+  font-size: 440px;
+}
+
+.Noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.Anta {
+  font-family: "Anta", sans-serif;
+}
+
+/* 궁서체 글씨 */
+.Imbue {
+  font-family: "Imbue", sans-serif;
+}
+
+.Oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.h-1\/12 {
+  height: 8.333333%;
 }

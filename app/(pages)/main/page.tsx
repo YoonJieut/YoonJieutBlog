@@ -1,8 +1,11 @@
 "use client";
-import ImgCard from "@/app/components/ui/ImgCard";
-import ViewMoreBtn from "@/app/components/ui/ViewMoreBtn";
-import GithubBtn from "../../components/ui/GithubBtn";
-import { useEffect, useState } from "react";
+import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
+import ViewMoreBtn from "@/app/components/ui/Molecules/Buttons/ViewMoreBtn";
+import GithubBtn from "../../components/ui/Molecules/Buttons/GithubBtn";
+import { useState } from "react";
+import PostsListContainer from "./@postListContainer/page";
+import MenuNav from "@/app/components/ui/Organism/Footer/MenuNav";
+import IntroduceLayout from "@/app/components/ui/Temp/IntroduceLayout";
 
 export default function MainPage() {
   const [isHovered, setIsHovered] = useState(false);
@@ -16,6 +19,7 @@ export default function MainPage() {
 
   return (
     <>
+      <IntroduceLayout />
       <div className="introduceText flex flex-col space-y-20 py-40">
         <h1 className="text-3xl font-bold">
           안녕하세요, 저는 이런 사람입니다.
@@ -88,6 +92,8 @@ export default function MainPage() {
           <GithubBtn />
         </div>
       </section>
+      <PostsListContainer />
+      <MenuNav />
     </>
   );
 }

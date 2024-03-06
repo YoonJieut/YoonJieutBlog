@@ -1,11 +1,19 @@
 # 윤지읒의 개인 블로그 프로젝트
 
 커맨드를 통해 엔트리하며, 메인 포트폴리오 사이트와 관리자로 접근했을 때는 관리자 전용 페이지가 나온다.
+사용자 측면을 고려한 로딩 환경을 구현해보았고, 추후에 animation 등 클릭을 유도하는 등의 모션에 대한 연구과제가 남아있다.
+현재 다양한 경험을 위해 디자인에 대한 연구를 하는 중
+
+컨셉 : 미니멀 | 정렬과 간격, 기본기를 다질 수 있으며 나의 성향과 가장 닮았다.
+시스템 : router 형식 | nextjs의 작성법, 사용법에 대해 익히며 ui 생성과정에 대해 익숙해질 수 있다.
+구조 :
+[페이지 넘김(routerOnly 브랜치 | router 활용 방안) 관련 ui] - ui 관련한 것은 Atomic Design을 참고하여 컴포넌트를 쪼개보는 연습을 한다.
+[스크롤 방식(main 브랜치 | 스크롤 활용 방안) 관련 ui ] - page에 따라 ui 컴포넌트를 저장
 
 ## 현재 작업 관련 내용
 
 ```
-작업 중인 브랜치 : adminPostsPage
+작업 중인 브랜치 : mergeTest
 ```
 
 ```
@@ -26,7 +34,7 @@ npm run dev
 
 ## 기술 스택 선정
 
-| 구분         | 초기 및 중반(2일 ~ 5일 내 완성 목표)     | 후반(추후 완성 목표)                           |
+| 구분         | 초기 및 중반                             | 후반(추후 완성 목표)                           |
 | ------------ | ---------------------------------------- | ---------------------------------------------- |
 | 프론트엔드   | Next.js                                  | Next.js (변경 없음)                            |
 | 백엔드       | Express                                  | Django                                         |
@@ -36,9 +44,7 @@ npm run dev
 
 ---
 
-#
-
-# 테스트 커맨드 정리
+## 테스트 커맨드 정리
 
 ### 포스트 조회 API 테스트
 
@@ -75,8 +81,32 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method PATCH -Body 
 
 ```
 
+---
+
 ### 포스트 삭제 API 테스트
 
 ```
 Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method DELETE
+```
+
+### 기존 레이아웃 브랜치 만들어보기
+
+```
+브랜치 이름 : routeOnly / mergeDone
+```
+
+#### 생성 컴포넌트
+
+1. minimal footer [done : mainTest layout.tsx]
+2. 자기소개 ui [done : mainTest/introduce page.tsx]
+3. 인적사항 ui [done : mainTest/aboutme page.tsx]
+   3-1. 스택 list [done : ui/Molecules PfList.tsx]
+4. 작업물 목록 [ done : mainTest/portfolio page.tsx]
+   4-1. 포폴 요약 컴포넌트 [ done : ui/Temp PortfolioTemp.tsx]
+   4-2. 작은 스택 ui [done : ui/Molecules StackOuter.tsx]
+
+### 테스트 layout 작성
+
+```
+/layoutTest/ blur.html, minimal.html ...
 ```

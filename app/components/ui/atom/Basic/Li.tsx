@@ -1,5 +1,3 @@
-import React from "react";
-
 interface DivProps {
   children: React.ReactNode;
   className?: string; // Add className prop
@@ -20,8 +18,19 @@ interface DivProps {
  *
  *
  */
-const Li: React.FC<DivProps> = ({ children, className }) => {
-  return <li className={className}>{children}</li>;
-};
+// Li 컴포넌트 정의
+const Li: React.FC<DivProps> = ({ children, className = "" }) => {
+  // 기본 스타일 초기화 및 사용자 정의 클래스 적용
+  const liStyle = {
+    margin: 0,
+    padding: 0,
+    listStyleType: "none", // 기본 리스트 스타일 제거
+  };
 
+  return (
+    <li className={`listItem ${className}`} style={liStyle}>
+      {children}
+    </li>
+  );
+};
 export default Li;

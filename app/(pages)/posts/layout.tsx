@@ -1,4 +1,4 @@
-import PostsHeader from "@/app/components/posts/PostsHeader";
+import PostsHeader from "@/app/components/ui/Organism/Header/PostsHeader";
 
 export default function RootLayout({
   children,

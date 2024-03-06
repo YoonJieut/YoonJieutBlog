@@ -8,7 +8,7 @@ import {
   PostTitleProps,
 } from "@/app/_interfaces/PostTableProps";
 import Link from "next/link";
-import PostsTableItem from "@/app/components/posts/PostsTableItem";
+import PostsTableItem from "@/app/components/ui/Molecules/Lists/PostsTableItem";
 
 export interface Post
   extends PostIdProps,

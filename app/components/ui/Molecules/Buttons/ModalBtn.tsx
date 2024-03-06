@@ -1,12 +1,6 @@
 "use client";
 import React, { ReactNode, ButtonHTMLAttributes } from "react";
 
-// todo 너무 좋아서 이걸 내 유틸함수로 만들자
-
-// type ModalBtnProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-//   children: ReactNode;
-// };
-
 interface ModalBtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   content?: string;
   children: ReactNode;
