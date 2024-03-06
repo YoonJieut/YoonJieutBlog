@@ -1,6 +1,15 @@
+import TextAlignRight from "@/app/components/ui/Molecules/Text/TextAlignRight";
+import TextAlignLeft from "../../components/ui/Molecules/Text/TextAlignLeft";
+import ImgAndSub from "../../components/ui/Organism/Container/ImgAndSub";
+
 const TestPage = () => {
-  return <div>{/* Your page content goes here */}</div>;
-  // 여기서 미니멀 테마의 상세보기 페이지 레이아웃 작성해보기
+  return (
+    <div className="text flex flex-col">
+      <TextAlignLeft />
+      <TextAlignRight />
+      <ImgAndSub />
+    </div>
+  );
 };
 
 export default TestPage;
