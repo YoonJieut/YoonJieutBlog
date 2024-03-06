@@ -1,4 +1,4 @@
-import { Data } from "@/app/_interfaces/DataAnyType";
+import { Data } from "@/app/_interfaces/dbInterfaces/DataAnyType";
 
 /**
  * 지정된 엔드포인트로 요청을 보내고 JSON 데이터를 가져오는 함수입니다.

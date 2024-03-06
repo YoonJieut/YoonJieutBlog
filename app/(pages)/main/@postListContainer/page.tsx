@@ -6,7 +6,7 @@ import {
   PostContentProps,
   PostIdProps,
   PostTitleProps,
-} from "@/app/_interfaces/PostTableProps";
+} from "@/app/_interfaces/dbInterfaces/PostTableProps";
 // import Link from "next/link";
 import { shuffleArray } from "@/app/utils/suffleArray";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";

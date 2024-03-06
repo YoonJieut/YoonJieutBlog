@@ -1,7 +1,7 @@
 "use client";
 
 import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
-import { Post } from "@/app/_interfaces/PostTableProps";
+import { Post } from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import Btn from "@/app/components/ui/Atom/Basic/Btn";
 import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
 
