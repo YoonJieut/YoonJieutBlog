@@ -9,11 +9,11 @@ interface ImgAndSubProps extends ChildrenProps, ClassNameProps {
 }
 
 /**
- * 이미지와 부제목을 포함하는 컨테이너 컴포넌트입니다.
+ * 이미지카드와 부가 설명을 포함하는 컨테이너 컴포넌트입니다.
  *
- * @param {string} imgClass - 이미지에 적용할 CSS 클래스 이름
- * @param {ReactNode} children - 이미지 아래에 표시할 자식 요소
- * @returns {JSX.Element} - 이미지와 부제목을 포함하는 컨테이너 컴포넌트
+ * @param {string} imgClass - 이미지카드에 적용할 CSS 클래스 이름 주로 넓이를 지정합니다. (예: w-3/8)
+ * @param {ReactNode} children - 컨테이너 오른쪽에 표시할 자식 요소
+ * @returns {JSX.Element} - 이미지카드와 부가 설명 컨테이너 컴포넌트
  *
  * @example
  * ```tsx
@@ -35,7 +35,7 @@ const ImgAndSub = ({ imgClass, children }: ImgAndSubProps) => {
         className={imgClass}
       />
 
-      <div className="imgSubTextArea">{children}</div>
+      <div className="imgSubTextArea w-2/5">{children}</div>
     </div>
   );
 };
