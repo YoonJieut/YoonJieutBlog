@@ -5,7 +5,7 @@ import React, { ReactNode, ButtonHTMLAttributes } from "react";
 
 interface ModalBtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   content?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 /**
