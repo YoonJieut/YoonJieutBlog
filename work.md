@@ -54,3 +54,5 @@
 <script src="https://cdn.tailwindcss.com"></script>
 라이브서버 형식으로 간단하게
 ```
+
+## 디렉토리 참고 및 하나의 모델 선정하기
