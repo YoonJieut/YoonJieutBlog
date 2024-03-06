@@ -2,7 +2,7 @@
 
 import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
 import { Post } from "@/app/_interfaces/PostTableProps";
-import Btn from "@/app/components/ui/atom/Basic/Btn";
+import Btn from "@/app/components/ui/Atom/Basic/Btn";
 import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
 
 export default function AdminPostsPage({

@@ -4,7 +4,7 @@
 // todo : 이미지 경로 설정할 것
 
 import Image from "next/image";
-import LargeText from "../atom/Logo/LargeText";
+import LargeText from "../Atom/Logo/LargeText";
 import FlowAni from "../../animation/FlowAni";
 
 export default function IntroduceLayout() {

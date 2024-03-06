@@ -1,4 +1,4 @@
-import Section from "../../atom/Basic/Section";
+import Section from "../../Atom/Basic/Section";
 import TextArea from "../../Molecules/Text/TextArea";
 import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
 const AboutMeTest: React.FC = () => {
