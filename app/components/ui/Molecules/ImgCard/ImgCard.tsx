@@ -9,6 +9,27 @@ interface ImgCardProps {
   className?: string;
 }
 
+/**
+ * 이미지 카드 컴포넌트입니다.
+ * @param {string} imgUrl - 이미지 URL
+ * @param {string} imgTitle - 이미지 제목
+ * @param {string} imgSub - 이미지 부제목
+ * @param {number} imgWidth - 이미지 너비
+ * @param {number} imgHeight - 이미지 높이
+ * @param {string} className - 추가 클래스명
+ * @example
+ * ```tsx
+ * <ImgCard
+ *   imgUrl="/path/to/image.jpg"
+ *   imgTitle="이미지 제목"
+ *   imgSub="이미지 부제목"
+ *   imgWidth={300}
+ *   imgHeight={200}
+ *   className="custom-class"
+ * />
+ * ```
+ */
+
 const ImgCard: React.FC<ImgCardProps> = ({
   imgUrl,
   imgTitle,
