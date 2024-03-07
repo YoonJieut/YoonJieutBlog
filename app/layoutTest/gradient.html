@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gradient-background {
+        /* 색상은 실제 이미지를 기반으로 조정해야 할 수 있습니다 */
+        background: radial-gradient(
+          circle at -70% -70%,
+          rgb(107, 44, 44),
+          rgb(7, 1, 44)
+        );
+        /* 전체 페이지를 채우도록 설정 */
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="gradient-background"></div>
+  </body>
+</html>
