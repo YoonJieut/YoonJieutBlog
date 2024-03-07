@@ -1,6 +1,6 @@
 import Section from "../../Atom/Basic/Section";
 import TextArea from "../../Molecules/Text/TextArea";
-import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
+
 const AboutMeTest: React.FC = () => {
   return (
     <div className="aboutMe flex gap-2 w-full h-full">
@@ -49,9 +49,18 @@ const AboutMeTest: React.FC = () => {
           </span>
         </TextArea>
       </Section>
-      <Section className="w-1/4 h-full OutLine"> </Section>
-      <Section className="w-1/4 h-full OutLine"> </Section>
-      <Section className="w-1/4 h-full OutLine"> </Section>
+      <Section className="w-1/4 h-full OutLine" style={{ filter: "blur(4px)" }}>
+        {" "}
+      </Section>
+      <Section className="w-1/4 h-full OutLine" style={{ filter: "blur(8px)" }}>
+        {" "}
+      </Section>
+      <Section
+        className="w-1/4 h-full OutLine"
+        style={{ filter: "blur(12px)" }}
+      >
+        {" "}
+      </Section>
     </div>
   );
 };
