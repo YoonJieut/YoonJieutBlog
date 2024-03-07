@@ -4,7 +4,10 @@
 
 import { useEffect, useState } from "react";
 import NewPostsPage from "./@newPosts/page";
-import { InteractPost, Post } from "@/app/_interfaces/PostTableProps";
+import {
+  InteractPost,
+  Post,
+} from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import AdminPostsPage from "./@adminPostsView/page";
 import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import postFetchJSON from "@/app/utils/frontend/postFetchJSON";

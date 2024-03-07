@@ -3,12 +3,11 @@ import {
   PostContentProps,
   PostIdProps,
   PostTitleProps,
-} from "@/app/_interfaces/PostTableProps";
+} from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import { shuffleArray } from "@/app/utils/suffleArray";
 
 // todo : 나중에 여기에 이미지를 추가해야 한다.
 // 그 이미지의 내용이 호버 됐을 때 크기가 조금씩 커지는 등의 상호작용도 넣을 예정
-
 
 interface PostItemProps
   extends PostIdProps,
