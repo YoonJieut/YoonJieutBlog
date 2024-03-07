@@ -7,10 +7,8 @@ import { useEffect, useState } from "react";
 
 const placeholders = [" Type here.", " Type here..", " Type here..."];
 
-export const CustomInputArea = (): JSX.Element => {
+export const CustomInputAreaVer2 = (): JSX.Element => {
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
-
-  // // todo : 나중에 인풋 내용에 따라 라우팅을 다르게 해야 한다.
   const [inputValue, setInputValue] = useState("");
 
   // 라우트 전용
@@ -36,6 +34,7 @@ export const CustomInputArea = (): JSX.Element => {
     outline: "none",
     background: "transparent",
     fontSize: "calc(100vw / 6)",
+    fontFamily: "Koulen",
     padding: "4px 8px",
     textAlign: "left",
     letterSpacing: "-0.03em",
@@ -46,7 +45,6 @@ export const CustomInputArea = (): JSX.Element => {
       // 페치로 배열가져오기
       fetchJSON("/api/cmdArray")
         .then((data) => {
-          console.log(data);
           if (checkWordInArray(inputValue, data)) {
             // 관리자 명령어가 있는 경우
             // todo : 보안적 측면으로 이 url이 나타나지 않는 형태로 한다.
@@ -68,7 +66,7 @@ export const CustomInputArea = (): JSX.Element => {
           id="customInput"
           style={inputStyles}
           placeholder={placeholders[currentPlaceholderIndex]}
-          className="flex items-center"
+          // className="flex items-center"
           onKeyPress={handleKeyPress}
           onChange={(e) => setInputValue(e.target.value)}
           autoFocus
