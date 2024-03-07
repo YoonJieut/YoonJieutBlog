@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Imbue:opsz,wght@10..100,100..900&family=Koulen&family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap");
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
