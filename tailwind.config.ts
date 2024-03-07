@@ -15,6 +15,10 @@ const config: Config = {
         justifyContent: "center",
         alignItems: "center",
       },
+      fontFamily: {
+        roboto: ["var(--roboto)"],
+        mono: ["var(--font-roboto-mono)"],
+      },
     },
     backgroundImage: {
       "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
