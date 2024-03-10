@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const MainFooter: React.FC = () => {
   return (
-    <footer className="w-full h-1/12 OutLine flex bg-d1 text-[12px] font-39 leading-4">
-      <div className="h-full w-2/12 flex flex-col ">
+    <footer className="w-full h-1/12 OutLine flex bg-sub-1 text-[12px] font-basic leading-4">
+      <div className="h-full w-2/12 flex flex-col font-main-1">
         <p>Web</p>
         <p>Developer</p>
       </div>
