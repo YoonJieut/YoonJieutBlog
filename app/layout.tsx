@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR, Koulen, Homemade_Apple } from "next/font/google";
+import { Noto_Sans_KR, Koulen, Homemade_Apple, Imbue } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 
@@ -29,6 +29,11 @@ const homemadeApple = Homemade_Apple({
   weight: "400",
   variable: "--font-homemade",
 });
+const imbue = Imbue({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-imbue",
+});
 
 export default function RootLayout({
   children,
@@ -44,7 +49,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable}`}
+        className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable} ${imbue.variable} noto`}
       >
         {children}
       </body>

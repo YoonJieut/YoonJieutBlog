@@ -1,5 +1,4 @@
 import { CustomInputAreaVer2 } from "./components/ui/Molecules/FetchInput/CustomInputAreaVer2";
-import { Noto_Sans_KR } from "next/font/google";
 
 export default function Home() {
   // return <EntryLayoutVer3 />;
@@ -12,10 +11,11 @@ export default function Home() {
           src="https://c.animaapp.com/5GL7mqk5/img/typehere---.png"
         />
         <CustomInputAreaVer2 />
-        <div className="">hello world</div>
+        <div className="homemadeApple">hello world</div>
         <div className="noto">Noto_Sans_KR</div>
         <div className="Noto">Noto_Sans_KR</div>
         <div className="koulen">Koulean</div>
+        <div className="imbue">Imbue</div>
         <div className="absolute w-[953px] h-[77px] top-[578px] left-[108px]">
           <div className="relative w-[957px] h-[69px] left-[-4px]">
             <img
