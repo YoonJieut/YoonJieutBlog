@@ -129,3 +129,35 @@ body {
 .h-1\/12 {
   height: 8.333333%;
 }
+
+/* 배경색 */
+.bg-39 {
+  background-color: #393939;
+}
+.font-39 {
+  color: #393939;
+}
+/* 메인 */
+.bg-4b {
+  background-color: #4b4b4b;
+}
+
+/* 메인-1 */
+.bg-95 {
+  background-color: #959595;
+}
+
+/* 서브 */
+.bg-c1 {
+  background-color: #c1c1c1;
+}
+
+/* 서브-1 */
+.bg-d1 {
+  background-color: #d1d1d1;
+}
+
+/* point */
+s .bg-point {
+  background-color: #f73b3b;
+}
