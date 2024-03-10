@@ -3,15 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: rgb(209, 209, 209);
+  --background-rgb: 57, 57, 57;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --collection-1-color: rgba(255, 255, 255, 1);
+  --color-basic: #393939;
+  --color-main: #4b4b4b;
+  --color-main-1: #959595;
+  --color-sub: #c1c1c1;
+  --color-sub-1: #d1d1d1;
+  --color-point: #f73b3b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: rgb(209, 209, 209);
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -19,12 +26,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  background: rgb(var(--background-rgb));
+  /* linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer components {
@@ -130,34 +138,46 @@ body {
   height: 8.333333%;
 }
 
-/* 배경색 */
-.bg-39 {
-  background-color: #393939;
+/* 배경색 #393939 */
+.bg-basic {
+  background-color: var(--color-basic);
 }
-.font-39 {
-  color: #393939;
+.font-basic {
+  color: var(--color-basic);
 }
-/* 메인 */
-.bg-4b {
-  background-color: #4b4b4b;
-}
-
-/* 메인-1 */
-.bg-95 {
-  background-color: #959595;
+.border-basic {
+  border-color: var(--color-basic);
 }
 
-/* 서브 */
-.bg-c1 {
-  background-color: #c1c1c1;
+/* #4b4b4b */
+.bg-main {
+  background-color: var(--color-main);
 }
 
-/* 서브-1 */
-.bg-d1 {
-  background-color: #d1d1d1;
+/* #959595 */
+.bg-main-1 {
+  background-color: var(--color-main-1);
+}
+.border-main-1 {
+  border-color: var(--color-main-1);
 }
 
-/* point */
-s .bg-point {
-  background-color: #f73b3b;
+/* #c1c1c1 */
+.bg-sub {
+  background-color: var(--color-sub);
+}
+
+/* #d1d1d1 */
+.bg-sub-1 {
+  background-color: var(--color-sub-1);
+}
+
+/* point #f73b3b */
+.bg-point {
+  background-color: var(--color-point);
+}
+
+/* ---------------------- custom */
+.shadow {
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
