@@ -3,18 +3,18 @@ import { Noto_Sans_KR, Koulen, Homemade_Apple, Imbue } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 
-export const metadata: Metadata = {
-  title: "YoonJieut",
-  description: "신입 프론트엔드 개발자 윤준현의 포트폴리오 사이트입니다.",
-};
-
 // import Font Awesome CSS
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
+export const metadata: Metadata = {
+  title: "YoonJieut",
+  description: "신입 프론트엔드 개발자 윤준현의 포트폴리오 사이트입니다.",
+};
+
 const noto = Noto_Sans_KR({
-  subsets: ["latin"], // 또는 preload: false
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-noto",
 });
@@ -30,7 +30,7 @@ const homemadeApple = Homemade_Apple({
   variable: "--font-homemade",
 });
 const imbue = Imbue({
-  subsets: ["latin"],
+  preload: false,
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-imbue",
 });
