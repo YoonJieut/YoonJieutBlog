@@ -1,6 +1,6 @@
 import { OnClickProps } from "@/app/_interfaces/common/CommomProps";
-import Btn from "../../Atom/Basic/Btn";
-import Div from "../../Atom/Basic/Div";
+import Btn from "@/app/components/ui/Atom/Basic/Btn";
+import Div from "@/app/components/ui/Atom/Basic/Div";
 
 /**
  * 좌우 화살표 버튼 컴포넌트입니다.
@@ -10,7 +10,7 @@ import Div from "../../Atom/Basic/Div";
  * // 사용 예시
  * <ArrowBtns prevOnClick={handlePrevClick} nextOnClick={handleNextClick} />
  */
-const ArrowBtns = ({
+const ArrowBtns: React.FC = ({
   prevOnClick,
   nextOnClick,
 }: {
@@ -18,9 +18,17 @@ const ArrowBtns = ({
   nextOnClick?: OnClickProps["onClick"];
 }) => {
   return (
-    <Div className="w-56 h-8 flex justify-between items-center">
-      <Btn content="<" className="text-5xl Imbue" onClick={prevOnClick} />
-      <Btn content=">" className="text-5xl Imbue" onClick={nextOnClick} />
+    <Div className="w-60 flex gap-24 text-[9.982rem] justify-between items-center koulen font-sub-1">
+      <Btn
+        content="<"
+        className="relative tracking-[-0.04em] leading-[101%]"
+        onClick={prevOnClick}
+      />
+      <Btn
+        content=">"
+        className="relative tracking-[-0.04em] leading-[101%]"
+        onClick={nextOnClick}
+      />
     </Div>
   );
 };

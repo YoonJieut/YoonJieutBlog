@@ -19,7 +19,6 @@ interface StackOuterProps {
  * ```tsx
  * <StackOuter pText="Hello, World!" divClassName="customClass">
  *   <div>Child Component 1</div>
- *   <div>Child Component 2</div>
  * </StackOuter>
  * ```
  */
@@ -28,7 +27,7 @@ const StackOuter: React.FC<StackOuterProps> = ({
   divClassName,
   children,
 }) => {
-  const divClass = `stackOuter border flexCenter py-1 px-4 ${divClassName}`;
+  const divClass = `stackOuter border flexCenter py-[3px] px-[10px] ${divClassName}`;
   return (
     <Div className={divClass}>
       {pText && <p>{pText}</p>}
