@@ -32,10 +32,10 @@ const MainFooter: React.FC = () => {
       </div>
       <div className="h-full w-3/12 flex flex-col">
         <div
-          className="aboutmeImg pt-1"
+          className="aboutmeImg pt-1 pointer"
+          // todo : window말고 다른 방법이 있을 건데
           onClick={() => {
-            console.log("hi");
-            // window.location.href = "/aboutme";
+            window.location.href = "/aboutme";
           }}
         >
           <Image
