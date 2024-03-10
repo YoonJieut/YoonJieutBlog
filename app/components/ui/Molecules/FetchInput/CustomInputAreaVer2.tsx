@@ -34,7 +34,6 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
     outline: "none",
     background: "transparent",
     fontSize: "calc(100vw / 6)",
-    fontFamily: "Koulen",
     padding: "4px 8px",
     textAlign: "left",
     letterSpacing: "-0.03em",
@@ -65,6 +64,7 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
         <input
           id="customInput"
           style={inputStyles}
+          className="koulen"
           placeholder={placeholders[currentPlaceholderIndex]}
           // className="flex items-center"
           onKeyPress={handleKeyPress}
