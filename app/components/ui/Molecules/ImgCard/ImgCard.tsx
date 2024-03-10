@@ -19,14 +19,7 @@ interface ImgCardProps {
  * @param {string} className - 추가 클래스명
  * @example
  * ```tsx
- * <ImgCard
- *   imgUrl="/path/to/image.jpg"
- *   imgTitle="이미지 제목"
- *   imgSub="이미지 부제목"
- *   imgWidth={300}
- *   imgHeight={200}
- *   className="custom-class"
- * />
+ * <ImgCard imgUrl="/path/to/image.jpg" imgTitle="이미지 제목" imgSub="이미지 부제목" imgWidth={300} imgHeight={200} className="custom-class" />
  * ```
  */
 
