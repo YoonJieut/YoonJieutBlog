@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
 :root {
   --foreground-rgb: rgb(209, 209, 209);
   --background-rgb: 57, 57, 57;
@@ -138,6 +147,12 @@ body {
 .h-1\/12 {
   height: 8.333333%;
 }
+.h-3\/7 {
+  height: 42.857143%;
+}
+.h-4\/7 {
+  height: 57.142857%;
+}
 
 /* 배경색 #393939 */
 .bg-basic {
@@ -177,6 +192,9 @@ body {
 }
 .font-sub-1 {
   color: var(--color-sub-1);
+}
+.border-sub-1 {
+  border-color: var(--color-sub-1);
 }
 
 /* 140,140,140 */
