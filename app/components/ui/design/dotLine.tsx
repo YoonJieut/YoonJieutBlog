@@ -1,18 +1,16 @@
-/**
- * DotLine 컴포넌트는 점으로 이루어진 수평 라인입니다.
- */
 const DotLine: React.FC = () => {
-  const dotColor1 = "#4B4B4B";
-  const dotColor2 = "#D1D1D1";
+  // const dotColor1 = "#4B4B4B";
+  // const dotColor2 = "#D1D1D1";
+  // const custom = `detailLine ${className} flex gap-4`;
 
   return (
-    <div className="detailLine flex gap-4">
-      <div className={`w-1 h-1 bg-${dotColor1}`}></div>
-      <div className={`w-1 h-1 bg-${dotColor1}`}></div>
-      <div className={`w-1 h-1 bg-${dotColor2}`}></div>
-      <div className={`w-1 h-1 bg-${dotColor2}`}></div>
-      <div className={`w-1 h-1 bg-${dotColor2}`}></div>
-      <div className={`w-1 h-1 bg-${dotColor2}`}></div>
+    <div className="detailLine flex gap-[14px] absolute top-[366px] left-[-22px] z-10 w-[500px] h-1">
+      <div className="w-1 h-1 bg-main"></div>
+      <div className="w-1 h-1 bg-main"></div>
+      <div className="w-1 h-1 bg-sub-1"></div>
+      <div className="w-1 h-1 bg-sub-1"></div>
+      <div className="w-1 h-1 bg-sub-1"></div>
+      <div className="w-full h-1 bg-sub-1"></div>
     </div>
   );
 };

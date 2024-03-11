@@ -8,7 +8,7 @@ import TextPfSummary from "@/app/components/ui/Molecules/Text/TextPfSummary";
 import PostTitle from "@/app/components/ui/design/PostTitle";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
 import ArrowBtns from "@/app/components/ui/Molecules/Buttons/ArrowBtns";
-import PfInfo from "@/app/components/ui/Molecules/Lists/PfInfo";
+import PfInfo from "@/app/components/ui/Molecules/Lists/PfInto";
 import TextAlignLeftOrRight from "@/app/components/ui/Atom/Basic/Flex";
 import TextAlign from "@/app/components/ui/Molecules/Text/TextAlign";
 import PfMenu from "../../components/ui/Molecules/Menu/PfMenu";
