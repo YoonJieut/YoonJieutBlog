@@ -10,7 +10,7 @@ export default function MainTestLayout({
       <body>
         <div
           id="MainRoot"
-          className="w-screen h-screen overflow-hidden flex flex-col p-2 space-y-2"
+          className="w-screen h-screen overflow-hidden flex flex-col p-2 space-y-[10px]"
         >
           {children}
           <MainFooter />
