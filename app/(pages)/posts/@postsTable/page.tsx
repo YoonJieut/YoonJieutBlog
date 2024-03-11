@@ -7,7 +7,6 @@ import {
   PostIdProps,
   PostTitleProps,
 } from "@/app/_interfaces/dbInterfaces/PostTableProps";
-import Link from "next/link";
 import PostsTableItem from "@/app/components/ui/Molecules/Lists/PostsTableItem";
 
 export interface Post
@@ -27,7 +26,7 @@ export default function PostsTable() {
   }, []);
 
   return (
-    <ul className="postsTable w-2/3 h-full flex flex-col space-y-14 overflow-y-scroll overflow-x-hidden">
+    <ul className="postsTable w-full h-full flex flex-col space-y-8 overflow-y-scroll overflow-x-hidden">
       {posts.map((post) => (
         <PostsTableItem key={post.id} post={post} />
       ))}

@@ -17,20 +17,21 @@ interface PostsTableProps {
 // Todo : id대신 나중에 이미지로 만든다.
 const PostsTableItem: React.FC<PostsTableProps> = ({ post }) => {
   return (
-    <li key={post.id} className="border-t border-t-zinc-900 text-left">
+    <li
+      key={post.id}
+      className="border-t border-sub-1 text-left text-[14px] leading-tight"
+    >
       <Link
         href={`/posts/${post.id}`}
         key={post.id}
-        className="flex justify-between items-start gap-2 leading-6 pt-4"
+        className="flex justify-between items-start gap-2 leading-6 pt-2"
       >
         <div className="w-1/12">{post.id}.</div>
-        <div className="w-1/3 font-bold hover:underline text-xl">
-          {post.title}
-        </div>
-        <div className="w-full">{post.content}</div>
+        <div className="w-1/3 hover:underline">{post.title}</div>
+        <div className="w-full leading-tight text-[13px]">{post.content}</div>
         <div className="w-1/4 flexCenter">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded border border-zinc-900"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-0 px-3 rounded border border-sub-1"
             title="Go to Post"
           >
             <FontAwesomeIcon icon={faArrowRight} style={{ color: "#c1c1c1" }} />
