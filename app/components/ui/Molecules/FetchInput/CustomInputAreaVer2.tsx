@@ -29,14 +29,11 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
   }, []);
 
   const inputStyles = {
-    width: "100%",
-    height: "100%",
-    outline: "none",
     background: "transparent",
     fontSize: "calc(100vw / 6)",
-    padding: "4px 8px",
     textAlign: "left",
     letterSpacing: "-0.03em",
+    outline: "none",
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -64,9 +61,8 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
         <input
           id="customInput"
           style={inputStyles}
-          className="koulen"
+          className="koulen w-3/4 h-1/12 font-sub-1"
           placeholder={placeholders[currentPlaceholderIndex]}
-          // className="flex items-center"
           onKeyPress={handleKeyPress}
           onChange={(e) => setInputValue(e.target.value)}
           autoFocus
