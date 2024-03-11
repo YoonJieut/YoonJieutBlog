@@ -5,7 +5,7 @@ import fetchJSON from "@/app/utils/frontend/fetchJSON";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const placeholders = [" Type here.", " Type here..", " Type here..."];
+const placeholders = ["Type here.", "Type here..", "Type here..."];
 
 export const CustomInputAreaVer2 = (): JSX.Element => {
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
@@ -30,10 +30,11 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
 
   const inputStyles = {
     background: "transparent",
-    fontSize: "calc(100vw / 6)",
+    fontSize: "257px",
     textAlign: "left",
     letterSpacing: "-0.03em",
     outline: "none",
+    padding: "0px",
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -56,12 +57,12 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full flex p-4 items-end justify-center">
+    <div className="w-full ml-10">
       <label htmlFor="customInput" title="CustomInput">
         <input
           id="customInput"
           style={inputStyles}
-          className="koulen w-3/4 h-1/12 font-sub-1"
+          className="koulen w-3/4 font-sub-1"
           placeholder={placeholders[currentPlaceholderIndex]}
           onKeyPress={handleKeyPress}
           onChange={(e) => setInputValue(e.target.value)}

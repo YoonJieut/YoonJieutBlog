@@ -12,7 +12,7 @@ body {
 }
 
 :root {
-  --foreground-rgb: rgb(209, 209, 209);
+  --foreground-rgb: #d1d1d1;
   --background-rgb: 57, 57, 57;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -79,6 +79,16 @@ body {
   background: #1c1c1c; /* 호버 시 메인 색상으로 변경 */
   transition: background-color 0.3s; /* 배경색 변경 트랜지션 */
 }
+
+/* placeholder */
+
+/* input::placeholder {
+  background: transparent;
+  font-size: calc(100vw / 6);
+  text-align: left;
+  letter-spacing: -0.03em;
+  line-height: -0.5em;
+} */
 
 /* Firefox를 위한 스크롤바 스타일 */
 * {
