@@ -64,7 +64,7 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
           id="content"
           value={content}
           onChange={handleContentChange}
-          className="text-zinc-900 border border-1 border-black block h-64 p-1"
+          className="text-zinc-900 border border-1 border-black block h-[10rem] overflow-scroll p-1"
         />
       </div>
       <Btn
