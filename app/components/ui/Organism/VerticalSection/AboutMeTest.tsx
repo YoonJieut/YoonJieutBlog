@@ -4,7 +4,7 @@ import AboutMePf from "./AboutMePf";
 const AboutMeTest: React.FC = () => {
   return (
     <div className="aboutMe flex gap-2 w-full h-full">
-      <Section className="w-1/4 h-full OutLine p-4 flex flex-col gap-10 bg-sub-1 font-basic">
+      <Section className="w-1/4 h-full  p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
         <div className="w-full relative flex flex-row items-start justify-between text-left text-[0.75rem] text-darkslategray font-noto-sans-kr">
           <div className="w-[10.188rem] relative h-[8.063rem]">
             <div className="absolute top-[2.25rem] left-[0rem] w-[10.188rem] h-[5.813rem]">
@@ -35,6 +35,7 @@ const AboutMeTest: React.FC = () => {
               </b>
             </div>
           </div>
+          <Image src />
           <img
             className="w-[7.313rem] relative h-[9.688rem] object-cover"
             alt="윤준현의 프로필사진입니다"
@@ -107,11 +108,11 @@ const AboutMeTest: React.FC = () => {
       </Section>
       <AboutMePf />
       <Section
-        className="w-1/4 h-full OutLine"
+        className="w-1/4 h-full "
         style={{ backdropFilter: "blur(12px)" }}
       ></Section>
       <Section
-        className="w-1/4 h-full OutLine"
+        className="w-1/4 h-full "
         style={{ backdropFilter: "blur(20x)" }}
       ></Section>
     </div>

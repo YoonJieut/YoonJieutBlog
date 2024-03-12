@@ -18,7 +18,7 @@ const PfItemsLayout = ({
 }) => {
   return (
     <div className="flex w-screen h-screen overflow-x-hidden p-4">
-      <div className="menuPart w-1/2 h-full OutLine flex flex-col gap-4">
+      <div className="menuPart w-1/2 h-full  flex flex-col gap-4">
         <ArrowBtns />
         <H1 className="koulen" text={title} />
       </div>

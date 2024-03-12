@@ -26,13 +26,13 @@ const PfList: React.FC<PortfolioTempProps> = ({
   children,
 }) => {
   return (
-    <div className="OutLine flex w-3/4">
+    <div className=" flex w-3/4">
       {/* clamp() 함수를 사용하여 텍스트 크기가 반응형으로 조절되도록 설정합니다. */}
-      <div className="OutLine flex-1 text-[clamp(2rem,15vw,15rem)] font-bold leading-tight flex items-center justify-end Ambue">
+      <div className=" flex-1 text-[clamp(2rem,15vw,15rem)] font-bold leading-tight flex items-center justify-end Ambue">
         {index}
       </div>
 
-      <div className="OutLine w-2/3 h-full flex flex-col gap-4 p-4 justify-center">
+      <div className=" w-2/3 h-full flex flex-col gap-4 p-4 justify-center">
         <H3 text="프로젝트1" />
         {children}
         <Ul className="flex gap-3">

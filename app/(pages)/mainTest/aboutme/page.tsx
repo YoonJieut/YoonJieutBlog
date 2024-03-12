@@ -2,7 +2,7 @@ import AboutMeTest from "../../../components/ui/Organism/VerticalSection/AboutMe
 
 export default function AboutMeTestPage() {
   return (
-    <main className="h-full w-full OutLine flexCenter">
+    <main className="h-full w-full  flexCenter">
       <AboutMeTest />
     </main>
   );

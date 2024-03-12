@@ -1,7 +1,7 @@
 import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
 export default function IntroduceTestPage() {
   return (
-    <main className="h-full w-full OutLine flexCenter gap-10">
+    <main className="h-full w-full  flexCenter gap-10">
       <div className="introduceOutBox flexCenter w-3/4 gap-40">
         <ImgCard
           imgUrl="/images/textCursor.png"
@@ -10,7 +10,7 @@ export default function IntroduceTestPage() {
           imgWidth={400}
           imgHeight={400}
         />
-        <div className="introduceMySelf OutLine p-4 flex flex-col space-y-4 w-1/2">
+        <div className="introduceMySelf  p-4 flex flex-col space-y-4 w-1/2">
           {/* 수정 필요 */}
           <h3 className="Imbue text-2xl font-bold">
             한 가지에 빠지면 선택과 집중을 통해 몰두해 보겠다는 마음.

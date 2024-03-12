@@ -15,7 +15,7 @@ export default function PostsPage() {
 
   return (
     <main className="postsMain w-full h-full flex justify-between bg-main overflow-hidden mb-[10px]">
-      <div className="w-5/12 OutLine">
+      <div className="w-5/12 ">
         <PostTitle />
       </div>
       <div className="w-7/12 pt-5">

@@ -7,19 +7,15 @@ const Flex: React.FC<FlexProps> = ({ children, align }) => {
   return (
     <>
       {align === "left" && (
-        <div className="OutLine w-full flex justify-start items-start">
-          {children}
-        </div>
+        <div className=" w-full flex justify-start items-start">{children}</div>
       )}
 
       {align === "right" && (
-        <div className="OutLine w-full flex justify-end items-end">
-          {children}
-        </div>
+        <div className=" w-full flex justify-end items-end">{children}</div>
       )}
 
       {align === "between" && (
-        <div className="OutLine w-full flex justify-between items-start">
+        <div className=" w-full flex justify-between items-start">
           {children}
         </div>
       )}
