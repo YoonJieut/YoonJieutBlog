@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Section from "../../Atom/Basic/Section";
 import AboutMePf from "./AboutMePf";
+import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
 
 const AboutMeTest: React.FC = () => {
   return (
-    <div className="aboutMe flex gap-2 w-full h-full">
+    <div className="aboutMe flex gap-2 w-full h-full relative">
       <Section className="w-1/4 h-full  p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
         <div className="w-full relative flex flex-row items-start justify-between text-left text-[0.75rem] text-darkslategray font-noto-sans-kr">
           <div className="w-[10.188rem] relative h-[8.063rem]">
@@ -35,11 +37,11 @@ const AboutMeTest: React.FC = () => {
               </b>
             </div>
           </div>
-          <Image src />
-          <img
-            className="w-[7.313rem] relative h-[9.688rem] object-cover"
+          <Image
+            src="/images/kakao-talk-202402182120487351.png"
             alt="윤준현의 프로필사진입니다"
-            src="/public/images/kakao-talk-202402182120487351.png"
+            width={120}
+            height={155}
           />
         </div>
         {/* 기술 */}
@@ -68,7 +70,7 @@ const AboutMeTest: React.FC = () => {
             <div className="absolute h-[3.7%] w-full top-[96.3%] right-[0%] bottom-[0%] left-[0%] bg-darkslategray" />
             <b className="absolute top-[0%] left-[0%] leading-[101%]">교육</b>
           </div>
-          <div className="w-[18.375rem] relative text-[0.75rem] leading-[184%] inline-block h-[6.391rem] shrink-0">
+          <div className="w-[18.375rem] relative text-[0.75rem] leading-[184%] inline-block shrink-0">
             <p className="m-0">지역인재양성을 위한 IaaS기반 웹 서비스</p>
             <p className="m-0">(Reat,Node,Next,MLOps)개발자 과정</p>
             <p className="m-0">2023.08 ~ 2024.03</p>
@@ -108,13 +110,14 @@ const AboutMeTest: React.FC = () => {
       </Section>
       <AboutMePf />
       <Section
-        className="w-1/4 h-full "
+        className="w-1/4 h-full bg-basic border border-lightgray"
         style={{ backdropFilter: "blur(12px)" }}
       ></Section>
       <Section
-        className="w-1/4 h-full "
+        className="w-1/4 h-full bg-basic-1 border border-lightgray"
         style={{ backdropFilter: "blur(20x)" }}
       ></Section>
+      <AboutMeBackText className="absolute bottom-[0%] right-[0%] -z-10" />
     </div>
   );
 };

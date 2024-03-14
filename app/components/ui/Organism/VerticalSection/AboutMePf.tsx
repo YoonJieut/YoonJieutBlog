@@ -10,7 +10,7 @@ const AboutMePf: NextPage = () => {
         <b className="absolute top-[0%] left-[0%] leading-[101%]">포트폴리오</b>
       </div>
       {/* pf1 */}
-      <div className="w-[21.063rem] flex flex-col items-start justify-start gap-[0.625rem_0rem] cursor-pointer">
+      <div className="w-[21.063rem] flex flex-col items-start justify-start gap-[0.625rem] cursor-pointer">
         <div className="w-full h-[2.841rem] flex flex-col items-start justify-start gap-[0.313rem]">
           <b className="relative tracking-[-0.05em] leading-[101%]">
             YOONJIEUT

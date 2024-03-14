@@ -163,6 +163,10 @@ body {
 .h-4\/7 {
   height: 57.142857%;
 }
+/* 배경색 #29 */
+.bg-basic-1 {
+  background-color: #292929;
+}
 
 /* 배경색 #393939 */
 .bg-basic {
