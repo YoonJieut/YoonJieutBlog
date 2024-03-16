@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Section from "../../Atom/Basic/Section";
-import AboutMePf from "./AboutMePf";
+import Section from "@/app/components/ui/Atom/Basic/Section";
+import AboutMePf from "@/app/components/ui/Organism/VerticalSection/AboutMePf";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
 
-const AboutMeTest: React.FC = () => {
+const AboutmePage: React.FC = () => {
   return (
     <div className="aboutMe flex gap-2 w-full h-full relative">
       <Section className="w-1/4 h-full  p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
@@ -115,11 +115,11 @@ const AboutMeTest: React.FC = () => {
       ></Section>
       <Section
         className="w-1/4 h-full bg-basic-1 border border-lightgray"
-        style={{ backdropFilter: "blur(20x)", opacity: "50%" }}
+        style={{ backdropFilter: "blur(12px)", opacity: "50%" }}
       ></Section>
       <AboutMeBackText className="absolute bottom-[0%] right-[0%] -z-10" />
     </div>
   );
 };
 
-export default AboutMeTest;
+export default AboutmePage;

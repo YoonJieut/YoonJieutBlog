@@ -7,3 +7,4 @@ const AboutMeBackText: NextPage<ClassNameProps> = ({ className }) => {
 };
 
 export default AboutMeBackText;
+``;
