@@ -1,8 +1,8 @@
-import AboutMeTest from "../../../components/ui/Organism/VerticalSection/AboutMeTest";
+import AboutMeTest from "@/app/components/ui/design/AboutMeBackText";
 
 export default function AboutMeTestPage() {
   return (
-    <main className="h-full w-full  flexCenter">
+    <main className="h-full w-full flexCenter">
       <AboutMeTest />
     </main>
   );
