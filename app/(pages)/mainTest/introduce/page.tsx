@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import IntroduceLayout from "../../../components/ui/Temp/IntroduceLayout";
 
-
 export default function IntroduceTestPage() {
   return (
     <main className="h-full w-full flex px-[100px] Testing">
@@ -17,9 +16,9 @@ export default function IntroduceTestPage() {
           />
         </Link>
       </Section>
-      <Section className="rightIntro relativek h-full flex flex-col">
-        <IntroduceLayout />
-        <LargeImgCard />
+      <Section className="rightIntro relative h-full flex flex-col">
+        <IntroduceTestPage />
+        {/* <LargeImgCard /> */}
       </Section>
     </main>
   );
