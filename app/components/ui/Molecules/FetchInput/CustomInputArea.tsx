@@ -1,7 +1,7 @@
 "use client";
 
 import { checkWordInArray } from "@/app/utils/checkWordInArray";
-import fetchJSON from "@/app/utils/frontend/fetchJSON";
+import fetchJSON from "@/app/utils/frontend/fetch/fetchJSON";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

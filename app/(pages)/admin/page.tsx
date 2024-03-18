@@ -9,10 +9,10 @@ import {
   Post,
 } from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import AdminPostsPage from "./@adminPostsView/page";
-import fetchJSON from "@/app/utils/frontend/fetchJSON";
-import postFetchJSON from "@/app/utils/frontend/postFetchJSON";
+import fetchJSON from "@/app/utils/frontend/fetch/fetchJSON";
+import postFetchJSON from "@/app/utils/frontend/fetch/postFetchJSON";
 import PatchPostsPage from "./@adminPostsPatch/page";
-import customFetchJSON from "@/app/utils/frontend/customFetchJSON";
+import customFetchJSON from "@/app/utils/frontend/fetch/customFetchJSON";
 export default function AdminPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   // 작성법에 놀라지 마라, 훅으로 생긴 제네릭과 소괄호의 콜라보

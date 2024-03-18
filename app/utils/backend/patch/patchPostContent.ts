@@ -1,7 +1,7 @@
 //app/utils/backend/patchPostContent.ts
 // 해당 코드는 postId를 사용하여 해당 게시물의 제목과 내용을 업데이트하는 함수
 
-import dbQuery from "../dbConnect";
+import dbQuery from "../../dbConnect";
 
 /**
  * 게시물 내용을 업데이트하는 함수입니다.

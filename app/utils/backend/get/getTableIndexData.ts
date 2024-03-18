@@ -1,9 +1,9 @@
 //app/utils/getTableIndexData.ts
 // fetch
 
-import dbQuery from "../dbConnect";
+import dbQuery from "../../dbConnect";
 import { Request, Response } from "express";
-import extractTableAndIndex from "../extractTableAndIndex";
+import extractTableAndIndex from "../../extractTableAndIndex";
 
 /**
  * 엔드포인트를 기반으로 테이블과 인덱스를 자동으로 참조, 해당 데이터를 가져오는 함수

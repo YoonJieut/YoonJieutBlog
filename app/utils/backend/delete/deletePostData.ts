@@ -1,7 +1,7 @@
 // app/utils/backend/deletePostData.ts
 // 해당 함수는 포스트 데이터를 삭제하는 함수입니다.
 
-import dbQuery from "../dbConnect";
+import dbQuery from "../../dbConnect";
 import { Request, Response } from "express";
 
 /**
