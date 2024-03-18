@@ -40,7 +40,7 @@ const ImgCard: React.FC<ImgCardProps> = ({
   const classNameProps = `imgCard ${className}`;
   return (
     <Div className={classNameProps}>
-      <Div className="imgArea Testing flex justify-end">
+      <Div className="imgArea flex justify-center items-center">
         <Image src={imgUrl} alt={imgAlt} width={imgWidth} height={imgHeight} />
       </Div>
       <Ul className="imgSubBar flex justify-between items-center h-8 border-t border-t-zinc-900">
