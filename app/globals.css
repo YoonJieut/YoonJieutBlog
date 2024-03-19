@@ -211,6 +211,11 @@ body {
   border-color: var(--color-sub-1);
 }
 
+/* #565656 */
+.bg-56 {
+  background-color: #565656;
+}
+
 /* 140,140,140 */
 .font-sub-2 {
   color: var(--color-sub-2);
