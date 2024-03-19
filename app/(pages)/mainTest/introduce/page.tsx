@@ -2,12 +2,11 @@ import Section from "@/app/components/ui/Atom/Basic/Section";
 import Image from "next/image";
 import Link from "next/link";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
-import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
-import DetailLine from "@/app/components/ui/design/DetailLine";
+import IntrodcueCircle from "../../../components/ui/design/IntroduceCircle";
 
 export default function IntroduceTestPage() {
   return (
-    <main className="h-full w-full flex px-[100px] Testing">
+    <main className="h-full w-full flex px-[100px] border border-sub-1 overflow-hidden">
       <Section className="leftIntro flex items-center w-1/2 h-full">
         <Link href={"/mainTest/aboutme"}>
           <Image
@@ -18,15 +17,15 @@ export default function IntroduceTestPage() {
           />
         </Link>
       </Section>
-      <Section className="rightIntro relative w-1/2 h-full flex flex-col justify-center items-end gap-16">
+      <Section className="rightIntro relative w-1/2 h-full flex flex-col items-end gap-14">
         {/* todo : 버튼에 따라 이미지가 달라져야 한다. */}
+        {/* 컴포넌트화 해야한다. */}
         <IntroMenu></IntroMenu>
-
         <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 Testing">
           <Image
             src="/images/entry.png"
             alt="이미지 설명"
-            width={420}
+            width={450}
             height={220}
             className="ImageCardImg Testing flex justify-end"
           />
@@ -39,6 +38,7 @@ export default function IntroduceTestPage() {
             </p>
           </div>
         </div>
+        <IntrodcueCircle />
       </Section>
     </main>
   );
