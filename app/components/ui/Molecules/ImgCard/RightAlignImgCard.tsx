@@ -29,7 +29,7 @@ const RightAlignImgCard: React.FC<RightAlignImgCardProps> = ({
 }) => {
   return (
     <div
-      className={`rightAlignImgCard flex flex-col justify-end items-end gap-4 ${className}`}
+      className={`rightAlignImgCard flex flex-col justify-end items-end gap-5 ${className}`}
     >
       <Image
         src={imgUrl}
@@ -38,7 +38,7 @@ const RightAlignImgCard: React.FC<RightAlignImgCardProps> = ({
         height={Number(imgHeight)}
       />
       <div className="ImageCardTextArea max-w-[600px]">
-        <p className="text-right leading-7 text-[14px]">{content}</p>
+        <p className="text-right leading-8 text-[14px]">{content}</p>
       </div>
     </div>
   );
