@@ -5,7 +5,7 @@ import GithubBtn from "../../components/ui/Molecules/Buttons/GithubBtn";
 import { useState } from "react";
 import PostsListContainer from "./@postListContainer/page";
 import MenuNav from "@/app/components/ui/Organism/Footer/MenuNav";
-import IntroduceLayout from "@/app/components/ui/Temp/IntroduceLayout";
+import IntroduceLayout from "@/app/components/ui/Temp/introduce/IntroduceLayout";
 
 export default function MainPage() {
   const [isHovered, setIsHovered] = useState(false);
