@@ -7,7 +7,9 @@ const AboutMePf: NextPage = () => {
     <div className="w-1/4 h-[53.875rem] relative bg-darkgray [backdrop-filter:blur(10px)] box-border overflow-y-scroll overflow-hidden flex flex-col items-start justify-start p-[1.25rem] gap-[3.75rem_0rem] text-left text-[1rem] text-lightgray font-noto-sans-kr border-[1px] border-solid border-lightgray">
       <div className="w-[10rem] relative h-[1.688rem]">
         <div className="absolute h-[3.7%] w-full top-[96.3%] right-[0%] bottom-[0%] left-[0%] bg-lightgray" />
-        <b className="absolute top-[0%] left-[0%] leading-[101%]">포트폴리오</b>
+        <b className="absolute top-[0%] left-[0%] leading-[101%] ">
+          포트폴리오
+        </b>
       </div>
       {/* pf1 */}
       <div className="w-[21.063rem] flex flex-col items-start justify-start gap-[0.625rem] cursor-pointer">
