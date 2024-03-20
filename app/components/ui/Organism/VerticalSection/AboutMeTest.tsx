@@ -17,6 +17,7 @@ const AboutMeTest: React.FC = () => {
                 </p>
                 <p className="m-0">
                   <a
+                    rel="noreferrer noopener" // . noopener 속성을 사용하면 새 창에서 열린 문서가 원래 문서에 대한 참조를 가지지 않게 함
                     className="text-[inherit] whitespace-pre-wrap"
                     href="https://github.com/YoonJieut"
                     target="_blank"

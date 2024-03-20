@@ -2,11 +2,12 @@ import Image from "next/image";
 import Section from "@/app/components/ui/Atom/Basic/Section";
 import AboutMePf from "@/app/components/ui/Organism/VerticalSection/AboutMePf";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
+import AboutMeSection from "../../Organism/VerticalSection/AboutMeSection";
 
 const AboutmePage: React.FC = () => {
   return (
     <div className="aboutMe flex gap-2 w-full h-full relative">
-      <Section className="w-1/4 h-full  p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
+      <Section className="w-1/4 h-full p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
         <div className="w-full relative flex flex-row items-start justify-between text-left text-[0.75rem] text-darkslategray font-noto-sans-kr">
           <div className="w-[10.188rem] relative h-[8.063rem]">
             <div className="absolute top-[2.25rem] left-[0rem] w-[10.188rem] h-[5.813rem]">
@@ -16,7 +17,10 @@ const AboutmePage: React.FC = () => {
                   현 재 지 역 : 대전yoonjieut@Gmail
                 </p>
                 <p className="m-0">
+                  {/* . noopener 속성을 사용하면 새 창에서 열린 문서가 원래 문서에 대한 참조를 가지지 않게 함 */}
+                  {/* HTTP 리퍼러 헤더는 사용자가 어떤 웹 페이지에서 링크를 클릭했는지를 나타내는 정보를 차단하는 noreferrer를 사용 */}
                   <a
+                    rel="noreferrer noopener"
                     className="text-[inherit] whitespace-pre-wrap"
                     href="https://github.com/YoonJieut"
                     target="_blank"
@@ -52,7 +56,7 @@ const AboutmePage: React.FC = () => {
           </div>
           <div className="w-[18.375rem] relative h-[5.5rem] text-[0.75rem]">
             <div className="absolute h-[85.22%] w-full top-[0%] left-[0%] leading-[94%] inline-block">
-              <p className="m-0">
+              <p className="m-0 ">
                 FrontEnd : React, TypeScript, JavaScrpt, HTML, CSS
               </p>
               <p className="m-0">&nbsp;</p>
@@ -109,15 +113,12 @@ const AboutmePage: React.FC = () => {
         </div>
       </Section>
       <AboutMePf />
-      <Section
-        className="w-1/4 h-full bg-basic border border-lightgray"
-        style={{ backdropFilter: "blur(12px)", opacity: "50%" }}
-      ></Section>
-      <Section
-        className="w-1/4 h-full bg-basic-1 border border-lightgray"
-        style={{ backdropFilter: "blur(12px)", opacity: "50%" }}
-      ></Section>
-      <AboutMeBackText className="absolute bottom-[0%] right-[0%] -z-10" />
+
+      <AboutMeSection rgbInt={57} blurPx={11} />
+
+      <AboutMeSection rgbInt={41} blurPx={12} />
+
+      <AboutMeBackText className="absolute bottom-[-9%] right-[1%] -z-10" />
     </div>
   );
 };
