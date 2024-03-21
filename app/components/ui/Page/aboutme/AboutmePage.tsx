@@ -64,7 +64,7 @@ const AboutmePage: React.FC = () => {
               <p className="m-0">&nbsp;</p>
               <p className="m-0">DataBase : MySQL, MariaDB, MongoDB</p>
               <p className="m-0">&nbsp;</p>
-              <p className="m-0">ETC : Git</p>
+              <p className="m-0">ETC : Git, Figma</p>
             </div>
           </div>
         </div>
