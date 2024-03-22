@@ -225,6 +225,9 @@ body {
 .bg-point {
   background-color: var(--color-point);
 }
+.font-point {
+  color: var(--color-point);
+}
 
 /* ---------------------- custom */
 .shadow {

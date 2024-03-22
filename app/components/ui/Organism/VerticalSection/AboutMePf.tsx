@@ -53,7 +53,7 @@ const AboutMePf: NextPage = () => {
           <b className="relative tracking-[-0.05em] leading-[101%]">
             스타크 래프트 ERP
           </b>
-          <div className="relative w-full text-[0.75rem] tracking-[-0.05em] leading-[114%]">
+          <div className="relative w-full  text-[0.75rem] tracking-[-0.05em] leading-[114%]">
             <p className="m-0 whitespace-pre-wrap">{`EPR 시스템을 스타크래프트 테마로  작업하며  팀원 간 협업, `}</p>
             <p className="m-0">DB 설계와 기획에 대해 배울 수 있었습니다.</p>
           </div>
