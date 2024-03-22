@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Div from "@/app/components/ui/Atom/Basic/Div";
-import Ul from "@/app/components/ui/Atom/Basic/Ul";
-import Li from "@/app/components/ui/Atom/Basic/Li";
+import Div from "@/app/components/ui/atom/Basic/Div";
+import Ul from "@/app/components/ui/atom/Basic/Ul";
+import Li from "@/app/components/ui/atom/Basic/Li";
 
 interface ImgCardProps {
   imgUrl: string;
@@ -41,7 +41,12 @@ const ImgCard: React.FC<ImgCardProps> = ({
   return (
     <Div className={classNameProps}>
       <Div className="imgArea flex justify-center items-center">
-        <Image src={imgUrl} alt={imgAlt} width={imgWidth} height={imgHeight} />
+        <Image
+          src={imgUrl}
+          alt={imgAlt}
+          width={Number(imgWidth)}
+          height={Number(imgHeight)}
+        />
       </Div>
       <Ul className="imgSubBar flex justify-between items-center h-8 border-t border-t-zinc-900">
         <Li className="imgSubBarTitle text-left opacity-45  active:opacity-100 duration-200">
