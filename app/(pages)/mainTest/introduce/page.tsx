@@ -1,4 +1,4 @@
-import Section from "@/app/components/ui/Atom/Basic/Section";
+import Section from "@/app/components/ui/atom/Basic/Section";
 import Image from "next/image";
 import Link from "next/link";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
@@ -8,7 +8,7 @@ export default function IntroduceTestPage() {
   return (
     <main className="h-full w-full flex px-[100px] border border-sub-1 overflow-hidden">
       <Section className="leftIntro flex items-center w-1/2 h-full">
-        <Link href={"/mainTest/aboutme"}>
+        <Link href="/mainTest/aboutme">
           <Image
             src={"/images/kakao-talk-202402182120487351.png"}
             alt="웹 개발자 윤준현입니다."
