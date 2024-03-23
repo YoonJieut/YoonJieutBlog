@@ -3,6 +3,7 @@ import DotLine from "@/app/components/ui/design/dotLine";
 import ImgCard from "../Molecules/ImgCard/ImgCard";
 import Image from "next/image";
 import MainBanner from "../Molecules/Title/MainBanner";
+import WelcomePart from "../Molecules/etc/WelcomePart";
 // component/main/IntroduceLayoutTest.tsx
 // 위쪽 상단, 자신을 소개하는 레이아웃입니다.
 
@@ -11,30 +12,7 @@ export default function IntroduceLayoutTest() {
     <div className="introLayout w-full h-full flex justify-between overflow-hidden">
       <Section className="leftImgSection w-4/5 h-full bg-basic relative">
         {/* 배경 flowAni */}
-        <div
-          className="absolute z-20 left-[-154px] top-[18rem]"
-          style={{
-            transform: "rotate(-40deg)",
-            transformOrigin: "left top",
-          }}
-        >
-          {Array.from({ length: 4 }).map((_, index) => (
-            <p
-              key={index}
-              className={`WelcomeTxt homemadeApple text-[12.5rem]`}
-              style={{
-                lineHeight: "1.1",
-                width: "fit-content",
-                height: "fit-content",
-                whiteSpace: "nowrap", // Add this line to remove line breaks
-                marginLeft: `${(index + 1) * 12}rem`,
-                opacity: `${(Array.from({ length: 4 }).length - index) * 0.1}`,
-              }}
-            >
-              Welcome Welcome
-            </p>
-          ))}
-        </div>
+        <WelcomePart />
         {/* z-10의 가리는 여백 디자인 */}
         <div className="SpaceDiv w-full h-4/7 bg-basic absolute bottom-0 left-0  z-20"></div>
       </Section>
