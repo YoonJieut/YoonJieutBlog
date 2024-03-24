@@ -1,8 +1,8 @@
 import Section from "@/app/components/ui/atom/Basic/Section";
 import DotLine from "@/app/components/ui/design/dotLine";
-import Image from "next/image";
 import MainBanner from "../Molecules/Title/MainBanner";
 import WelcomePart from "../Molecules/etc/WelcomePart";
+import IntroImgCard from "@/app/components/ui/Molecules/ImgCard/IntroImgCard";
 // component/main/IntroduceLayoutTest.tsx
 // 위쪽 상단, 자신을 소개하는 레이아웃입니다.
 
@@ -25,20 +25,8 @@ export default function IntroduceLayoutTest() {
           <DotLine />
         </div>
         <div className="rightBottom w-full relative h-4/7 p-9">
-          <div className="flex flex-col items-end gap-4">
-            <Image
-              src="/images/kakao-talk-202402182120487351.png"
-              alt="개인 포트폴리오 사이트입니다."
-              width={150}
-              height={244}
-            />
-            <p className="text-[12px] leading-5 w-44 text-right">
-              안녕하세요! <br />
-              입체적인 <br />
-              노력을 아끼지 않는 <br />
-              프론트엔드 개발자 윤준현입니다.
-            </p>
-          </div>
+          {/* 이미지 카드 파트 */}
+          <IntroImgCard />
         </div>
       </Section>
     </div>
