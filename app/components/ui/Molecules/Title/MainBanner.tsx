@@ -12,7 +12,7 @@ const MainBanner = () => {
 
   return (
     <div
-      className="mainBannerOuter absolute right-0 bottom-0"
+      className="mainBannerOuter absolute right-0 bottom-0 w-fit h-fit Testing"
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >
@@ -24,7 +24,7 @@ const MainBanner = () => {
 
       <p
         className={`mainBannerRed text-[16rem] koulen leading-[0.8] tracking-tight absolute z-30 font-point opacity-10 transition-all duration-200 ${
-          isHovered ? "right-0 bottom-0" : "right-3 bottom-5"
+          isHovered ? "right-0 bottom-0" : "right-2 bottom-4"
         }`}
       >
         YoonJieut
@@ -32,7 +32,7 @@ const MainBanner = () => {
 
       <p
         className={`mainBannerGhost text-[16rem] koulen leading-[0.8] tracking-tight absolute z-40 font-sub-1 opacity-5 transition-all duration-200 ${
-          isHovered ? "right-0 bottom-0" : "right-4 bottom-4"
+          isHovered ? "right-0 bottom-0" : "right-3 bottom-3"
         }`}
       >
         YoonJieut
