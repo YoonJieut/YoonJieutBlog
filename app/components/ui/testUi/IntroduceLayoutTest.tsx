@@ -1,6 +1,5 @@
 import Section from "@/app/components/ui/atom/Basic/Section";
 import DotLine from "@/app/components/ui/design/dotLine";
-import ImgCard from "../Molecules/ImgCard/ImgCard";
 import Image from "next/image";
 import MainBanner from "../Molecules/Title/MainBanner";
 import WelcomePart from "../Molecules/etc/WelcomePart";
@@ -22,8 +21,9 @@ export default function IntroduceLayoutTest() {
           {/* todo : 마우스 올라가면 텍스트 겹치는 애니메이션 */}
           <MainBanner />
         </div>
-        <div className="w-full h-[4px] bg-basic"></div>
-        <DotLine />
+        <div className="w-full h-[4px] bg-basic relative">
+          <DotLine />
+        </div>
         <div className="rightBottom w-full relative h-4/7 p-9">
           <div className="flex flex-col items-end gap-4">
             <Image
@@ -32,9 +32,9 @@ export default function IntroduceLayoutTest() {
               width={150}
               height={244}
             />
-            <p className="text-[12px] leading-5 w-40 text-right">
+            <p className="text-[12px] leading-5 w-44 text-right">
               안녕하세요! <br />
-              저는 입체적인 경험을 위해 <br />
+              입체적인 <br />
               노력을 아끼지 않는 <br />
               프론트엔드 개발자 윤준현입니다.
             </p>

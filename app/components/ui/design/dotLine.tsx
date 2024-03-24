@@ -4,13 +4,13 @@ const DotLine: React.FC = () => {
   // const custom = `detailLine ${className} flex gap-4`;
 
   return (
-    <div className="detailLine flex gap-[14px] absolute top-[369px] left-[-22px] z-30 w-[500px] h-1">
+    <div className="detailLine flex gap-[14px] absolute top-0 right-0 z-30 w-[401px] h-1">
       <div className="w-[4px] h-1 bg-main"></div>
       <div className="w-[4px] h-1 bg-main"></div>
       <div className="w-[4px] h-1 bg-sub-1"></div>
       <div className="w-[4px] h-1 bg-sub-1"></div>
       <div className="w-[4px] h-1 bg-sub-1"></div>
-      <div className="w-[400px] h-1 bg-sub-1"></div>
+      <div className="w-full h-1 bg-sub-1"></div>
     </div>
   );
 };
