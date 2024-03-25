@@ -1,4 +1,4 @@
-import Section from "@/app/components/ui/atom/Basic/Section";
+import Section from "@/app/components/ui/Atom/Basic/Section";
 import DotLine from "@/app/components/ui/design/dotLine";
 import MainBanner from "../Molecules/Title/MainBanner";
 import WelcomePart from "../Molecules/etc/WelcomePart";
