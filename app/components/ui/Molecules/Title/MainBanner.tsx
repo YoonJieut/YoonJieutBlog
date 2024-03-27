@@ -17,7 +17,7 @@ const MainBanner = () => {
       onMouseLeave={handleHover}
     >
       <p className="mainBanner text-[16rem] koulen leading-[0.8] tracking-tight absolute right-0 bottom-0 z-50 font-sub-1">
-        <a href="/" className="inline-block">
+        <a href="/mainTest/introduce" className="inline-block">
           YoonJieut
         </a>
       </p>
