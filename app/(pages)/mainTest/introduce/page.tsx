@@ -1,4 +1,4 @@
-import Section from "@/app/components/ui/atom/Basic/Section";
+import Section from "@/app/components/ui/Atom/Basic/Section";
 import Image from "next/image";
 import Link from "next/link";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
