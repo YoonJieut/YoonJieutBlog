@@ -10,7 +10,7 @@ const IntroImgCard = () => {
     const handleMouseMove = (event: MouseEvent) => {
       const parentDiv = document.getElementById("parentDiv");
       if (parentDiv) {
-        const rect = event.currentTarget.getBoundingClientRect();
+        // const rect = event.currentTarget.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         // 마우스 위치에 따른 이미지 오프셋 계산
