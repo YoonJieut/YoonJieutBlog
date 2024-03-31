@@ -4,6 +4,8 @@ import ArrowBtns from "@/app/components/ui/Molecules/Buttons/ArrowBtns";
 import Div from "@/app/components/ui/atom/Basic/Div";
 import StackOuter from "@/app/components/ui/design/StackOuter";
 
+// todo arrowbtn에 들어갈 기능 추가
+//  pfRightSection에 내용 추가
 export default function ChatNovelPage() {
   return (
     <div className="w-full  h-full flex Tesing">
@@ -20,7 +22,9 @@ export default function ChatNovelPage() {
           </Div>
         </Div>
       </Section>
-      <Section className="portfolioRightSection w-1/2 Testing"></Section>
+      <Section className="portfolioRightSection w-1/2 Testing">
+        hello world
+      </Section>
     </div>
   );
 }
