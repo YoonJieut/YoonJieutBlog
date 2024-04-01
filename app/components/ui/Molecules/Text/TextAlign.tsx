@@ -7,12 +7,17 @@ interface TextAlignProps {
 }
 
 /**
- * 텍스트 정렬 컴포넌트입니다.
- * @param {TextAlignProps} props - 컴포넌트에 전달되는 속성들입니다.
- * @returns {JSX.Element} - 텍스트 정렬 컴포넌트의 JSX 요소입니다.
+ * 텍스트를 정렬하는 컴포넌트입니다.
+ * @param {Object} props - 컴포넌트에 전달되는 속성들입니다.
+ * @param {string} props.title - 제목 텍스트입니다.
+ * @param {string} props.children - 내용 텍스트입니다.
+ * @param {string} props.type - 텍스트 정렬 방식입니다. "left", "right", "center" 중 하나를 선택할 수 있습니다.
+ * @returns {JSX.Element} - 텍스트 정렬 컴포넌트를 반환합니다.
  * @example
  * // 사용 예시
- * <TextAlign title="제목">내용</TextAlign>
+ * <TextAlign title="제목" type="left">
+ *   내용
+ * </TextAlign>
  */
 const TextAlign = (props: TextAlignProps): JSX.Element => {
   const { title, children, type } = props;
