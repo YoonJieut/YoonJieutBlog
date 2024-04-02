@@ -7,7 +7,8 @@ interface TextAlignProps {
 }
 
 /**
- * 텍스트를 정렬하는 컴포넌트입니다.
+ * 텍스트 문단이 정렬되는 컴포넌트입니다.
+ *
  * @param {Object} props - 컴포넌트에 전달되는 속성들입니다.
  * @param {string} props.title - 제목 텍스트입니다.
  * @param {string} props.children - 내용 텍스트입니다.
