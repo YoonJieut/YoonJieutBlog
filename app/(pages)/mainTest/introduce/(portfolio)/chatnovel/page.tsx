@@ -178,22 +178,25 @@ export default function ChatNovelPage() {
           </TextAlign>
         </div>
         {/* 왼쪽 정렬 - 결론 */}
-        <div className="Study w-full flex">
+        <div className="Study w-full pb-10">
           <TextAlign title="STUDY" type="left">
             <p>
               새로운 취미인 <b>소설을 분기를 표현할 수 있도록 프로젝트</b>를
               진행했습니다.
             </p>
+            <p>&nbsp;</p>
             <p>
               처음에는 공부 후 개발해야 된다는 고정관념이 있었으나, <br />
               만들면서 학습할 수 있다는 것을 배울 수 있었습니다.
             </p>
+            <p>&nbsp;</p>
             <p>
               이를 통해 저는 개발자 생활과 개발과 학습의 병행이 가능하다.
               <br />
               <b>만드는 것이 공부가 될 수 있다는 것에 대해 이해하는 시간</b>
               이었습니다.
             </p>
+            <p>&nbsp;</p>
             <p>
               이 프로젝트로 <b>DB의 개념</b>와 <b>직접 함수</b>를 작성해보며
               <b>JS의 작성법과 모듈화</b>의 개념에 대해 공부하였습니다. 개인적인
