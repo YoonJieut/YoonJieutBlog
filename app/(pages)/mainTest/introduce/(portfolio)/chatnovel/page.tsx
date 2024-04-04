@@ -14,7 +14,7 @@ export default function ChatNovelPage() {
       <Section className="portfolioLeftSection w-1/2 h-full">
         <ArrowBtns />
         <Div className="flex flex-col gap-2">
-          <H1 text="CHAT NOVEL" className="koulen font-normal" />
+          <H1 text="CHAT NOVEL" className="koulen font-normal text-8xl" />
           <Div className="StackFlexBox flex space-x-2 ">
             <StackOuter divClassName="rounded-full">TypeScript</StackOuter>
             <StackOuter divClassName="rounded-full">Express</StackOuter>
