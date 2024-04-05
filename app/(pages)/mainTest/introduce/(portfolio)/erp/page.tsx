@@ -101,7 +101,15 @@ export default function ErpPage() {
         {/* 오른 정렬 - 왜 db를 맡았나? */}
         <div className="w-full flex justify-between">
           {/* 이미지 카드 위치 */}
-          <div></div>
+          <ImgCard
+            imgUrl="/images/erp_db.png"
+            imgAlt="메인 이미지 모습"
+            imgTitle="최종 DB 관계도"
+            imgSub="MariaDB"
+            imgWidth={400}
+            imgHeight={400}
+            className="db-ImgCard"
+          />
           <TextAlign title="왜? DB를 맡았나?" type="right">
             <p>
               <b>퍼블리셔 과정</b>을 지내며 배운 디자인과 프론트 작업보다는
@@ -204,7 +212,15 @@ export default function ErpPage() {
             </p>
           </TextAlign>
           {/* 이미지 카드 */}
-          <div></div>
+          <ImgCard
+            imgUrl="/images/erp_research.png"
+            imgAlt="메인 이미지 모습"
+            imgTitle="최종 DB 관계도"
+            imgSub="MariaDB"
+            imgWidth={400}
+            imgHeight={400}
+            className="db-ImgCard"
+          />
         </div>
         {/* 중앙 정렬 - 환경 구성의 중요성 */}
         <div className="w-full flexCenter">
