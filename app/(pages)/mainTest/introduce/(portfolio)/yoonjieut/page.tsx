@@ -189,14 +189,14 @@ export default function YoonJieutPage() {
           />
         </div>
         {/* 나만의 결론 - 전체 이미지 */}
-        <div className="w-full h-1/2 flex flex-col gap-12">
+        <div className="w-full h-3/5 flex flex-col gap-12">
           <div className="w-full flexCenter">
             <TextAlign title="나만의 결론 내기" type="center">
               내용
             </TextAlign>
           </div>
           {/* 이슈 - 이미지가 꽉 안차는 문제 발견 */}
-          <div className="w-full relative h-1/4">
+          <div className="w-full relative h-[500px]">
             <Image
               src="/images/pf_figma.png"
               alt="test"
