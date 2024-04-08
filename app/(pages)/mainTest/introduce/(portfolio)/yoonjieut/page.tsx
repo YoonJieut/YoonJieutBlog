@@ -195,7 +195,7 @@ export default function YoonJieutPage() {
               내용
             </TextAlign>
           </div>
-          {/* 이슈 - 이미지가 꽉 안차는 문제 발견 */}
+          {/* 이슈 - 이미지 퀄리티가 많이 떨어진다. */}
           <div className="w-full relative h-[500px]">
             <Image
               src="/images/pf_figma.png"
