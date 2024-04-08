@@ -200,8 +200,7 @@ export default function YoonJieutPage() {
             imgAlt="이전 웹 퍼블리셔 과정에 준비하던 pf 이미지가 담겨있습니다."
             imgTitle="이미지 이전 포트폴리오 사이트"
             imgSub="흔한 레이아웃"
-            imgWidth={930}
-            imgHeight={400}
+            fill={true}
           />
         </div>
         {/* 오른 정렬 - 아쉬운 점 */}
