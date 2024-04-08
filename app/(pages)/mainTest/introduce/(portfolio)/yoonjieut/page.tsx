@@ -1,3 +1,4 @@
+import Image from "next/image";
 import H1 from "@/app/components/ui/Atom/Basic/H1";
 import Section from "@/app/components/ui/Atom/Basic/Section";
 import ArrowBtns from "@/app/components/ui/Molecules/Buttons/ArrowBtns";
@@ -188,20 +189,29 @@ export default function YoonJieutPage() {
           />
         </div>
         {/* 나만의 결론 - 전체 이미지 */}
-        <div className="w-full flex flex-col gap-12">
+        <div className="w-full h-1/2 flex flex-col gap-12">
           <div className="w-full flexCenter">
             <TextAlign title="나만의 결론 내기" type="center">
               내용
             </TextAlign>
           </div>
           {/* 이슈 - 이미지가 꽉 안차는 문제 발견 */}
-          <ImgCard
+          <div className="w-full relative h-1/4">
+            <Image
+              src="/images/pf_figma.png"
+              alt="test"
+              priority={true}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          {/* <ImgCard
             imgUrl="/images/pf_figma.png"
             imgAlt="이전 웹 퍼블리셔 과정에 준비하던 pf 이미지가 담겨있습니다."
             imgTitle="이미지 이전 포트폴리오 사이트"
             imgSub="흔한 레이아웃"
             fill={true}
-          />
+          /> */}
         </div>
         {/* 오른 정렬 - 아쉬운 점 */}
         <div className="w-full flex justify-end">

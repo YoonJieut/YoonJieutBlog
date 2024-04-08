@@ -52,11 +52,18 @@ const ImgCard: React.FC<ImgCardProps> = ({
     <Div className={classNameProps}>
       <Div className="imgArea relative">
         {fill ? (
-          <Image src={imgUrl} alt={imgAlt} fill />
+          <Image
+            src={imgUrl}
+            alt={imgAlt}
+            priority={true}
+            layout="fill"
+            objectFit="contain"
+          />
         ) : (
           <Image
             src={imgUrl}
             alt={imgAlt}
+            // priority={true}
             width={Number(imgWidth)}
             height={Number(imgHeight)}
           />
