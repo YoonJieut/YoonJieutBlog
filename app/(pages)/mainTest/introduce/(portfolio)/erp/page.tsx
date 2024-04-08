@@ -99,8 +99,7 @@ export default function ErpPage() {
           </TextAlign>
         </div>
         {/* 오른 정렬 - 왜 db를 맡았나? */}
-        <div className="w-full flex justify-between">
-          {/* 이미지 카드 위치 */}
+        <div className="w-full flex justify-between items-start">
           <ImgCard
             imgUrl="/images/erp_db.png"
             imgAlt="메인 이미지 모습"
