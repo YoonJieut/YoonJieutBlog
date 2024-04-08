@@ -197,13 +197,14 @@ export default function YoonJieutPage() {
           </div>
           {/* 이슈 - 이미지 퀄리티가 많이 떨어진다. */}
           <div className="w-full relative h-[500px]">
-            <Image
+            {/* <Image
               src="/images/pf_figma.png"
               alt="test"
               priority={true}
               layout="fill"
               objectFit="contain"
-            />
+            /> */}
+            <Image src="/images/pf_figma.png" alt="test" priority={true} fill />
           </div>
           {/* <ImgCard
             imgUrl="/images/pf_figma.png"
