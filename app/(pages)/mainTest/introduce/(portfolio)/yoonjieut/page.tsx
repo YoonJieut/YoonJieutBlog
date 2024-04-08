@@ -96,16 +96,44 @@ export default function YoonJieutPage() {
           </TextAlign>
         </div>
         {/* 오른 정렬 - 주관갖기 어려운 신입 */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-start">
+          <ImgCard
+            imgUrl="/images/pf_before.png"
+            imgAlt="이전 웹 퍼블리셔 과정에 준비하던 pf 이미지가 담겨있습니다."
+            imgTitle="이미지 이전 포트폴리오 사이트"
+            imgSub="흔한 레이아웃"
+            imgWidth={300}
+            imgHeight={240}
+          />
           <TextAlign title="주관 갖기 어려운 신입" type="right">
-            내용
+            <p>
+              <b>기술이란 결국 작성법</b>
+              <br />
+              바르게 성장하기 위해서는 자신에 대한 연구가 필요합니다.
+            </p>
+            <p>&nbsp;</p>
+            <p>
+              성숙하고 자립심있는 개발자의 첫걸음이
+              <br />
+              무엇보다 중요하다고 생각했습니다.
+            </p>
+            {/* <p className="mt-2">
+              이전과 다른 도전을 위해 모든 것을 갈아 엎었습니다.
+            </p> */}
           </TextAlign>
         </div>
         {/* 왼쪽 정렬 - 혼란의 과정 */}
-        <div className="w-full flex justify-between">
-          <TextAlign title="주관 갖기 어려운 신입" type="right">
+        <div className="w-full flex justify-between items-start">
+          <TextAlign title="주관 갖기 어려운 신입" type="left">
             내용
           </TextAlign>
+          <ImgCard
+            imgUrl="/images/pf_second.png"
+            imgAlt="첫번 째로 만든 레퍼런스들과 레이아웃 사진이 담겨있습니다."
+            imgSub="화려한 인터렉션 중심 스크롤 레이아웃"
+            imgWidth={360}
+            imgHeight={360}
+          />
         </div>
         {/* 중앙 정렬 - 윤준현 연구 */}
         <div className="w-full flexCenter">
@@ -114,24 +142,68 @@ export default function YoonJieutPage() {
           </TextAlign>
         </div>
         {/* 오른 정렬 - 근거는 과거의 자신 */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-start">
+          <ImgCard
+            imgUrl="/images/pf_banner.png"
+            imgAlt="과거의 저의 흔적에서 취향을 발견함을 표현하기 위한 이미지가 담겨있습니다."
+            imgTitle="과걱의 작업에 힌트가 있었습니다."
+            imgWidth={160}
+            imgHeight={312}
+          />
           <TextAlign title="주관 갖기 어려운 신입" type="right">
             내용
           </TextAlign>
         </div>
         {/* 왼쪽 정렬 - 확신은 디자인 연구 */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-start">
           <TextAlign title="주관 갖기 어려운 신입" type="right">
             내용
           </TextAlign>
+          <ImgCard
+            imgUrl="/images/pf_pontana.png"
+            imgAlt="저에게 큰 영감을 주었던 루이초 폰타나의 공간개념이라는 작품 사진이 들어있습니다. 캔버스 가운데 칼로 그어 구멍을 냈습니다."
+            imgSub="루이초 폰타나 <공간개념, 기다림..>"
+            imgWidth={250}
+            imgHeight={250}
+          />
         </div>
         {/* 이미지 정렬 - 과거 흔적 */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-start">
           {/* 이미지 노력 */}
+          <ImgCard
+            imgUrl="/images/pf_practice.png"
+            imgAlt="레이아웃을 실제로 그리고 재밌게 하기 위해 웃긴 사진들과 노션에 정리하던 이미지가 담겨있습니다."
+            imgTitle="연습 작업"
+            imgSub="분야는 가리지 않았습니다."
+            imgWidth={300}
+            imgHeight={170}
+          />
           {/* 이미지 수기 */}
+          <ImgCard
+            imgUrl="/images/pf_pencil.png"
+            imgAlt="pf 디자인을 위해 수많은 레이아웃을 연필이나 수기로 그린 사진이 담겨 있습니다."
+            imgSub="직접 그리며 볼 수 밖에 없었습니다."
+            imgWidth={530}
+            imgHeight={260}
+          />
         </div>
         {/* 나만의 결론 - 전체 이미지 */}
-        <div className="w-full flex justify-between"></div>
+        <div className="w-full flex flex-col gap-12">
+          <div className="w-full flexCenter">
+            <TextAlign title="나만의 결론 내기" type="center">
+              내용
+            </TextAlign>
+          </div>
+          {/* 이슈 - 이미지가 꽉 안차는 문제 발견 */}
+          <ImgCard
+            imgUrl="/images/pf_figma.png"
+            imgAlt="이전 웹 퍼블리셔 과정에 준비하던 pf 이미지가 담겨있습니다."
+            imgTitle="이미지 이전 포트폴리오 사이트"
+            imgSub="흔한 레이아웃"
+            imgWidth={930}
+            imgHeight={400}
+          />
+        </div>
         {/* 오른 정렬 - 아쉬운 점 */}
         <div className="w-full flex justify-end">
           <TextAlign title="주관 갖기 어려운 신입" type="right">
@@ -139,7 +211,7 @@ export default function YoonJieutPage() {
           </TextAlign>
         </div>
         {/* 왼쪽 정렬 - 의의와 결론 */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-start">
           <TextAlign title="주관 갖기 어려운 신입" type="right">
             내용
           </TextAlign>
