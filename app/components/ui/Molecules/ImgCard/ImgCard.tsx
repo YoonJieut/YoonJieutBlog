@@ -50,10 +50,12 @@ const ImgCard: React.FC<ImgCardProps> = ({
   const classNameProps = className ? `${className}` : "imgCard";
   return (
     <Div className={classNameProps}>
-      <Div className="imgArea relative w-full h-full">
-        {fill ? (
+      {fill ? (
+        <Div className="imgArea relative w-full h-full">
           <Image src={imgUrl} alt={imgAlt} priority={true} fill />
-        ) : (
+        </Div>
+      ) : (
+        <Div className="imgArea relative w-full">
           <Image
             src={imgUrl}
             alt={imgAlt}
@@ -61,8 +63,9 @@ const ImgCard: React.FC<ImgCardProps> = ({
             width={Number(imgWidth)}
             height={Number(imgHeight)}
           />
-        )}
-      </Div>
+        </Div>
+      )}
+
       <Ul className="imgSubBar flex justify-between items-center h-8 text-[12px] -mt-1">
         <Li className="imgSubBarTitle text-left opacity-45  active:opacity-100 duration-200">
           {imgTitle}
