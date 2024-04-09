@@ -5,7 +5,7 @@ import GithubBtn from "../../components/ui/Molecules/Buttons/GithubBtn";
 import { useState } from "react";
 import PostsListContainer from "./@postListContainer/page";
 import MenuNav from "@/app/components/ui/Organism/Footer/MenuNav";
-import IntroduceLayout from "@/app/components/ui/Temp/IntroduceLayout";
+import IntroduceLayout from "@/app/components/ui/Temp/introduce/IntroduceLayout";
 
 export default function MainPage() {
   const [isHovered, setIsHovered] = useState(false);
@@ -41,6 +41,7 @@ export default function MainPage() {
         >
           <ImgCard
             imgUrl="/images/textCursor.png"
+            imgAlt="이미지 설명"
             imgTitle="나를 표현할 수 있는 무언가"
             imgSub="이건 저의 무언가입니다."
             imgWidth={400}
@@ -61,6 +62,7 @@ export default function MainPage() {
         </div>
         <ImgCard
           imgUrl="/images/textCursor.png"
+          imgAlt="이미지 설명"
           imgTitle="Lorem 2"
           imgSub="이건 저의 무언가입니다."
           imgWidth={650}
@@ -77,6 +79,7 @@ export default function MainPage() {
       <section className="oneCardLayout w-full flex flex-col space-y-10 justify-center ">
         <ImgCard
           className="w-full"
+          imgAlt="이미지 설명"
           imgUrl="/images/textCursor.png"
           imgTitle="나를 표현할 수 있는 무언가"
           imgSub="이건 저의 무언가입니다."

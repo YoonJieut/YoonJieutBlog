@@ -1,6 +1,6 @@
 import React from "react";
 import Div from "../../Atom/Basic/Div";
-import DetailLine from "../Etc/DetailLine";
+import DetailLine from "../../design/DetailLine";
 import H1 from "../../Atom/Basic/H1";
 import H3 from "../../Atom/Basic/H3";
 import H5 from "../../Atom/Basic/H5";

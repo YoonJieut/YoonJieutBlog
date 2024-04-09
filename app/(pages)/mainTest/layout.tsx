@@ -1,4 +1,4 @@
-import FooterTest from "@/app/components/ui/Organism/Footer/FooterTest";
+import MainFooter from "@/app/components/ui/Organism/Footer/MainFooter";
 
 export default function MainTestLayout({
   children,
@@ -9,11 +9,11 @@ export default function MainTestLayout({
     <html lang="ko">
       <body>
         <div
-          id="MainTestRoot"
-          className="w-screen h-screen overflow-hidden flex flex-col p-2 space-y-2"
+          id="MainRoot"
+          className="w-screen h-screen overflow-hidden flex flex-col p-2 space-y-[10px]"
         >
           {children}
-          <FooterTest />
+          <MainFooter />
         </div>
       </body>
     </html>

@@ -1,39 +1,34 @@
+import Section from "@/app/components/ui/Atom/Basic/Section";
+import DotLine from "@/app/components/ui/design/dotLine";
+import MainBanner from "../Molecules/Title/MainBanner";
+import WelcomePart from "../Molecules/etc/WelcomePart";
+import IntroImgCard from "@/app/components/ui/Molecules/ImgCard/IntroImgCard";
 // component/main/IntroduceLayoutTest.tsx
 // 위쪽 상단, 자신을 소개하는 레이아웃입니다.
 
-// todo : 이미지 경로 설정할 것
-
-import Image from "next/image";
-import LargeTextTest from "./LargeTextTest";
-import FlowAni from "../../animation/FlowAni";
-
 export default function IntroduceLayoutTest() {
   return (
-    <div className="introLayout w-full h-screen flex justify-between outline outline-1 mb-3 overflow-hidden">
-      <div className="introLeft w-1/6 h-full flex-col flex OutLine relative">
-        <div className="introTextArea w-full h-1/3 absolute left-full flex items-end OutLine">
-          안녕하세요! 저는 윤준현이라고 합니다. <br />
-          현재 프론트엔드 개발자 지망생이며 <br />
-          주로 쓰는 기술은 Reat, Next.js, express 등 입니다.
-          <br />
-          `이곳에 인풋 value가 들어갑니다.`
+    <div className="introLayout w-full h-full flex justify-between overflow-hidden">
+      <Section className="leftImgSection w-4/5 h-full bg-basic relative">
+        {/* 배경 flowAni */}
+        <WelcomePart />
+        {/* z-10의 가리는 여백 디자인 */}
+        <div className="SpaceDiv w-full h-4/7 bg-basic absolute bottom-0 left-0  z-20"></div>
+      </Section>
+      <Section className="rightImgSection w-1/5 h-full bg-main-1 relative flex flex-col">
+        <div className="rightTop w-full relative h-3/7">
+          {/* YoonJieut 메인 배너 자리 */}
+          {/* todo : 마우스 올라가면 텍스트 겹치는 애니메이션 */}
+          <MainBanner />
         </div>
-        <div className="w-full h-1/3"></div>
-        <div className="imgCardArea w-3/4 h-1/3 OutLine self-end">
-          <Image src="" alt="Profile" width={150} height={250} />
-          <div className="w-full h-fit">
-            <h2 className="text-left w-full mb-2">나를 소개합니다.</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-          </div>
+        <div className="w-full h-[4px] bg-basic relative">
+          <DotLine />
         </div>
-      </div>
-      <div className="OutLine w-5/6 h-1/4 self-end flex items-end overflow-hidden pb-12 opacity-40">
-        <FlowAni>
-          <LargeTextTest />
-          <LargeTextTest />
-          <LargeTextTest />
-        </FlowAni>
-      </div>
+        <div className="rightBottom w-full relative h-4/7 p-9">
+          {/* 이미지 카드 파트 */}
+          <IntroImgCard />
+        </div>
+      </Section>
     </div>
   );
 }

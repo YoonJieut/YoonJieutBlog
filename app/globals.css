@@ -2,31 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Imbue:opsz,wght@10..100,100..900&family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap");
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: #d1d1d1;
+  --background-rgb: 57, 57, 57;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --collection-1-color: rgba(255, 255, 255, 1);
+  --color-basic: #393939;
+  --color-main: #4b4b4b;
+  --color-main-1: #959595;
+  --color-sub: #c1c1c1;
+  --color-sub-1: #d1d1d1;
+  --color-sub-2: rgb(140, 140, 140);
+  --color-point: #f73b3b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: rgb(209, 209, 209);
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: var(--color-sub-1); /* Updated text color */
+  background: rgb(var(--background-rgb));
+  /* linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer components {
@@ -64,6 +80,16 @@ body {
   transition: background-color 0.3s; /* 배경색 변경 트랜지션 */
 }
 
+/* placeholder */
+
+/* input::placeholder {
+  background: transparent;
+  font-size: calc(100vw / 6);
+  text-align: left;
+  letter-spacing: -0.03em;
+  line-height: -0.5em;
+} */
+
 /* Firefox를 위한 스크롤바 스타일 */
 * {
   scrollbar-width: thin; /* 스크롤바 너비 설정 */
@@ -81,7 +107,7 @@ body {
   align-items: center;
 }
 
-.OutLine {
+.Testing {
   outline: 1px solid purple;
 }
 
@@ -93,20 +119,153 @@ body {
 .Noto {
   font-family: "Noto Sans KR", sans-serif;
 }
-
+.noto {
+  font-family: var(--font-noto);
+}
 .Anta {
   font-family: "Anta", sans-serif;
 }
 
 /* 궁서체 글씨 */
-.Imbue {
+/* .Imbue {
   font-family: "Imbue", sans-serif;
+} */
+.imbue {
+  font-family: var(--font-imbue);
 }
 
-.Oswald {
+/* .Oswald {
   font-family: "Oswald", sans-serif;
-}
+} */
 
+/* .Homemade-apple {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+.homemadeApple {
+  font-family: var(--font-homemade);
+}
+/* .Koulen {
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+.koulen {
+  font-family: var(--font-koulen);
+}
 .h-1\/12 {
   height: 8.333333%;
+}
+.h-11\/12 {
+  height: 91.666667%;
+}
+.h-3\/7 {
+  height: 42.857143%;
+}
+.h-4\/7 {
+  height: 57.142857%;
+}
+/* 배경색 #29 */
+.bg-basic-1 {
+  background-color: #292929;
+}
+
+/* 배경색 #393939 */
+.bg-basic {
+  background-color: var(--color-basic);
+}
+.font-basic {
+  color: var(--color-basic);
+}
+.border-basic {
+  border-color: var(--color-basic);
+}
+
+/* #4b4b4b */
+.bg-main {
+  background-color: var(--color-main);
+}
+
+/* #959595 */
+.bg-main-1 {
+  background-color: var(--color-main-1);
+}
+.border-main-1 {
+  border-color: var(--color-main-1);
+}
+.font-main-1 {
+  color: var(--color-main-1);
+}
+
+/* #c1c1c1 */
+.bg-sub {
+  background-color: var(--color-sub);
+}
+
+/* #d1d1d1 */
+.bg-sub-1 {
+  background-color: var(--color-sub-1);
+}
+.font-sub-1 {
+  color: var(--color-sub-1);
+}
+.border-sub-1 {
+  border-color: var(--color-sub-1);
+}
+
+/* #565656 */
+.bg-56 {
+  background-color: #565656;
+}
+
+/* 140,140,140 */
+.font-sub-2 {
+  color: var(--color-sub-2);
+}
+
+/* point #f73b3b */
+.bg-point {
+  background-color: var(--color-point);
+}
+.font-point {
+  color: var(--color-point);
+}
+
+/* ---------------------- custom */
+.shadow {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.stackOuter {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.05em;
+}
+
+.titleText {
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -0.05em;
+}
+
+.centerTitleText {
+  font-size: 20px;
+  line-height: 56px;
+  letter-spacing: -0.05em;
+}
+
+.typo {
+  letter-spacing: -0.04em;
+  line-height: 101%;
+}
+
+.titleTypo {
+  font-size: 70px;
+  line-height: 80%;
+  letter-spacing: -0.05em;
+}
+
+.subFontSize {
+  font-size: 14px;
 }

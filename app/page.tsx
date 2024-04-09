@@ -1,19 +1,13 @@
-// import Image from "next/image";
-import { CustomInputArea } from "@/app/components/ui/Molecules/FetchInput/CustomInputArea";
+import { CustomInputAreaVer2 } from "./components/ui/Molecules/FetchInput/CustomInputAreaVer2";
+import EntryFont from "./components/ui/design/EntryFont";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen flex flex-col justify-end items-center overflow-hidden p-4">
-      <div className="font-thin font-serif self-start opacity-50">
-        <p className="font-thin font-serif">해당 페이지는 수정 중입니다.</p>
-        <p className="font-thin font-serif">
-          관리자 페이지 커맨드 : test, admin, 관리자
-        </p>
-        <p className="font-thin font-serif">
-          아무키나 입력하면 메인 포트폴리오 페이지로 접근합니다.
-        </p>
+    <div className="flex flex-col w-screen h-screen overflow-hidden p-3 justify-end">
+      <div className="flex flex-col">
+        <EntryFont />
+        <CustomInputAreaVer2 />
       </div>
-      <CustomInputArea />
-    </main>
+    </div>
   );
 }

@@ -2,9 +2,9 @@
 // 해당 페이지는 게시물 목록을 보여주는 페이지입니다.
 "use client";
 
-import { NewPostsPageProps } from "@/app/_interfaces/PostTableProps";
+import { NewPostsPageProps } from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import Btn from "@/app/components/ui/Atom/Basic/Btn";
-import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
+import DetailLine from "@/app/components/ui/design/DetailLine";
 
 const NewPostsPage: React.FC<NewPostsPageProps> = ({
   addEvent,
@@ -64,7 +64,7 @@ const NewPostsPage: React.FC<NewPostsPageProps> = ({
           id="content"
           value={content}
           onChange={handleContentChange}
-          className="text-zinc-900 border border-1 border-black block h-64 p-1"
+          className="text-zinc-900 border border-1 border-black block h-[10rem] overflow-scroll p-1"
         />
       </div>
       <Btn

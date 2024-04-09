@@ -1,9 +1,9 @@
 "use client";
 
-import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
-import { Post } from "@/app/_interfaces/PostTableProps";
+import DetailLine from "@/app/components/ui/design/DetailLine";
+import { Post } from "@/app/_interfaces/dbInterfaces/PostTableProps";
 import Btn from "@/app/components/ui/Atom/Basic/Btn";
-import deleteFetchJSON from "@/app/utils/frontend/deleteFetchJSON";
+import deleteFetchJSON from "@/app/utils/frontend/fetch/deleteFetchJSON";
 
 export default function AdminPostsPage({
   posts,
@@ -30,9 +30,12 @@ export default function AdminPostsPage({
     <div className="adminPostsView">
       <h3 className="text-xl font-bold text-blue-500 mb-5">Post Lists</h3>
       <DetailLine className="w-12" />
-      <ul className="adminPostUl flex flex-col space-y-4">
+      <ul className="adminPostUl flex flex-col space-y-2">
         {posts.map((post, index) => (
-          <li key={index} className="flex w-full justify-between">
+          <li
+            key={index}
+            className="flex w-full justify-between leading-tight gap-2"
+          >
             <span
               className="cursor-pointer contentPart flex space-x-4"
               onClick={() => {
@@ -40,9 +43,11 @@ export default function AdminPostsPage({
                 console.log("선택된 포스트 : ", post);
               }}
             >
-              <h2>{post.title}</h2>
+              <h2 className="overflow-hidden overflow-ellipsis">
+                {post.title}
+              </h2>
               <p>|</p>
-              <p>{post.content}</p>
+              <p className="text-[14px]">{post.content}</p>
             </span>
             <Btn onClick={() => handleDelete(post.id)}>Delete</Btn>
           </li>

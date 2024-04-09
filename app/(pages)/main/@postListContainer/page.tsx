@@ -6,12 +6,12 @@ import {
   PostContentProps,
   PostIdProps,
   PostTitleProps,
-} from "@/app/_interfaces/PostTableProps";
+} from "@/app/_interfaces/dbInterfaces/PostTableProps";
 // import Link from "next/link";
 import { shuffleArray } from "@/app/utils/suffleArray";
-import fetchJSON from "@/app/utils/frontend/fetchJSON";
+import fetchJSON from "@/app/utils/frontend/fetch/fetchJSON";
 import PostItem from "@/app/components/ui/Molecules/Lists/PostItem";
-import DetailLine from "@/app/components/ui/Molecules/Etc/DetailLine";
+import DetailLine from "@/app/components/ui/design/DetailLine";
 import Link from "next/link";
 
 interface Post
