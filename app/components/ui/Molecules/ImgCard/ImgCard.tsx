@@ -50,15 +50,9 @@ const ImgCard: React.FC<ImgCardProps> = ({
   const classNameProps = className ? `${className}` : "imgCard";
   return (
     <Div className={classNameProps}>
-      <Div className="imgArea relative">
+      <Div className="imgArea relative w-full h-full">
         {fill ? (
-          <Image
-            src={imgUrl}
-            alt={imgAlt}
-            priority={true}
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image src={imgUrl} alt={imgAlt} priority={true} fill />
         ) : (
           <Image
             src={imgUrl}
