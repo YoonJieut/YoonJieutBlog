@@ -6,7 +6,6 @@ import StackOuter from "@/app/components/ui/design/StackOuter";
 import ErpContent from "@/app/components/ui/Page/portfolio/erp/ErpContent";
 
 // todo arrowbtn에 들어갈 기능 추가
-//  pfRightSection에 내용 추가
 export default function ErpPage() {
   return (
     <div className="w-full h-11/12 flex Tesing">

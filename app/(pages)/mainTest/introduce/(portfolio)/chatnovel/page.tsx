@@ -6,7 +6,6 @@ import StackOuter from "@/app/components/ui/design/StackOuter";
 import ChatnovelContent from "@/app/components/ui/Page/portfolio/chatnovel/ChatNovelContent";
 
 // todo arrowbtn에 들어갈 기능 추가
-//  pfRightSection에 내용 추가
 export default function ChatNovelPage() {
   return (
     <div className="w-full h-11/12 flex Tesing">
