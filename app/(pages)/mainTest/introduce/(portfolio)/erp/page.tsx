@@ -31,7 +31,7 @@ export default function ErpPage() {
           <div className="EntryPart w-full">
             <ImgCard
               imgUrl="/images/erp_mainpage.png"
-              imgAlt="메인 이미지 모습"
+              imgAlt="테마는 재밌게 스타크래프트로 하고, 기능은 최대한 많이 구현한 저의 erp 프로젝트 메인 페이지가 담겨있는 이미지입니다."
               imgTitle="ERP의 메인 페이지"
               imgWidth={950}
               imgHeight={440}
@@ -108,7 +108,7 @@ export default function ErpPage() {
         <div className="w-full flex justify-between items-start">
           <ImgCard
             imgUrl="/images/erp_db.png"
-            imgAlt="메인 이미지 모습"
+            imgAlt="초기 팀원이 만든 스키마 설계를 모두 하나하나 검토하며 완성한 3번째 버전의 최종 스키마 설계도가 이미지에 담겨 있습니다."
             imgTitle="최종 DB 관계도"
             imgSub="MariaDB"
             imgWidth={400}
@@ -219,9 +219,9 @@ export default function ErpPage() {
           {/* 이미지 카드 */}
           <ImgCard
             imgUrl="/images/erp_research.png"
-            imgAlt="메인 이미지 모습"
-            imgTitle="최종 DB 관계도"
-            imgSub="MariaDB"
+            imgAlt="A3 페이지에 수기로 작성된 IA 기능표와 스키마 설계, 관계도가 작성되어 있습니다."
+            imgTitle="왼쪽 위 IA의 기능을 나열"
+            imgSub="A3 페이지에 모두 적고 검토했다."
             imgWidth={400}
             imgHeight={400}
             className="db-ImgCard"
