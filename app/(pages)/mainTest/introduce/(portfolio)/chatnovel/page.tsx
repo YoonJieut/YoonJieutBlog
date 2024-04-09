@@ -25,35 +25,39 @@ export default function ChatNovelPage() {
         </Div>
       </Section>
       <Section className="portfolioRightSection w-1/2 Testing flex flex-col gap-[300px] overflow-x-hidden overflow-y-scroll">
-        {/* 메인 이미지 모습 */}
-        <div className="EntryPart w-full">
-          <ImgCard
-            imgUrl="/images/chat_main.png"
-            imgAlt="메인 이미지 모습"
-            imgTitle="분기 화면의 모습"
-            imgWidth={655}
-            imgHeight={325}
-            className="protoType-ImgCard"
-          />
-        </div>
-        {/* 사용된 스택과 링크 */}
-        <div className="w-full flex justify-between">
-          <TextAlign title="사용된 스택과 링크" type="left">
-            스택 : JavaScript, EXPRESS, HTML, CSS 의의 : 협업 , Next.JS , DB
-            <br />
-            설계와 기획 팀 협업 툴 : Notion, Github <br />
-            <br />
-            개인 노션 링크 : 윤준현 - Metro2033-ownPath
-          </TextAlign>
-          {/* 이미지 자리 */}
-          <ImgCard
-            imgUrl="/images/chat_nextWork.png"
-            imgAlt="다음 로직 이미지"
-            imgTitle="클릭 시 소설의 대사가 나온다."
-            imgWidth={380}
-            imgHeight={260}
-            className="protoType-ImgCard"
-          />
+        <div className="entryPart flex flex-col gap-20">
+          {/* 메인 이미지 모습 */}
+          <div className="w-full">
+            <ImgCard
+              imgUrl="/images/chat_main.png"
+              imgAlt="메인 이미지 모습"
+              imgTitle="분기 화면의 모습"
+              fill={true}
+              className="protoType-ImgCard h-[400px] w-full"
+            />
+          </div>
+          {/* 사용된 스택과 링크 */}
+          <div className="w-full flex justify-between">
+            <TextAlign title="사용된 스택과 링크" type="left">
+              <p>
+                스택 : JavaScript, EXPRESS, HTML, CSS <br />
+                의의 : 협업 , Next.JS , DB
+                <br />
+                설계와 기획 팀 협업 툴 : Notion, Github <br />
+                <br />
+                개인 노션 링크 : 윤준현 - Metro2033-ownPath
+              </p>
+            </TextAlign>
+            {/* 이미지 자리 */}
+            <ImgCard
+              imgUrl="/images/chat_nextWork.png"
+              imgAlt="다음 로직 이미지"
+              imgTitle="클릭 시 소설의 대사가 나온다."
+              imgWidth={380}
+              imgHeight={260}
+              className="protoType-ImgCard"
+            />
+          </div>
         </div>
         {/* 중앙 텍스트 */}
         <div className="w-full flexCenter">

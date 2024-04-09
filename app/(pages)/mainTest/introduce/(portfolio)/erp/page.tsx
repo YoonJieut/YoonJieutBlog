@@ -39,13 +39,14 @@ export default function ErpPage() {
         {/* 사용된 스택과 링크 */}
         <div className="w-full flex justify-between">
           <TextAlign title="사용된 스택과 링크" type="left">
-            <p>{`스택 : TPYESCRIPT, NEXT.JS, EXPRESS, MARIADB `}</p>
+            <p>{`스택 : Typescript, NEXT.JS, EXPRESS, MariaDB `}</p>
             <p className="m-0 whitespace-pre-wrap">{`의의 : 협업 , Next.JS , DB 설계와 기획 팀 협업 `}</p>
             <p>툴 : Notion, Github, Figma</p>
             <p>&nbsp;</p>
             <p>
               {`개인 노션 링크 : `}
               <a
+                rel="noreferrer noopener"
                 className="whitespace-pre-wrap"
                 href="https://resilient-aster-1dc.notion.site/ERP-63d8c0f6651e4808a677791431d18c61?pvs=4"
                 target="_blank"
