@@ -25,6 +25,7 @@ export default function ChatNovelPage() {
         </Div>
       </Section>
       <Section className="portfolioRightSection w-1/2 Testing flex flex-col gap-[300px] overflow-x-hidden overflow-y-scroll">
+        {/* 메인 엔트리 파트 */}
         <div className="entryPart flex flex-col gap-20">
           {/* 메인 이미지 모습 */}
           <div className="w-full">
