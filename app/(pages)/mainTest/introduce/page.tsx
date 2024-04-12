@@ -1,8 +1,8 @@
-import Section from "@/app/components/ui/Atom/Basic/Section";
 import Image from "next/image";
 import Link from "next/link";
+import Section from "@/app/components/ui/Atom/Basic/Section";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
-import IntrodcueCircle from "../../../components/ui/design/IntroduceCircle";
+import IntrodcueCircle from "@/app/components/ui/design/IntroduceCircle";
 
 export default function IntroduceTestPage() {
   return (
@@ -12,7 +12,7 @@ export default function IntroduceTestPage() {
           <Image
             src={"/images/kakao-talk-202402182120487351.png"}
             alt="웹 개발자 윤준현입니다."
-            width={150}
+            width={200}
             height={200}
           />
         </Link>
