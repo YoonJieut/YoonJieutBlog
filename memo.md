@@ -33,6 +33,13 @@
 1. json 활용
 2. db 활용
 
+```
+1번 방식을 채택, configiuration File 패턴이라고 한다.
+config파일 안에 json을 여러개 만들도록 하자.
+
+참고 : metadata/~Data.ts 처럼 리터럴 배열이나 객체를 관리해도 좋을 것 같다.
+```
+
 # 이전 메모들
 
 1. aboutme 일정 섹션에서 스크롤바 없앨 수 있나?
