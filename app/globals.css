@@ -4,6 +4,8 @@
 
 body {
   @apply leading-[normal] m-0;
+  color: var(--color-sub-1); /* Updated text color */
+  background: rgb(var(--background-rgb));
 }
 *,
 ::before,
@@ -32,17 +34,6 @@ body {
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
-body {
-  color: var(--color-sub-1); /* Updated text color */
-  background: rgb(var(--background-rgb));
-  /* linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 @layer components {
