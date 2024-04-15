@@ -3,7 +3,7 @@
 const portfolioMetaData = [
   {
     name: "YoonJieut",
-    path: "/yoonjieut",
+    path: "mainTest/introduce/yoonjieut",
     stack: ["a", "b", "c"],
   },
   {
@@ -13,7 +13,12 @@ const portfolioMetaData = [
   },
   {
     name: "NovelChat",
-    path: "mainTest/introduce/novelchat",
+    path: "/novelchat",
+    stack: ["a", "b", "c"],
+  },
+  {
+    name: "testRightSection",
+    path: "mainTest/introduce/testRightSection",
     stack: ["a", "b", "c"],
   },
 ];
