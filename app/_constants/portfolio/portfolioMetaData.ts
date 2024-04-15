@@ -3,22 +3,22 @@
 const portfolioMetaData = [
   {
     name: "YoonJieut",
-    path: "mainTest/introduce/yoonjieut",
+    path: "localhost:3000/mainTest/introduce/yoonjieut",
     stack: ["a", "b", "c"],
   },
   {
     name: "ERP",
-    path: "mainTest/introduce/erp",
+    path: "localhost:3000/mainTest/introduce/erp",
     stack: ["a", "b", "c"],
   },
   {
     name: "NovelChat",
-    path: "/novelchat",
+    path: "localhost:3000/mainTest/introduce/novelchat",
     stack: ["a", "b", "c"],
   },
   {
     name: "testRightSection",
-    path: "mainTest/introduce/testRightSection",
+    path: "localhost:3000/mainTest/introduce/testRightSection",
     stack: ["a", "b", "c"],
   },
 ];

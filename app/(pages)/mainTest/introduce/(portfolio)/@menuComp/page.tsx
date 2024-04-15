@@ -11,7 +11,8 @@ import urlParamMaker from "@/app/utils/urlParamMaker";
 const MenuComp = () => {
   console.log("MenuComp");
   // 현재 url에서 path를 추출하여 현재 index를 커스텀 훅에 제공한다.
-  const urlString = typeof window !== "undefined" ? window.location.href : "";
+  // const urlString = typeof window !== "undefined" ? window.location.href : "";
+  const urlString = window.location.href;
   const nowPath = urlParamMaker(urlString);
   console.log(nowPath);
   const { handlePrevClick, handleNextClick } = useNavigation(nowPath);
