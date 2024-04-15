@@ -10,6 +10,7 @@ import Div from "@/app/components/ui/Atom/Basic/Div";
  * // 사용 예시
  * <ArrowBtns prevOnClick={handlePrevClick} nextOnClick={handleNextClick} />
  */
+// todo : onClick 이벤트 타입 정의
 const ArrowBtns: React.FC = ({
   prevOnClick,
   nextOnClick,
