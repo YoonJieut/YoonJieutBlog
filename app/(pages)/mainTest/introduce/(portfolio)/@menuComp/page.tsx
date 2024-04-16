@@ -1,5 +1,6 @@
 "use client";
 
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
 import H1 from "@/app/components/ui/Atom/Basic/H1";
 import urlParamMaker from "@/app/utils/urlParamMaker";
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ import { useEffect, useState } from "react";
 const MenuComp = () => {
   const [url, setUrl] = useState("");
   const [currentMenu, setCurrentMenu] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // 현재 url을 가져온다.
   useEffect(() => {
@@ -28,29 +30,43 @@ const MenuComp = () => {
     console.log("MenuComp useEffect2");
     const param = urlParamMaker(url);
     setCurrentMenu(param as string); // 타입에러 : 타입을 string으로 강제로 변환했다.
+
+    // 현재 param을 기준으로 현재 메뉴의 index를 반환한다.
+    const nowIndex = portfolioMetaData.findIndex(
+      (data) => data.name.toLowerCase() === param
+    );
+    // 찾은 url이 없을 때, 오류 처리
+    if (nowIndex === -1) {
+      setCurrentIndex(0);
+      return;
+    }
+    console.log(nowIndex);
+    setCurrentIndex(nowIndex);
   }, [url]);
 
   const handlePrevClick = () => {
-    console.log("handlePrevClick");
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? portfolioMetaData.length - 1 : prevIndex - 1
+    );
   };
+
   const handleNextClick = () => {
-    console.log("handleNextClick");
+    setCurrentIndex((prevIndex) =>
+      prevIndex === portfolioMetaData.length - 1 ? 0 : prevIndex + 1
+    );
+    // window.location.href = portfolioMetaData[currentIndex].path;
   };
 
   return (
     <>
       <div className="w-full flex justify-between mt-20">
-        <button
-          onClick={() => {
-            handlePrevClick;
-          }}
-        >
-          이전 페이지
-        </button>
-
+        <button onClick={handlePrevClick}>이전 페이지</button>
         <button onClick={handleNextClick}>다음 페이지</button>
       </div>
       <H1 text={currentMenu} />
+      <div>현재 인덱스는? {currentIndex}</div>
+      <div>length-1? {portfolioMetaData.length - 1}</div>
+      <div>{portfolioMetaData[currentIndex].path}</div>
     </>
   );
 };
