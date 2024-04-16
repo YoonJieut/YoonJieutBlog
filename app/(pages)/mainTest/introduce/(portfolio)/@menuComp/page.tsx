@@ -1,6 +1,7 @@
 "use client";
 
 import H1 from "@/app/components/ui/Atom/Basic/H1";
+import urlParamMaker from "@/app/utils/urlParamMaker";
 import { useEffect, useState } from "react";
 
 // 해당 컴포넌트는 pf 페이지의 왼쪽 섹션에 해당하며 병렬 로딩을 구현했다.
@@ -14,18 +15,19 @@ import { useEffect, useState } from "react";
 // 3. 맨 뒤로 가면 처음으로 돌아오는 로직을 추가한다. (0에서 뒤로 가면 마지막으로 간다 그리고 마지막에서 앞으로 가면 처음으로 간다.)
 
 const MenuComp = () => {
-  console.log("MenuComp");
-  console.log("window.location.href : ", window.location.href);
-
   const [url, setUrl] = useState("");
+  const [currentMenu, setCurrentMenu] = useState("");
+
   // 현재 url을 가져온다.
   useEffect(() => {
     console.log("MenuComp useEffect");
     setUrl(window.location.href);
   }, []);
-  // 가져온 문자열을 컴포넌트에 업데이트 한다.
+
   useEffect(() => {
-    console.log("now url : ", url);
+    console.log("MenuComp useEffect2");
+    const param = urlParamMaker(url);
+    setCurrentMenu(param as string); // 타입에러 : 타입을 string으로 강제로 변환했다.
   }, [url]);
 
   const handlePrevClick = () => {
@@ -48,7 +50,7 @@ const MenuComp = () => {
 
         <button onClick={handleNextClick}>다음 페이지</button>
       </div>
-      <H1 text={url} />
+      <H1 text={currentMenu} />
     </>
   );
 };
