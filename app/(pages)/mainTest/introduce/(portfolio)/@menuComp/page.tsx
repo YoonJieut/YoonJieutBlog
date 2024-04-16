@@ -21,16 +21,22 @@ const MenuComp = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(0);
+  const [isClickable, setIsClickable] = useState(true);
 
-  // 컴포넌트가 랜더링되면 url을 가져온다.
   useEffect(() => {
-    console.log("MenuComp useEffect");
-    setUrl(window.location.href);
+    const timer = setTimeout(() => {
+      setIsClickable(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   // 현재 url에 따라 인덱스를 반환한다.
   useEffect(() => {
-    console.log("MenuComp useEffect2");
+    // 랜더링 되면, 현재 주소를 상태로 저장한다.
+    setUrl(window.location.href);
 
     const param = urlParamMaker(url);
     setCurrentMenu(param as string); // 타입에러 : 타입을 string으로 강제로 변환했다.
@@ -61,13 +67,21 @@ const MenuComp = () => {
     console.log("next", next);
   }, [currentIndex]);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isClickable) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <>
       <div className="w-full flex justify-between mt-20">
-        {/* <button onClick={handlePrevClick}>이전 페이지</button>
-        <button onClick={handleNextClick}>다음 페이지</button> */}
-        <a href={portfolioMetaData[prevIndex].path}>이전 페이지</a>
-        <a href={portfolioMetaData[nextIndex].path}>이전 페이지</a>
+        <a href={portfolioMetaData[prevIndex].path} onClick={handleLinkClick}>
+          이전 페이지
+        </a>
+        <a href={portfolioMetaData[nextIndex].path} onClick={handleLinkClick}>
+          다음 페이지
+        </a>
       </div>
       <H1 text={currentMenu} />
       <H1 text={currentIndex.toString()} />
@@ -76,9 +90,6 @@ const MenuComp = () => {
       <div>{portfolioMetaData[currentIndex].path}</div>
       <div>{portfolioMetaData[prevIndex].path}</div>
       <div>{portfolioMetaData[nextIndex].path}</div>
-      {/* <div>현재 인덱스는? {currentIndex}</div> */}
-      {/* <div>length-1? {portfolioMetaData.length - 1}</div>
-      <div>{portfolioMetaData[currentIndex].path}</div> */}
     </>
   );
 };
