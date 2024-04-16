@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
 import H1 from "@/app/components/ui/Atom/Basic/H1";
+import urlParamMaker from "@/app/utils/urlParamMaker";
 
 const MenuComp = () => {
   const [currentMenu, setCurrentMenu] = useState("");
@@ -12,7 +13,7 @@ const MenuComp = () => {
   const router = usePathname();
 
   useEffect(() => {
-    const currentPath = router.split("/").pop() ?? "";
+    const currentPath = urlParamMaker(router) ?? "";
     const nowIndex = portfolioMetaData.findIndex(
       (data) => data.name.toLowerCase() === currentPath?.toLowerCase()
     );
