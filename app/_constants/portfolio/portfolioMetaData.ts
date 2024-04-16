@@ -4,22 +4,22 @@ const portfolioMetaData = [
   {
     name: "YoonJieut",
     path: "http://localhost:3000/mainTest/introduce/yoonjieut",
-    stack: ["a", "b", "c"],
+    stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MySQL"],
   },
   {
     name: "ERP",
     path: "http://localhost:3000/mainTest/introduce/erp",
-    stack: ["a", "b", "c"],
+    stack: ["JavaScript", "Express", "HTML", "CSS"],
   },
   {
     name: "ChatNovel",
     path: "http://localhost:3000/mainTest/introduce/chatnovel",
-    stack: ["a", "b", "c"],
+    stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MySQL"],
   },
   {
     name: "testRightSection",
     path: "http://localhost:3000/mainTest/introduce/testRightSection",
-    stack: ["a", "b", "c"],
+    stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MySQL"],
   },
 ];
 
