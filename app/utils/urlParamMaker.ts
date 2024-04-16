@@ -14,7 +14,7 @@
  * ```
  */
 function urlParamMaker(url: string) {
-  const urlParam = url.split("/").pop();
+  const urlParam = url.split("/").pop()?.toLowerCase();
   return urlParam;
 }
 export default urlParamMaker;
