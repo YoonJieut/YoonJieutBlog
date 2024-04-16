@@ -19,15 +19,19 @@ const MenuComp = () => {
   const [url, setUrl] = useState("");
   const [currentMenu, setCurrentMenu] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(0);
 
-  // 현재 url을 가져온다.
+  // 컴포넌트가 랜더링되면 url을 가져온다.
   useEffect(() => {
     console.log("MenuComp useEffect");
     setUrl(window.location.href);
   }, []);
 
+  // 현재 url에 따라 인덱스를 반환한다.
   useEffect(() => {
     console.log("MenuComp useEffect2");
+
     const param = urlParamMaker(url);
     setCurrentMenu(param as string); // 타입에러 : 타입을 string으로 강제로 변환했다.
 
@@ -40,33 +44,41 @@ const MenuComp = () => {
       setCurrentIndex(0);
       return;
     }
-    console.log(nowIndex);
+    console.log("nowIndex", nowIndex);
     setCurrentIndex(nowIndex);
   }, [url]);
 
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? portfolioMetaData.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === portfolioMetaData.length - 1 ? 0 : prevIndex + 1
-    );
-    // window.location.href = portfolioMetaData[currentIndex].path;
-  };
+  // 현재 인덱스에 따른 다음, 이전 인덱스를 반환.
+  useEffect(() => {
+    console.log("MenuComp useEffect3");
+    const prev =
+      currentIndex == 0 ? portfolioMetaData.length - 1 : currentIndex - 1;
+    const next =
+      currentIndex === portfolioMetaData.length - 1 ? 0 : currentIndex + 1;
+    setPrevIndex(prev);
+    setNextIndex(next);
+    console.log("prev", prev);
+    console.log("next", next);
+  }, [currentIndex]);
 
   return (
     <>
       <div className="w-full flex justify-between mt-20">
-        <button onClick={handlePrevClick}>이전 페이지</button>
-        <button onClick={handleNextClick}>다음 페이지</button>
+        {/* <button onClick={handlePrevClick}>이전 페이지</button>
+        <button onClick={handleNextClick}>다음 페이지</button> */}
+        <a href={portfolioMetaData[prevIndex].path}>이전 페이지</a>
+        <a href={portfolioMetaData[nextIndex].path}>이전 페이지</a>
       </div>
       <H1 text={currentMenu} />
-      <div>현재 인덱스는? {currentIndex}</div>
-      <div>length-1? {portfolioMetaData.length - 1}</div>
+      <H1 text={currentIndex.toString()} />
+      <H1 text={prevIndex.toString()} />
+      <H1 text={nextIndex.toString()} />
       <div>{portfolioMetaData[currentIndex].path}</div>
+      <div>{portfolioMetaData[prevIndex].path}</div>
+      <div>{portfolioMetaData[nextIndex].path}</div>
+      {/* <div>현재 인덱스는? {currentIndex}</div> */}
+      {/* <div>length-1? {portfolioMetaData.length - 1}</div>
+      <div>{portfolioMetaData[currentIndex].path}</div> */}
     </>
   );
 };
