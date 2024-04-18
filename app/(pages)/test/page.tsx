@@ -1,5 +1,11 @@
+import ImgTest from "@/app/components/animation/ImgTest";
+
 const TestPage = () => {
-  return <>테스트 페이지입니다.</>;
+  return (
+    <main className="w-screen h-screen flexCenter">
+      <ImgTest />
+    </main>
+  );
 };
 
 export default TestPage;
