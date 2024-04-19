@@ -1,8 +1,8 @@
 // pagesMetaData.ts
 // 포트 폴리오 관련 리터럴 데이터가 적혀있는 파일
+import { PortfolioMetaData } from "@/app/_interfaces/common/MetaDataProp";
 
-// todo : 라우트 변경시 path도 변경해야 한다.
-const portfolioMetaData = [
+const portfolioMetaData: PortfolioMetaData[] = [
   {
     name: "YoonJieut",
     path: "http://localhost:3000/mainTest/introduce/yoonjieut",
@@ -32,11 +32,6 @@ const portfolioMetaData = [
       content:
         "새로운 취미인 소설을 활용한 프로젝트를 진행해보며 좋아하는 것을 통해 공부도 할 수 있다는 것에 대한 확신을 가지게 해준 프로젝트입니다. 초기 JS에 입문했을 때, 막막하던 개발을 공부를 통해 개념을 빠르게 확립하고 프로젝트에 적용하므로서 CLOUSRE 패턴과 REACT의 코어에 해당하는 컴포넌트 생성과 랜더링 방식에 대해 이해하게 되었습니다. 이 프로젝트를 하며 취미를 통해 공부하는 것이 얼마나 즐거운 일인지 깨달을 수 있었습니다.",
     },
-  },
-  {
-    name: "testRightSection",
-    path: "http://localhost:3000/mainTest/introduce/testRightSection",
-    stack: ["TypeScript", "NEXT.JS", "EXPRESS", "MySQL"],
   },
 ];
 
