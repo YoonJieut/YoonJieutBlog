@@ -1,4 +1,6 @@
-interface DivProps {
+import { OnClickProps } from "@/app/_interfaces/common/CommomProps";
+
+interface DivProps extends OnClickProps {
   children: React.ReactNode;
   className?: string; // Add className prop
 }
@@ -19,7 +21,7 @@ interface DivProps {
  *
  */
 // Li 컴포넌트 정의
-const Li: React.FC<DivProps> = ({ children, className = "" }) => {
+const Li: React.FC<DivProps> = ({ children, className = "", onClick }) => {
   // 기본 스타일 초기화 및 사용자 정의 클래스 적용
   const liStyle = {
     margin: 0,
@@ -28,7 +30,7 @@ const Li: React.FC<DivProps> = ({ children, className = "" }) => {
   };
 
   return (
-    <li className={`listItem ${className}`} style={liStyle}>
+    <li className={`listItem ${className}`} style={liStyle} onClick={onClick}>
       {children}
     </li>
   );
