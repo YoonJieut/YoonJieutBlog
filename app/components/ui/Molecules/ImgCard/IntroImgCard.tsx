@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const IntroImgCard = () => {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-
+  // 이미지가 움직이는 애니메이션 구현
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const parentDiv = document.getElementById("parentDiv");

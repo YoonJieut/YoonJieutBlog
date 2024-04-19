@@ -15,7 +15,7 @@ interface RightAlignImgCardProps extends ImageProps {
  *   imgAlt="이미지 설명"
  *   imgWidth={420}
  *   imgHeight={220}
- *   className="ImageCardImg Testing flex justify-end"
+ *   className="ImageCardImg flex justify-end"
  * />
  * ```
  */
