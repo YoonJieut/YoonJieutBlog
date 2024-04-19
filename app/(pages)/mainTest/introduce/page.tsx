@@ -21,7 +21,7 @@ export default function IntroduceTestPage() {
         {/* todo : 버튼에 따라 이미지가 달라져야 한다. */}
         {/* 컴포넌트화 해야한다. */}
         <div className="content w-full h-full flex flex-col items-end gap-14 mt-[140px]">
-          <IntroMenu></IntroMenu>
+          <IntroMenu />
           <IntrodcueCircle />
         </div>
       </Section>
