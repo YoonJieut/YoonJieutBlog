@@ -22,23 +22,6 @@ export default function IntroduceTestPage() {
         {/* 컴포넌트화 해야한다. */}
         <div className="content w-full h-full flex flex-col items-end gap-14 mt-[140px]">
           <IntroMenu></IntroMenu>
-          <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 TeWsting">
-            <Image
-              src={
-                portfolioMetaData[0]?.introduce?.imgUrl ||
-                "사진 주소가 없습니다."
-              }
-              alt="이미지 설명"
-              width={450}
-              height={220}
-              className="ImageCardImg Testing flex justify-end"
-            />
-            <div className="ImageCardTextArea max-w-[600px]">
-              <p className="text-right leading-7 text-[14px]">
-                {portfolioMetaData[0]?.introduce?.content || "내용이 없습니다."}
-              </p>
-            </div>
-          </div>
           <IntrodcueCircle />
         </div>
       </Section>
