@@ -1,3 +1,4 @@
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
 import Li from "@/app/components/ui/Atom/Basic/Li";
 import Ul from "@/app/components/ui/Atom/Basic/Ul";
 
@@ -8,9 +9,11 @@ const IntroMenu = () => {
         <h1 className="koulen text-start titleTypo text-[80px]">Intro</h1>
       </div>
       <Ul className="flex items-start justify-start gap-12 koulen text-4xl ">
-        <Li className="Li typo">YoonJieut</Li>
-        <Li className="Li typo">ERP</Li>
-        <Li className="Li typo">CHAT NOVEL</Li>
+        {portfolioMetaData.map((item, index) => (
+          <Li key={index} className="Li typo">
+            {item.name}
+          </Li>
+        ))}
       </Ul>
     </div>
   );
