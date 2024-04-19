@@ -2,8 +2,11 @@ export interface PortfolioMetaData {
   path: string;
   name: string;
   stack: string[];
+  imgUrl: string;
   introduce: {
-    imgUrl: string;
+    content: string;
+  };
+  aboutme: {
     content: string;
   };
 }

@@ -8,7 +8,7 @@ export default function IntroMenuImage({ item }: { item: PortfolioMetaData }) {
     <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 ">
       {/* todo : 기본값을 에러 사진으로 대체해야 한다. */}
       <Image
-        src={item.introduce.imgUrl || "/images/entry.png"}
+        src={item.imgUrl || "/images/entry.png"}
         alt="이미지 설명"
         width={450}
         height={220}
