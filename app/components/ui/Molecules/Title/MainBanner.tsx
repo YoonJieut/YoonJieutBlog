@@ -12,7 +12,7 @@ const MainBanner = () => {
 
   return (
     <div
-      className="mainBannerOuter absolute right-0 bottom-0 w-fit h-fit Testing"
+      className="mainBannerOuter absolute right-0 bottom-0 w-fit h-fit"
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >

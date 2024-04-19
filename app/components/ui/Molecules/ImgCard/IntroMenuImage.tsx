@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function IntroMenuImage({ item }: { item: PortfolioMetaData }) {
   return (
-    <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 Testing">
+    <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 ">
       {/* todo : 기본값을 에러 사진으로 대체해야 한다. */}
       <Image
         src={item.introduce.imgUrl || "/images/entry.png"}
         alt="이미지 설명"
         width={450}
         height={220}
-        className="ImageCardImg Testing flex justify-end"
+        className="ImageCardImg flex justify-end"
       />
       <div className="ImageCardTextArea max-w-[600px]">
         <p className="text-right leading-6 text-[14px]">

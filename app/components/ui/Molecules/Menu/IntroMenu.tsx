@@ -24,7 +24,7 @@ const IntroMenu = () => {
 
   return (
     <>
-      <div className="IntroMenu flex justify-end w-full gap-4 Li Testing">
+      <div className="IntroMenu flex justify-end w-full gap-4 Li">
         <div className="w-1/4">
           <h1 className="koulen text-start titleTypo text-[80px]">Intro</h1>
         </div>
