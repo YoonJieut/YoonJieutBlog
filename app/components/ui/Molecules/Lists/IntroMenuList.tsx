@@ -13,7 +13,11 @@ export default function IntroMenuList({
   return (
     <Ul className="flex items-start justify-start gap-12 koulen text-4xl ">
       {portfolioMetaData.map((item, index) => (
-        <Li key={index} className="Li typo" onClick={() => onItemClick(item)}>
+        <Li
+          key={index}
+          className="Li typo cursor-pointer"
+          onClick={() => onItemClick(item)}
+        >
           {item.name}
         </Li>
       ))}

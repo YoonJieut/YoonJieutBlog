@@ -2,8 +2,8 @@
 
 import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
 import { useState } from "react";
-import IntroMenuImage from "@/app/components/ui/Molecules/ImgCard/IntroMenuImage";
 import IntroMenuList from "@/app/components/ui/Molecules/Lists/IntroMenuList";
+import IntroMenuImage from "@/app/components/ui/Molecules/ImgCard/IntroMenuImage";
 
 const IntroMenu = () => {
   // portfolioMetaData가 비어있지 않은 경우 첫 번째 아이템을, 비어있는 경우 기본값을 설정
@@ -26,7 +26,9 @@ const IntroMenu = () => {
     <>
       <div className="IntroMenu flex justify-end w-full gap-4 Li">
         <div className="w-1/4">
-          <h1 className="koulen text-start titleTypo text-[80px]">Intro</h1>
+          <h1 className="koulen text-start titleTypo text-[80px] pointer-events-none">
+            Intro
+          </h1>
         </div>
         <IntroMenuList
           items={portfolioMetaData}
