@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
+///images/kakao-talk-202402182120487351.png
 // todo : 해당 컴포넌트에는 프로필 이미지에 관련된 애니메이션 효과를 구현한다.
 // 1. 부모 div가 존재합니다.
 // 2. 사진 영역 div가 존재합니다.
@@ -11,12 +12,16 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ImgTest() {
   return (
-    <div className="w-full h-full absolute overflow-hidden pointer-events-none Testing">
-      <img
-        src="/images/kakao-talk-202402182120487351.png"
-        alt="Follow the Mouse"
-        className="absolute"
-      />
+    <div
+      className="relative w-full h-full bg-no-repeat bg-center flex justify-center items-center"
+      style={{
+        backgroundImage: "url('/images/chat_closure.png')",
+      }}
+    >
+      <div
+        className="masking-clip w-[150px] h-[200px]"
+        style={{ backgroundClip: "content-box" }}
+      ></div>
     </div>
   );
 }
