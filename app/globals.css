@@ -262,20 +262,3 @@ body {
 }
 
 /* 마스킹 관련 클래스 */
-.masking-clip {
-  background-image: url("../public/images/masking.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.masking-test {
-  -webkit-mask-image: url("../public/images/masking.png");
-  -webkit-mask-size: cover;
-  mask-image: url("../public/images/masking.png");
-  mask-size: cover;
-}

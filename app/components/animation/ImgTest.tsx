@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 ///images/kakao-talk-202402182120487351.png
 // todo : 해당 컴포넌트에는 프로필 이미지에 관련된 애니메이션 효과를 구현한다.
 // 1. 부모 div가 존재합니다.
@@ -11,17 +9,5 @@ import { useEffect, useRef, useState } from "react";
 // 5. 보여지는 div는 부모 div의 마우스에 따라 이동되게 됩니다.
 
 export default function ImgTest() {
-  return (
-    <div
-      className="relative w-full h-full bg-no-repeat bg-center flex justify-center items-center"
-      style={{
-        backgroundImage: "url('/images/chat_closure.png')",
-      }}
-    >
-      <div
-        className="masking-clip w-[150px] h-[200px]"
-        style={{ backgroundClip: "content-box" }}
-      ></div>
-    </div>
-  );
+  return <div></div>;
 }
