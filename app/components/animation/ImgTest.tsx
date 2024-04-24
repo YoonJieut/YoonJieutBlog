@@ -9,5 +9,9 @@
 // 5. 보여지는 div는 부모 div의 마우스에 따라 이동되게 됩니다.
 
 export default function ImgTest() {
-  return <div></div>;
+  return (
+    <div className="parent">
+      <div className="child"></div>
+    </div>
+  );
 }
