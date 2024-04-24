@@ -1,9 +1,9 @@
-import ImgTest from "@/app/components/animation/ImgTest";
+import InteractiveClipPath from "@/app/components/animation/InteractiveClipPath";
 
 const TestPage = () => {
   return (
     <main className="w-screen h-screen flexCenter">
-      <ImgTest />
+      <InteractiveClipPath />
     </main>
   );
 };

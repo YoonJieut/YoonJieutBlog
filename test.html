@@ -1,93 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>전하는 말</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/@babel/standalone/babel.min.js"
-    ></script>
-    <style>
-      @keyframes fadeInAnimation {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .fade-in {
-        animation: fadeInAnimation 3s ease forwards;
-      }
-      @keyframes growAnimation {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.4);
-        }
-      }
-      .grow {
-        animation: growAnimation 60s ease forwards;
-      }
-    </style>
+    <title>Document</title>
   </head>
-  <body class="bg-gray-800 text-gray-300 font-serif">
-    <div id="root"></div>
-
-    <script type="text/babel">
-      const { useEffect } = React;
-
-      const paragraphs = [
-        `"아직 시작도 하기 전에 답답한 얘기만 늘어놓아 봐야 소용없으니까. 넌 이미 마음을 정했어. 이제 남은 건 그걸 실행하는 일뿐이야. 무엇이 어떻게 되든 네 인생이니까, 기본적으로는 네 생각대로 할 수밖에 없지."`,
-        `그래, 어쨌든 <strong>이것</strong>은 내 인생이니까 네 말이 맞아.`,
-        `"하지만 지금부터 넌 무척 터프한 사람이 되지 않으면 살아갈 수 없다는 건 알고는 있어?"`,
-        `"그렇게 노력은 하고 있어" 하고 나는 말한다.`,
-        `"분명히" 하고 까마귀 소년은 말한다. "지난 몇 년 동안에 넌 무척 강해졌어. 내가 그걸 인정하지 않는 건 아니야."`,
-        `나는 고개를 끄덕인다.`,
-        `까마귀 소년은 말한다. "그렇지만 뭐니뭐니 해도 넌 아직 열다섯살 아니냐구 네 인생은 아무래도 이제 막 시작된 거나 다름없지. 네가 지금까지 본 적도 없는 것들이 이 세상엔 잔뜩 넘쳐 있다는 걸 알아야 해. 지금 너로선 상상조차 할 수 없는 일들이 세상에는 가득 차 있다는 걸 알아야 한다구."`,
-      ];
-      // Section comp
-      function Section({ content }) {
-        return (
-          <section className="h-screen flex justify-center items-center text-center p-8 fade-in grow">
-            <p
-              className="max-w-2xl mx-auto leading-relaxed font-light"
-              dangerouslySetInnerHTML={{ __html: content }}
-            ></p>
-          </section>
-        );
-      }
-      // entry point
-      function App() {
-        return (
-          <main className="flex-1">
-            {paragraphs.map((paragraph, index) => (
-              <Section key={index} content={paragraph} />
-            ))}
-          </main>
-        );
-      }
-
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      );
-    </script>
-  </body>
+  <body></body>
 </html>
