@@ -262,21 +262,3 @@ body {
 }
 
 /* 마스킹 관련 클래스 */
-.parent {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-image: url("../public/images/chat_closure.png"); /* 배경 이미지 설정 */
-  background-size: cover;
-  opacity: 0.5; /* 기본적으로 부분 투명 */
-  overflow: hidden;
-}
-
-.child {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  clip-path: circle(50%); /* 원 모양 클리핑 */
-  pointer-events: none; /* 이벤트 무시 */
-}
-W
