@@ -28,9 +28,15 @@ const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
     console.log("underlineRef.current - ", underlineRef.current);
   }, [underlineRef]);
   return (
-    <div>
+    <div className="pa">
       {children}
       <div className="underlineAnimation" ref={underlineRef}></div>
+      <style jsx>{`
+        .pa {
+          background-color: black;
+          transition: width 0.5s;
+        }
+      `}</style>
     </div>
   );
 };
