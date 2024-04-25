@@ -3,8 +3,6 @@
 
 "use client";
 
-import React, { useRef, useEffect } from "react";
-
 type UnderBarAniProps = {
   children: React.ReactNode;
 };
@@ -22,7 +20,7 @@ type UnderBarAniProps = {
 // 3. 마우스 enter, leave 이벤트를 생성한다.
 // 4. 애니메이션을 생성한다. (width를 0에서 100%로 변경하고 그와 반대로 실행)
 
-const UnderBarAni = () => {
-  return <>helloWorld</>;
+const UnderBarAni = ({ children }: UnderBarAniProps) => {
+  return <>{children}</>;
 };
 export default UnderBarAni;
