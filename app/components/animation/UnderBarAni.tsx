@@ -4,12 +4,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
-type UnderBarAniProps = {
-  children: React.ReactNode;
-};
+import { ChildrenProps } from "@/app/_interfaces/common/CommomProps";
 
 // ? style-in-jsx를 활용하면 내부에 스타일 태그 생성 가능
+// 오늘은 이것을 활용해서 작업해본다.
 
 // * JS를 활용한 언더바 애니메이션
 // 조건 : 자식 노드를 활용한다.
@@ -20,7 +18,27 @@ type UnderBarAniProps = {
 // 마우스 enter, leave 이벤트를 생성한다.
 // 애니메이션을 생성한다. (width를 0에서 100%로 변경하고 그와 반대로 실행)
 
-const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
+/**
+ * 하위 컴포넌트에 마우스 호버 시 밑줄 애니메이션을 적용하는 컴포넌트입니다.
+ * @param {React.FC<ChildrenProps>} props - 하위 컴포넌트를 감싸는 컨테이너 컴포넌트에 전달되는 속성들입니다.
+ * @returns {React.ReactElement} - 밑줄 애니메이션을 적용한 컨테이너 컴포넌트를 반환합니다.
+ * @example
+ * ```tsx
+ * "use client"
+ * import React from 'react';
+ * import UnderBarAni from './UnderBarAni';
+ *
+ * const ExampleComponent = () => {
+ *   return (
+ *     <UnderBarAni>
+ *       <div>Example Content</div>
+ *     </UnderBarAni>
+ *   );
+ * };
+ * ```
+ */
+
+const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
