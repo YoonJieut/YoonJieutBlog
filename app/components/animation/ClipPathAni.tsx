@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import SvgAnimationController from "@/app/_services/SvgAnimationController";
 
-const InteractiveClipPath: React.FC = () => {
+const ClipPathAni: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 5, y: 0 });
   const [controller, setController] = useState<SvgAnimationController | null>(
@@ -50,4 +50,4 @@ const InteractiveClipPath: React.FC = () => {
   );
 };
 
-export default InteractiveClipPath;
+export default ClipPathAni;
