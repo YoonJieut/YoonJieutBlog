@@ -17,24 +17,34 @@ type UnderBarAniProps = {
 // 2. MOUSELEAVE 할 때, 100%~0 길이로 언더바가 사라진다.
 
 // * 구현 방법
-// 1. children을 인지한다.
-// 2. 길이를 측정한다.
-// 3. 마우스 enter, leave 이벤트를 생성한다.
-// 4. 애니메이션을 생성한다. (width를 0에서 100%로 변경하고 그와 반대로 실행)
+// 마우스 enter, leave 이벤트를 생성한다.
+// 애니메이션을 생성한다. (width를 0에서 100%로 변경하고 그와 반대로 실행)
 
 const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
-  const underlineRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    console.log("underlineRef.current - ", underlineRef.current);
-  }, [underlineRef]);
+    const container = containerRef.current;
+    if (container) {
+      console.dir("container - ", container);
+      const underline = container.children[-1];
+      console.dir("underline - ", underline);
+    }
+  }, [children]);
+
   return (
-    <div className="pa">
+    <div className="relative" ref={containerRef}>
       {children}
-      <div className="underlineAnimation" ref={underlineRef}></div>
+      <div className="underlineAnimation"></div>
       <style jsx>{`
-        .pa {
+        .underlineAnimation {
+          position: absolute;
+          bottom: -5;
+          left: 0;
+          height: 2px;
           background-color: black;
-          transition: width 0.5s;
+          width: 0;
+          transition: width 0.5s ease-in-out;
         }
       `}</style>
     </div>
