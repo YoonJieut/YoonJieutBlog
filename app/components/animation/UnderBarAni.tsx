@@ -25,27 +25,43 @@ const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
 
   useEffect(() => {
     const container = containerRef.current;
+    console.dir(container);
     if (container) {
-      console.log("container - ", container);
-      console.dir(container);
       const underline = container.children[
         container.children.length - 1
       ] as HTMLElement;
-      console.log("underline - ", underline);
+
+      const handleMouseEnter = () => {
+        console.log("handleMouseEnter");
+        underline.style.width = "100%";
+        console.log(underline.style.width);
+      };
+      const handleMouseLeave = () => {
+        console.log("handleMouseEnter");
+        underline.style.width = "0";
+        console.log(underline.style.width);
+      };
+
+      container.addEventListener("mouseenter", handleMouseEnter);
+      container.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        container.removeEventListener("mouseenter", handleMouseEnter);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+      };
     }
   }, []);
 
   return (
-    <div className="relative" ref={containerRef}>
+    <div className="relative pb-1 cursor-pointer" ref={containerRef}>
       {children}
-      <div className="underlineAnimation"></div>
+      <div className="underlineAnimation bg-main-1"></div>
       <style jsx>{`
         .underlineAnimation {
           position: absolute;
-          bottom: -5;
+          bottom: 0;
           left: 0;
           height: 2px;
-          background-color: black;
           width: 0;
           transition: width 0.5s ease-in-out;
         }
