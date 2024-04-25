@@ -3,6 +3,8 @@
 
 "use client";
 
+import { useEffect, useRef } from "react";
+
 type UnderBarAniProps = {
   children: React.ReactNode;
 };
@@ -20,7 +22,16 @@ type UnderBarAniProps = {
 // 3. 마우스 enter, leave 이벤트를 생성한다.
 // 4. 애니메이션을 생성한다. (width를 0에서 100%로 변경하고 그와 반대로 실행)
 
-const UnderBarAni = ({ children }: UnderBarAniProps) => {
-  return <>{children}</>;
+const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
+  const underlineRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    console.log("underlineRef.current - ", underlineRef.current);
+  }, [underlineRef]);
+  return (
+    <div>
+      {children}
+      <div className="underlineAnimation" ref={underlineRef}></div>
+    </div>
+  );
 };
 export default UnderBarAni;
