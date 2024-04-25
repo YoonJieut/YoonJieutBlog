@@ -26,11 +26,14 @@ const UnderBarAni: React.FC<UnderBarAniProps> = ({ children }) => {
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
-      console.dir("container - ", container);
-      const underline = container.children[-1];
-      console.dir("underline - ", underline);
+      console.log("container - ", container);
+      console.dir(container);
+      const underline = container.children[
+        container.children.length - 1
+      ] as HTMLElement;
+      console.log("underline - ", underline);
     }
-  }, [children]);
+  }, []);
 
   return (
     <div className="relative" ref={containerRef}>
