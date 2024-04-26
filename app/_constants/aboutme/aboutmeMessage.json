@@ -1,20 +1,15 @@
 [
   {
     "USER_NAME": {
-      "Region": "대전",
-      "Phone": "${process.env.USER_PHONE}",
-      "Email": "process.env.USER_EMAIL",
-      "GitHub": "${process.env.USER_GITHUB}",
-      "Major": "${process.env.USER_GRADUATION_MAJOR}",
-      "University": "${process.env.USER_UNIVERSITY}"
+      "Region": "대전"
     }
   },
   {
     "기술": {
-      "FrontEnd": "React, TypeScript, JavaScrpt, HTML, CSS",
+      "FrontEnd": "NextJS, TypeScript, HTML, CSS",
       "BackEnd": "Node.js, Express",
-      "DataBase": "MySQL, MariaDB, MongoDB",
-      "ETC": "Git, Figma"
+      "DevOps": "MariaDB, PostgreSQL, DB 설계 경험, S3",
+      "ETC": "Git, Figma, Notion, Slack"
     }
   },
   {

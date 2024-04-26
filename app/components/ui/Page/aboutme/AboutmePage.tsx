@@ -16,26 +16,23 @@ const AboutmePage: React.FC = () => {
           <div className="w-[10.188rem] relative h-[8.063rem]">
             <div className="absolute top-[2.25rem] left-[0rem] w-[10.188rem] h-[5.813rem]">
               <div className="absolute h-[85.22%] w-full top-[0%] left-[0%] leading-[184%] inline-block">
-                <p className="m-0">{`010 - 4412 - 3007 `}</p>
-                <p className="m-0">현 재 지 역 :</p>
-                <p className="m-0">이메일 자리</p>
-                <p>{process.env.USER_PHONE}</p>
+                <p className="m-0">{process.env.USER_BIRTHDAY}</p>
+                <p className="m-0">
+                  현 재 지 역 : {aboutmeMessage[0].USER_NAME?.Region}
+                </p>
+                <p className="m-0">{process.env.USER_PHONE}</p>
                 <p className="m-0">
                   {/* . noopener 속성을 사용하면 새 창에서 열린 문서가 원래 문서에 대한 참조를 가지지 않게 함 */}
                   {/* HTTP 리퍼러 헤더는 사용자가 어떤 웹 페이지에서 링크를 클릭했는지를 나타내는 정보를 차단하는 noreferrer를 사용 */}
                   <a
                     rel="noreferrer noopener"
-                    className="text-[inherit] whitespace-pre-wrap"
                     href="https://github.com/YoonJieut"
                     target="_blank"
                   >
-                    <span className="[text-decoration:underline]">
-                      GitHub : YoonJieut
-                    </span>
+                    Github : {process.env.USER_GITHUB}
                   </a>
-                  {` `}
                 </p>
-                <p className="m-0">1996 . 06 . 11</p>
+                <p className="m-0">{process.env.USER_EMAIL}</p>
               </div>
             </div>
             <div className="absolute top-[0rem] left-[0rem] w-[4.188rem] h-[1.688rem] text-[1rem]">
@@ -61,14 +58,14 @@ const AboutmePage: React.FC = () => {
           <div className="w-[18.375rem] relative h-[5.5rem] text-[0.75rem]">
             <div className="absolute h-[85.22%] w-full top-[0%] left-[0%] leading-[94%] inline-block">
               <p className="m-0 ">
-                FrontEnd : React, TypeScript, JavaScrpt, HTML, CSS
+                Frontend : {aboutmeMessage[1].기술?.FrontEnd}
               </p>
               <p className="m-0">&nbsp;</p>
-              <p className="m-0">BackEnd : Node.js, Express</p>
+              <p className="m-0">BackEnd : {aboutmeMessage[1].기술?.BackEnd}</p>
               <p className="m-0">&nbsp;</p>
-              <p className="m-0">DataBase : MySQL, MariaDB, MongoDB</p>
+              <p>DevOps : {aboutmeMessage[1].기술?.DevOps}</p>
               <p className="m-0">&nbsp;</p>
-              <p className="m-0">ETC : Git, Figma</p>
+              <p className="m-0">ETC : {aboutmeMessage[1].기술?.ETC}</p>
             </div>
           </div>
         </div>
