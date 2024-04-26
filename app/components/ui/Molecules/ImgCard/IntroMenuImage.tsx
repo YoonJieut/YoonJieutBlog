@@ -1,6 +1,6 @@
 // Introduce 메뉴 리스트의 이미지 분자 컴포넌트입니다.
 
-import { PortfolioMetaData } from "@/app/_interfaces/common/MetaDataProp";
+import { PortfolioMetaData } from "@/app/_interfaces/common/TextResourcesProp";
 import Image from "next/image";
 import Link from "next/link";
 

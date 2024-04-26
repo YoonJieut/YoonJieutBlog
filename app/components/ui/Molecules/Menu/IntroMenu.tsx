@@ -1,6 +1,6 @@
 "use client";
 
-import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
 import { useState } from "react";
 import IntroMenuList from "@/app/components/ui/Molecules/Lists/IntroMenuList";
 import IntroMenuImage from "@/app/components/ui/Molecules/ImgCard/IntroMenuImage";

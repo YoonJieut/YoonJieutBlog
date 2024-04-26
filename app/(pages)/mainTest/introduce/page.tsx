@@ -3,7 +3,7 @@ import Link from "next/link";
 import Section from "@/app/components/ui/Atom/Basic/Section";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
 import IntrodcueCircle from "@/app/components/ui/design/IntroduceCircle";
-import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
 export default function IntroduceTestPage() {
   return (
     <main className="h-full w-full flex px-[100px] border border-sub-1 overflow-hidden">

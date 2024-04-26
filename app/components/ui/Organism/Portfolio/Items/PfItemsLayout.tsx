@@ -1,4 +1,4 @@
-import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
 import PfItemsMenu from "@/app/components/ui/Molecules/Menu/PfLayout/PfItemsMenu";
 import StackOuter from "@/app/components/ui/design/StackOuter";
 import Link from "next/link";

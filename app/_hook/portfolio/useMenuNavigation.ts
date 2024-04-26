@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import portfolioMetaData from "@/app/_constants/portfolio/portfolioMetaData";
+import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
 import urlParamMaker from "@/app/utils/urlParamMaker";
 
 /**

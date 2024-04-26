@@ -1,4 +1,4 @@
-export interface PortfolioMetaData {
+export interface PortfolioMessage {
   path: string;
   name: string;
   stack: string[];

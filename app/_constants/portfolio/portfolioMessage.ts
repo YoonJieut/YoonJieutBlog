@@ -1,8 +1,9 @@
 // pagesMetaData.ts
 // 포트 폴리오 관련 리터럴 데이터가 적혀있는 파일
-import { PortfolioMetaData } from "@/app/_interfaces/common/MetaDataProp";
 
-const portfolioMetaData: PortfolioMetaData[] = [
+import { PortfolioMessage } from "@/app/_interfaces/common/TextResourcesProp";
+
+const portfolioMessage: PortfolioMessage[] = [
   {
     name: "YoonJieut",
     path: "http://localhost:3000/mainTest/introduce/yoonjieut",
@@ -47,4 +48,4 @@ const portfolioMetaData: PortfolioMetaData[] = [
   },
 ];
 
-export default portfolioMetaData;
+export default portfolioMessage;
