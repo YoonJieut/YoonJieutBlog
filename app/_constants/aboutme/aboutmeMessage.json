@@ -1,6 +1,37 @@
-{
-  "Aboutme": {
-    "내용 제목": "About Me",
-    "ts와 어떤 차이?": "네트워크로 로딩이 필요한 json, 처음에 느릴 순 있지만, 캐시에 저장만 되면 로딩속도가 빠르다, 반면 ts는 로딩마다 캐시에 저장이 안되고 로딩이 빠르다. 그러나 로딩마다 새로운 데이터를 받아와야 하기 때문에 느릴 수 있다."
+[
+  {
+    "USER_NAME": {
+      "Region": "대전",
+      "Phone": "${process.env.USER_PHONE}",
+      "Email": "process.env.USER_EMAIL",
+      "GitHub": "${process.env.USER_GITHUB}",
+      "Major": "${process.env.USER_GRADUATION_MAJOR}",
+      "University": "${process.env.USER_UNIVERSITY}"
+    }
+  },
+  {
+    "기술": {
+      "FrontEnd": "React, TypeScript, JavaScrpt, HTML, CSS",
+      "BackEnd": "Node.js, Express",
+      "DataBase": "MySQL, MariaDB, MongoDB",
+      "ETC": "Git, Figma"
+    }
+  },
+  {
+    "교육": {
+      "Iaas": [
+        "지역인재양성을 위한 IaaS기반 웹 서비스",
+        "(Reat,Node,Next,MLOps)개발자 과정",
+        "2023.08 ~ 2024.03"
+      ],
+      "Publisher": ["웹 앱 및 프론트엔드개발자(react)", "2022.10 ~ 2023.03"]
+    }
+  },
+  {
+    "자격증": [
+      "웹 디자인 기능사 (2023.12) - 한국산업인력공단",
+      "사회복지사 2급(2023.04) - 한국사회복지사협회",
+      "1종보통운전면허 (2015.03) - 경찰청(운전면허시험관리단)"
+    ]
   }
-}
+]
