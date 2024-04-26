@@ -31,7 +31,7 @@
 - 해야할 파트들
 
 1. Pf(introduce 파트) [완료]
-2. Aboutme [초기화 작업 완료]
+2. Aboutme [json 생성 및 환경 변수 테스트 완료, 단순 작업 진행 중]
 3. main파트
 
 ```
