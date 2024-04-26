@@ -2,9 +2,13 @@ import Image from "next/image";
 import Section from "@/app/components/ui/Atom/Basic/Section";
 import AboutMePf from "@/app/components/ui/Organism/VerticalSection/AboutMePf";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
-import AboutMeSection from "../../Organism/VerticalSection/AboutMeSection";
+import AboutMeSection from "@/app/components/ui/Organism/VerticalSection/AboutMeSection";
+import { unstable_noStore as noStore } from "next/cache";
+import aboutmeMessage from "@/app/_constants/aboutme/aboutmeMessage.json";
 
 const AboutmePage: React.FC = () => {
+  noStore();
+
   return (
     <div className="aboutMe flex gap-2 w-full h-full relative">
       <Section className="w-1/4 h-full p-4 flex flex-col gap-10 bg-sub-1 font-basic overflow-hidden">
@@ -13,9 +17,9 @@ const AboutmePage: React.FC = () => {
             <div className="absolute top-[2.25rem] left-[0rem] w-[10.188rem] h-[5.813rem]">
               <div className="absolute h-[85.22%] w-full top-[0%] left-[0%] leading-[184%] inline-block">
                 <p className="m-0">{`010 - 4412 - 3007 `}</p>
-                <p className="m-0 whitespace-pre-wrap">
-                  현 재 지 역 : 대전yoonjieut@Gmail
-                </p>
+                <p className="m-0">현 재 지 역 :</p>
+                <p className="m-0">이메일 자리</p>
+                <p>{process.env.USER_PHONE}</p>
                 <p className="m-0">
                   {/* . noopener 속성을 사용하면 새 창에서 열린 문서가 원래 문서에 대한 참조를 가지지 않게 함 */}
                   {/* HTTP 리퍼러 헤더는 사용자가 어떤 웹 페이지에서 링크를 클릭했는지를 나타내는 정보를 차단하는 noreferrer를 사용 */}
@@ -112,12 +116,13 @@ const AboutmePage: React.FC = () => {
           </div>
         </div>
       </Section>
+      {/* 2번째 세션 */}
       <AboutMePf />
-
+      {/* 3번째 세션 */}
       <AboutMeSection rgbInt={57} blurPx={11} />
-
+      {/* 4번째 세션 */}
       <AboutMeSection rgbInt={41} blurPx={12} />
-
+      {/* 백그라운드 텍스트 컴포넌트 */}
       <AboutMeBackText className="absolute bottom-[-9%] right-[1%] -z-10" />
     </div>
   );
