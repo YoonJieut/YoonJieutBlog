@@ -8,7 +8,19 @@ import { Data } from "@/app/_interfaces/dbInterfaces/DataAnyType";
  * @param method - 요청의 HTTP 메서드입니다.
  * @param data - 요청에 포함할 데이터입니다.
  * @returns Promise 객체로서, 성공적으로 가져온 JSON 데이터를 반환합니다.
+ *
+ * @example
+ * // 예제: 게시물 생성 요청 보내기
+ * const endPoint = "https://api.example.com/posts";
+ * const method = "POST";
+ * const data = {
+ *   title: "New Post",
+ *   content: "This is the content of the new post."
+ * };
+ * const response = await customFetchJSON(endPoint, method, data);
+ * console.log(response); // 출력: 생성된 게시물의 JSON 데이터
  */
+
 async function customFetchJSON(endPoint: string, method: string, data: Data) {
   try {
     const response = await fetch(`${endPoint}`, {
