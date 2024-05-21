@@ -26,16 +26,7 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
     }, 700);
     // 언마운트 될 때 나오는 cleanup 함수
     return () => clearInterval(interval);
-  }, []);
-
-  const inputStyles = {
-    background: "transparent",
-    fontSize: "257px",
-    textAlign: "left",
-    letterSpacing: "-0.03em",
-    outline: "none",
-    padding: "0px",
-  };
+  });
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
@@ -61,7 +52,14 @@ export const CustomInputAreaVer2 = (): JSX.Element => {
       <label htmlFor="customInput" title="CustomInput">
         <input
           id="customInput"
-          style={inputStyles}
+          style={{
+            background: "transparent",
+            fontSize: "257px",
+            textAlign: "left",
+            letterSpacing: "-0.03em",
+            outline: "none",
+            padding: "0px",
+          }}
           className="koulen w-3/4 font-sub-1"
           placeholder={placeholders[currentPlaceholderIndex]}
           onKeyPress={handleKeyPress}
