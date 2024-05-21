@@ -23,7 +23,7 @@ export default function PostsTable() {
       .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((error) => console.error(error));
-  }, []);
+  });
 
   return (
     <ul className="postsTable w-full h-full flex flex-col space-y-8 overflow-y-scroll overflow-x-hidden">
