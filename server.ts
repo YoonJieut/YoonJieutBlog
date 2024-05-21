@@ -1,5 +1,9 @@
 console.log("server.ts 시작");
 
+// dotenv를 사용하여 .env 파일을 로드합니다.
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import { Request, Response } from "express";
 import next from "next";
