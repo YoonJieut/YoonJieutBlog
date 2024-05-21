@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -22,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({
           <div className="fixed inset-0 bg-black opacity-50"></div>
           <div className="w-1/2 h-2/3 bg-white border border-gray-300 rounded-lg overflow-hidden">
             <div className="flex flex-col items-center justify-center p-4">
-              <img src={image} alt="Modal Image" className="w-1/2" />
+              <Image src={image} alt="Modal Image" className="w-1/2"/>
               <h2 className="text-xl font-bold mt-4">{title}</h2>
               <p className="mt-2">{content}</p>
             </div>
