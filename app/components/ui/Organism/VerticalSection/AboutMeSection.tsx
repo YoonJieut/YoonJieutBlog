@@ -1,4 +1,4 @@
-import Section from "../../Atom/Basic/Section";
+import Section from "../../atom/Basic/Section";
 
 const AboutMeSection = ({
   rgbInt,

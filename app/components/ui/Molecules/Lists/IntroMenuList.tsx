@@ -1,6 +1,6 @@
 import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";
-import Li from "@/app/components/ui/Atom/Basic/Li";
-import Ul from "@/app/components/ui/Atom/Basic/Ul";
+import Li from "@/app/components/ui/atom/Basic/Li";
+import Ul from "@/app/components/ui/atom/Basic/Ul";
 // Introduce 페이지의 메뉴 리스트 컴포넌트입니다.
 
 export default function IntroMenuList({
