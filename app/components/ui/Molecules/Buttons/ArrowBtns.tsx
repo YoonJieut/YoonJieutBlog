@@ -1,4 +1,4 @@
-import { OnClickProps } from "@/app/_interfaces/common/CommomProps";
+// import { OnClickProps } from "@/app/_interfaces/common/CommomProps";
 import Btn from "@/app/components/ui/Atom/Basic/Btn";
 import Div from "@/app/components/ui/Atom/Basic/Div";
 
@@ -10,12 +10,13 @@ import Div from "@/app/components/ui/Atom/Basic/Div";
  * // 사용 예시
  * <ArrowBtns prevOnClick={handlePrevClick} nextOnClick={handleNextClick} />
  */
+// todo : onClick 이벤트 타입 정의
 const ArrowBtns: React.FC = ({
   prevOnClick,
   nextOnClick,
 }: {
-  prevOnClick?: OnClickProps["onClick"];
-  nextOnClick?: OnClickProps["onClick"];
+  prevOnClick?: any;
+  nextOnClick?: any;
 }) => {
   return (
     <Div className="w-60 flex gap-24 text-[9.982rem] justify-between items-center koulen font-sub-1">

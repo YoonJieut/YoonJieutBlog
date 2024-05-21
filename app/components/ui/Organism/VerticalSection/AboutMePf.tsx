@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutMePf: NextPage = () => {
   return (
-    <div className="w-1/4 h-[53.875rem] relative bg-darkgray [backdrop-filter:blur(10px)] box-border overflow-y-scroll overflow-hidden flex flex-col items-start justify-start p-[1.25rem] gap-[3.75rem_0rem] text-left text-[1rem] text-lightgray font-noto-sans-kr border-[1px] border-solid border-lightgray">
+    <div className="w-1/4 h-full relative bg-darkgray [backdrop-filter:blur(10px)] box-border overflow-y-scroll overflow-hidden flex flex-col items-start justify-start p-[1.25rem] gap-[3.75rem_0rem] text-left text-[1rem] text-lightgray font-noto-sans-kr border-[1px] border-solid border-lightgray">
       <div className="w-[10rem] relative h-[1.688rem]">
         <div className="absolute h-[3.7%] w-full top-[96.3%] right-[0%] bottom-[0%] left-[0%] bg-lightgray" />
         <b className="absolute top-[0%] left-[0%] leading-[101%] ">
@@ -18,8 +18,8 @@ const AboutMePf: NextPage = () => {
             YOONJIEUT
           </b>
           <div className="relative text-[0.75rem] tracking-[-0.05em] leading-[114%]">
-            <p className="m-0 whitespace-pre-wrap">{`EPR 시스템을 스타크래프트 테마로  작업하며  팀원 간 협업, `}</p>
-            <p className="m-0">블로그를 기반으로 한 포트폴리오 사이트입니다.</p>
+            <p className="whitespace-pre-wrap">{`EPR 시스템을 스타크래프트 테마로  작업하며  팀원 간 협업, `}</p>
+            <p>블로그를 기반으로 한 포트폴리오 사이트입니다.</p>
           </div>
         </div>
         <div className="w-[21.063rem] flex flex-row flex-wrap items-start justify-start gap-[0.625rem] text-[0.75rem]">
@@ -54,8 +54,8 @@ const AboutMePf: NextPage = () => {
             스타크 래프트 ERP
           </b>
           <div className="relative w-full  text-[0.75rem] tracking-[-0.05em] leading-[114%]">
-            <p className="m-0 whitespace-pre-wrap">{`EPR 시스템을 스타크래프트 테마로  작업하며  팀원 간 협업, `}</p>
-            <p className="m-0">DB 설계와 기획에 대해 배울 수 있었습니다.</p>
+            <p className="whitespace-pre-wrap">{`EPR 시스템을 스타크래프트 테마로  작업하며  팀원 간 협업, `}</p>
+            <p>DB 설계와 기획에 대해 배울 수 있었습니다.</p>
           </div>
         </div>
         <div className="w-[21.063rem] flex flex-row flex-wrap items-start justify-start gap-[0.625rem] text-[0.75rem]">

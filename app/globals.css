@@ -4,6 +4,8 @@
 
 body {
   @apply leading-[normal] m-0;
+  color: var(--color-sub-1); /* Updated text color */
+  background: rgb(var(--background-rgb));
 }
 *,
 ::before,
@@ -32,17 +34,6 @@ body {
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
-body {
-  color: var(--color-sub-1); /* Updated text color */
-  background: rgb(var(--background-rgb));
-  /* linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 @layer components {
@@ -268,4 +259,9 @@ body {
 
 .subFontSize {
   font-size: 14px;
+}
+
+/* 마스킹 관련 클래스 */
+#mouseRect {
+  transition: all 0.3s ease-out; /* 부드러운 이동을 위한 transition 효과를 추가합니다. */
 }

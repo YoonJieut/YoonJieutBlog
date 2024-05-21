@@ -1,0 +1,32 @@
+[
+  {
+    "USER_NAME": {
+      "Region": "대전"
+    }
+  },
+  {
+    "기술": {
+      "FrontEnd": "NextJS, TypeScript, HTML, CSS",
+      "BackEnd": "Node.js, Express",
+      "DevOps": "MariaDB, PostgreSQL, DB 설계 경험, S3",
+      "ETC": "Git, Figma, Notion, Slack"
+    }
+  },
+  {
+    "교육": {
+      "Iaas": [
+        "지역인재양성을 위한 IaaS기반 웹 서비스",
+        "(Reat,Node,Next,MLOps)개발자 과정",
+        "2023.08 ~ 2024.03"
+      ],
+      "Publisher": ["웹 앱 및 프론트엔드개발자(react)", "2022.10 ~ 2023.03"]
+    }
+  },
+  {
+    "자격증": [
+      "웹 디자인 기능사 (2023.12) - 한국산업인력공단",
+      "사회복지사 2급(2023.04) - 한국사회복지사협회",
+      "1종보통운전면허 (2015.03) - 경찰청(운전면허시험관리단)"
+    ]
+  }
+]
