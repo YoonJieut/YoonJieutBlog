@@ -30,6 +30,7 @@ const ImgAndSub = ({ imgClass, children }: ImgAndSubProps) => {
         imgUrl="/images/textCursor.png"
         imgTitle="이미지 제목"
         imgSub="이미지 부제목"
+        imgAlt=""
         imgWidth={250}
         imgHeight={250}
         className={imgClass}
