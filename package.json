@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "nodemon --exec ts-node server.ts",
     "nextDev": "next dev",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "build": "tsc && next build",
+    "start": "set NODE_ENV=production&& node dist/server.js",
+    "lint": "next lint",
+    "ps-prestart": "powershell -Command \" $env:NODE_ENV='production' \"",
+    "cmd-prestart": "set NODE_ENV=production"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
