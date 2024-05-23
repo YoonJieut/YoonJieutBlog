@@ -3,7 +3,7 @@
 "use client";
 
 import { NewPostsPageProps } from "@/app/_interfaces/dbInterfaces/PostTableProps";
-import Btn from "@/app/components/ui/Atom/Basic/Btn";
+import Btn from "@/app/components/ui/atom/Basic/Btn";
 import DetailLine from "@/app/components/ui/design/DetailLine";
 
 const NewPostsPage: React.FC<NewPostsPageProps> = ({

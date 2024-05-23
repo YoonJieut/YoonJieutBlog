@@ -1,10 +1,10 @@
 // Introduce 메뉴 리스트의 이미지 분자 컴포넌트입니다.
 
-import { PortfolioMetaData } from "@/app/_interfaces/common/TextResourcesProp";
+import { PortfolioMessage } from "@/app/_interfaces/common/TextResourcesProp";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function IntroMenuImage({ item }: { item: PortfolioMetaData }) {
+export default function IntroMenuImage({ item }: { item: PortfolioMessage }) {
   return (
     <div className="rightAlignImgCard flex flex-col justify-end items-end gap-4 ">
       {/* todo : 기본값을 에러 사진으로 대체해야 한다. */}

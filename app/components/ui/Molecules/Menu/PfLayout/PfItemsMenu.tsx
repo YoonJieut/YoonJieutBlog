@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Section from "@/app/components/ui/Atom/Basic/Section";
-import H1 from "@/app/components/ui/Atom/Basic/H1";
+import Section from "@/app/components/ui/atom/Basic/Section";
+import H1 from "@/app/components/ui/atom/Basic/H1";
 
 /**
  * 포트폴리오 아이템 레이아웃 컴포넌트

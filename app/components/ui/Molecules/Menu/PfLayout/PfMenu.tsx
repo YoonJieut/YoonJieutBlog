@@ -1,5 +1,5 @@
-import Li from "@/app/components/ui/Atom/Basic/Li";
-import Ul from "@/app/components/ui/Atom/Basic/Ul";
+import Li from "@/app/components/ui/atom/Basic/Li";
+import Ul from "@/app/components/ui/atom/Basic/Ul";
 import Link from "next/link";
 
 const PfMenu = () => {

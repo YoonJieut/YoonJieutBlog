@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Div from "@/app/components/ui/Atom/Basic/Div";
-import Ul from "@/app/components/ui/Atom/Basic/Ul";
-import Li from "@/app/components/ui/Atom/Basic/Li";
+import Div from "@/app/components/ui/atom/Basic/Div";
+import Ul from "@/app/components/ui/atom/Basic/Ul";
+import Li from "@/app/components/ui/atom/Basic/Li";
 
 interface ImgCardProps {
   imgUrl: string;

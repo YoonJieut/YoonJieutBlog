@@ -5,12 +5,13 @@ import React from "react";
 const FormattedSub = ({ sub }: { sub: string }) => {
   return (
     <>
-      {sub.split("\n").map((line, index) => (
+      {sub.split("\n").map((line, index) => {
         <React.Fragment key={index}>
           {line}
           <br />
-        </React.Fragment>
-      ))}
+        </React.Fragment>;
+      })}
     </>
   );
 };
+export default FormattedSub;

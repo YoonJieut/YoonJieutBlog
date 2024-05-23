@@ -1,6 +1,6 @@
 // import { OnClickProps } from "@/app/_interfaces/common/CommomProps";
-import Btn from "@/app/components/ui/Atom/Basic/Btn";
-import Div from "@/app/components/ui/Atom/Basic/Div";
+import Btn from "@/app/components/ui/atom/Basic/Btn";
+import Div from "@/app/components/ui/atom/Basic/Div";
 
 /**
  * 좌우 화살표 버튼 컴포넌트입니다.

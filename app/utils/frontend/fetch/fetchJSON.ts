@@ -7,8 +7,9 @@
  * // "https://api.example.com/data" 엔드포인트에서 JSON 데이터를 가져옵니다.
  * const jsonData = await fetchJSON("https://api.example.com/data");
  */
+
 async function fetchJSON(endPoint: string) {
-  const res = await fetch(endPoint);
+  const res = await fetch(endPoint, { cache: "no-store" });
   if (!res.ok) {
     console.error("Error fetching data : ", Error);
   }

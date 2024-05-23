@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Section from "@/app/components/ui/Atom/Basic/Section";
+import Section from "@/app/components/ui/atom/Basic/Section";
 import AboutMePf from "@/app/components/ui/Organism/VerticalSection/AboutMePf";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
 import AboutMeSection from "@/app/components/ui/Organism/VerticalSection/AboutMeSection";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Section from "@/app/components/ui/Atom/Basic/Section";
+import Section from "@/app/components/ui/atom/Basic/Section";
 import IntroMenu from "@/app/components/ui/Molecules/Menu/IntroMenu";
 import IntrodcueCircle from "@/app/components/ui/design/IntroduceCircle";
 import portfolioMetaData from "@/app/_constants/portfolio/portfolioMessage";

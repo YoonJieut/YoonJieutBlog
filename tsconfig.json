@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "forceConsistentCasingInFileNames": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
+    "noEmit": false, // 이 옵션을 false로 설정하여 컴파일된 파일을 출력합니다.
     "esModuleInterop": true,
-    // "module": "esnext", 기본 설정 ,ts-node를 설치한 후 commonjs로 변경
     "module": "commonjs",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -24,10 +27,11 @@
   },
   "include": [
     "next-env.d.ts",
+    "./**/*.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/api/posts/router.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

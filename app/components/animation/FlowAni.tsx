@@ -49,7 +49,7 @@ export default function FlowAni({ children }: FlowAniProps) {
         cancelAnimationFrame(animationFrameId.current);
       }
     };
-  }, []);
+  });
 
   return (
     <div

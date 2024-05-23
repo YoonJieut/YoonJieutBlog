@@ -1,4 +1,4 @@
-import Section from "@/app/components/ui/Atom/Basic/Section";
+import Section from "@/app/components/ui/atom/Basic/Section";
 import MenuComp from "./@menuComp/page";
 
 export default function PortfolioLayout({
