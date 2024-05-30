@@ -1,3 +1,4 @@
+import UnderBarAni from "@/app/components/animation/UnderBarAni";
 import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
 import TextAlign from "@/app/components/ui/Molecules/Text/TextAlign";
 export default function ErpContent() {
@@ -31,9 +32,7 @@ export default function ErpContent() {
                 href="https://resilient-aster-1dc.notion.site/ERP-63d8c0f6651e4808a677791431d18c61?pvs=4"
                 target="_blank"
               >
-                <span className="[text-decoration:underline]">
-                  윤준현 - 스타크래프트 ERP
-                </span>
+                <UnderBarAni>윤준현 - 스타크래프트 ERP</UnderBarAni>
               </a>
             </p>
             <p>
@@ -43,7 +42,7 @@ export default function ErpContent() {
                 href="/FORM-8bb1a4092ee34bab83f8dbd0077fa943?pvs=24"
                 target="_blank"
               >
-                <span className="[text-decoration:underline]">FORM미쳤다</span>
+                <UnderBarAni>FORM미쳤다</UnderBarAni>
               </a>
             </p>
             <p>
@@ -53,7 +52,7 @@ export default function ErpContent() {
                 href={`https://www.figma.com/file/5KDz54ixEJir3fd9V6fJ1L/ERP-DB?type=whiteboard&node-id=0-1`}
                 target="_blank"
               >
-                <span className="[text-decoration:underline]">ERP DB</span>
+                <UnderBarAni>ERP DB</UnderBarAni>
               </a>
               {` , `}
               <a
@@ -61,7 +60,7 @@ export default function ErpContent() {
                 href={`https://www.figma.com/file/2lrzpae0BKnkLMTZgJSjgY/Wireframe?type=design&node-id=37-41&mode=design`}
                 target="_blank"
               >
-                <span className="[text-decoration:underline]">Wireframe</span>
+                <UnderBarAni>Wireframe</UnderBarAni>
               </a>
             </p>
           </TextAlign>

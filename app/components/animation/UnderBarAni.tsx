@@ -20,6 +20,8 @@ import { ChildrenProps } from "@/app/_interfaces/common/CommomProps";
 
 /**
  * 하위 컴포넌트에 마우스 호버 시 밑줄 애니메이션을 적용하는 컴포넌트입니다.
+ * span으로 이루어져 있습니다.
+ *
  * @param {React.FC<ChildrenProps>} props - 하위 컴포넌트를 감싸는 컨테이너 컴포넌트에 전달되는 속성들입니다.
  * @returns {React.ReactElement} - 밑줄 애니메이션을 적용한 컨테이너 컴포넌트를 반환합니다.
  * @example
@@ -31,7 +33,7 @@ import { ChildrenProps } from "@/app/_interfaces/common/CommomProps";
  * const ExampleComponent = () => {
  *   return (
  *     <UnderBarAni>
- *       <div>Example Content</div>
+ *       Example Content
  *     </UnderBarAni>
  *   );
  * };
@@ -71,20 +73,23 @@ const UnderBarAni: React.FC<ChildrenProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative pb-1 cursor-pointer" ref={containerRef}>
+    <span
+      className="UnderBarContainer relative pb-[2px] cursor-pointer w-fit"
+      ref={containerRef}
+    >
       {children}
-      <div className="underlineAnimation bg-main-1"></div>
+      <span className="underlineAnimation bg-main-1"></span>
       <style jsx>{`
         .underlineAnimation {
           position: absolute;
           bottom: 0;
           left: 0;
-          height: 2px;
+          height: 1px;
           width: 0;
-          transition: width 0.5s ease-in-out;
+          transition: width 0.3s ease-in-out;
         }
       `}</style>
-    </div>
+    </span>
   );
 };
 export default UnderBarAni;

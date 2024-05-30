@@ -1,5 +1,7 @@
 import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
 import TextAlign from "@/app/components/ui/Molecules/Text/TextAlign";
+import UnderBarAni from "@/app/components/animation/UnderBarAni";
+import Link from "next/link";
 
 export default function ChatnovelContent() {
   return (
@@ -18,13 +20,23 @@ export default function ChatnovelContent() {
         {/* 사용된 스택과 링크 */}
         <div className="w-full flex justify-between">
           <TextAlign title="사용된 스택과 링크" type="left">
+            <p>스택 : JavaScript, EXPRESS, HTML, CSS</p>
+            <p>의의 : 협업 , Next.JS , DB</p>
             <p>
-              스택 : JavaScript, EXPRESS, HTML, CSS <br />
-              의의 : 협업 , Next.JS , DB
-              <br />
-              설계와 기획 팀 협업 툴 : Notion, Github <br />
-              <br />
-              개인 노션 링크 : 윤준현 - Metro2033-ownPath
+              설계와 기획 팀 협업 툴 : Notion ,{" "}
+              <Link href={"https://github.com/YoonJieut/Metro2033-ownPath"}>
+                <UnderBarAni>Github</UnderBarAni>
+              </Link>
+            </p>
+            <p>
+              개인 노션 링크 :{" "}
+              <Link
+                href={
+                  "https://resilient-aster-1dc.notion.site/CHAT-NOVEL-fd742ec0ea9e465bb6fc8704b6733e1d?pvs=4"
+                }
+              >
+                <UnderBarAni>윤준현 - Metro2033-ownPath</UnderBarAni>
+              </Link>
             </p>
           </TextAlign>
           {/* 이미지 자리 */}
