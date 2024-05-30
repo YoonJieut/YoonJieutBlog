@@ -1,19 +1,18 @@
 import Section from "@/app/components/ui/atom/Basic/Section";
 import DotLine from "@/app/components/ui/design/dotLine";
-import MainBanner from "../Molecules/Title/MainBanner";
-import WelcomePart from "../Molecules/etc/WelcomePart";
 import IntroImgCard from "@/app/components/ui/Molecules/ImgCard/IntroImgCard";
-// component/main/IntroduceLayoutTest.tsx
-// 위쪽 상단, 자신을 소개하는 레이아웃입니다.
+import MainBanner from "@/app/components/ui/Molecules/Title/MainBanner";
+import WelcomePart from "@/app/components/ui/Molecules/etc/WelcomePart";
+import Link from "next/link";
 
-export default function IntroduceLayoutTest() {
+export default function IntroduceLayout() {
   return (
     <div className="introLayout w-full h-full flex justify-between overflow-hidden">
       <Section className="leftImgSection w-4/5 h-full bg-basic relative">
         {/* 배경 flowAni */}
         <WelcomePart />
         {/* z-10의 가리는 여백 디자인 */}
-        <div className="SpaceDiv w-full h-4/7 bg-basic absolute bottom-0 left-0  z-20"></div>
+        <div className="SpaceDiv w-full h-4/7 bg-basic absolute bottom-0 right-0 z-20"></div>
       </Section>
       <Section className="rightImgSection w-1/5 h-full bg-main-1 relative flex flex-col">
         <div className="rightTop w-full relative h-3/7">
@@ -25,8 +24,10 @@ export default function IntroduceLayoutTest() {
           <DotLine />
         </div>
         <div className="rightBottom w-full relative h-4/7 p-9">
-          {/* 이미지 카드 파트 */}
-          <IntroImgCard />
+          <Link href="/main/aboutme">
+            {/* 이미지 카드 파트 */}
+            <IntroImgCard />
+          </Link>
         </div>
       </Section>
     </div>

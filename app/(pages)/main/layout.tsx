@@ -1,6 +1,6 @@
 import MainFooter from "@/app/components/ui/Organism/Footer/MainFooter";
 
-export default function MainTestLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

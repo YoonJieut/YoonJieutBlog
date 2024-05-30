@@ -1,9 +1,9 @@
-import IntroduceLayoutTest from "@/app/components/ui/testUi/IntroduceLayoutTest";
+import IntroduceLayout from "@/app/components/ui/Page/introduce/IntroduceLayout";
 
-export default function MainTestPage() {
+export default function MainPage() {
   return (
     <>
-      <IntroduceLayoutTest />
+      <IntroduceLayout />
     </>
   );
 }
