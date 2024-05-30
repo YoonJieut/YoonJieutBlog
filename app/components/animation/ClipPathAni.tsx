@@ -18,7 +18,7 @@ const ClipPathAni: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center">
       <svg
         ref={svgRef}
         width="160"
