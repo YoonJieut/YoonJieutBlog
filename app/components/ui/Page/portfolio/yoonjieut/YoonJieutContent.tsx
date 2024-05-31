@@ -1,3 +1,4 @@
+import UnderBarAni from "@/app/components/animation/UnderBarAni";
 import ImgCard from "@/app/components/ui/Molecules/ImgCard/ImgCard";
 import TextAlign from "@/app/components/ui/Molecules/Text/TextAlign";
 
@@ -34,23 +35,9 @@ export default function YoonJieutContent() {
                 href="추후 추가 예정"
                 className="whitespace-pre-wrap"
               >
-                <span className="[text-decoration:underline]">
-                  윤준현 - 포트폴리오 사이트
-                </span>
+                <UnderBarAni>윤준현 - 포트폴리오 사이트</UnderBarAni>
               </a>
             </p>
-            {/* <p>
-                {`노션 링크 : `}
-                <a
-                  className="whitespace-pre-wrap"
-                  href="/FORM-8bb1a4092ee34bab83f8dbd0077fa943?pvs=24"
-                  target="_blank"
-                >
-                  <span className="[text-decoration:underline]">
-                    윤준현 - 포트폴리오 사이트
-                  </span>
-                </a>
-              </p> */}
             <p>
               {`피그마 : `}
               <a
@@ -58,7 +45,7 @@ export default function YoonJieutContent() {
                 href={`https://www.figma.com/file/9BzcyeVaToW3smjAxnEa5l/YoonJieut-%EA%B0%9C%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?type=design&node-id=903-4678&mode=design&t=XVHBP52gD8l850Ic-0`}
                 target="_blank"
               >
-                <span className="[text-decoration:underline]">PF Site</span>
+                <UnderBarAni>PF Site</UnderBarAni>
               </a>
             </p>
           </TextAlign>
