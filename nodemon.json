@@ -1,6 +1,6 @@
 {
-  "watch": ["./server.ts", "utils/"],
+  "watch": ["./server.ts", "utils/", "*.json"],
   "ext": "ts,json",
   "ignore": ["*.test.ts", "node_modules/", ".next/"],
-  "exec": "ts-node server.ts"
+  "exec": "node_modules/.bin/ts-node server.ts"
 }

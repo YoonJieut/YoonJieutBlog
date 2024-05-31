@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "../../atom/Basic/Section";
 import AboutMePf from "./AboutMePf";
 import AboutMeBackText from "@/app/components/ui/design/AboutMeBackText";
+import UnderBarAni from "@/app/components/animation/UnderBarAni";
 
 const AboutMeTest: React.FC = () => {
   return (
@@ -22,9 +23,7 @@ const AboutMeTest: React.FC = () => {
                     href="https://github.com/YoonJieut"
                     target="_blank"
                   >
-                    <span className="[text-decoration:underline]">
-                      GitHub : YoonJieut
-                    </span>
+                    <UnderBarAni>GitHub : YoonJieut</UnderBarAni>
                   </a>
                   {` `}
                 </p>

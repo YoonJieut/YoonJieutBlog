@@ -87,7 +87,7 @@ const AboutMePf: NextPage = () => {
         </div>
         <Image
           className="border-[1px] border-solid border-gainsboro"
-          src="/images/teamPf-40.png"
+          src="/images/erp_sub.png"
           alt="팀 포트폴리오 사이트입니다."
           width={350}
           height={200}
