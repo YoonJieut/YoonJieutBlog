@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "nodemon --exec ts-node server.ts",
     "nextDev": "next dev",
-    "nextbuild": "next build",
-    "build": "tsc && next build",
+    "build": "next build",
+    "tsc-build": "tsc && next build",
     "start": "set NODE_ENV=production&& node dist/server.js",
     "lint": "next lint",
     "ps-prestart": "powershell -Command \" $env:NODE_ENV='production' \"",
