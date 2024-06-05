@@ -9,7 +9,7 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full h-11/12 flex Tesing">
+    <div className="w-full h-11/12 flex">
       <Section className="portfolioLeftSection w-1/2 h-full">
         {menuComp}
       </Section>
