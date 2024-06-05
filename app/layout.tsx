@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR, Koulen, Homemade_Apple, Imbue } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 // import Font Awesome CSS
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -42,12 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <Head>
+      <head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
-      </Head>
+      </head>
       <body
         className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable} ${imbue.variable} noto`}
       >
