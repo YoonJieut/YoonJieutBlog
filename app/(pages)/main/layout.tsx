@@ -1,10 +1,7 @@
 import MainFooter from "@/app/components/ui/Organism/Footer/MainFooter";
+import IntroduceLayout from "@/app/components/ui/Page/introduce/IntroduceLayout";
 
-export default function MainLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function MainLayout() {
   return (
     <html lang="ko">
       <body>
@@ -12,7 +9,7 @@ export default function MainLayout({
           id="MainRoot"
           className="w-screen h-screen overflow-hidden flex flex-col p-2 space-y-[10px]"
         >
-          {children}
+          <IntroduceLayout />
           <MainFooter />
         </div>
       </body>
