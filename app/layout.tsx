@@ -9,7 +9,8 @@ config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "YoonJieut",
-  description: "신입 프론트엔드 개발자 윤준현의 포트폴리오 사이트입니다.",
+  description:
+    "신입 프론트엔드 개발자 윤준현의 포트폴리오 사이트입니다. 이곳에서 제가 만든 프로젝트의 요약 정보를 확인하실 수 있습니다.",
 };
 
 const noto = Noto_Sans_KR({
@@ -28,11 +29,12 @@ const homemadeApple = Homemade_Apple({
   weight: "400",
   variable: "--font-homemade",
 });
-const imbue = Imbue({
-  preload: false,
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-imbue",
-});
+// const imbue = Imbue({
+//   subsets: ["latin"],
+//   preload: false,
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   variable: "--font-imbue",
+// });
 
 export default function RootLayout({
   children,
@@ -48,7 +50,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable} ${imbue.variable} noto`}
+        className={`${noto.variable} ${koulen.variable} ${homemadeApple.variable} noto`}
       >
         {children}
       </body>
