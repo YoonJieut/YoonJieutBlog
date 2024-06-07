@@ -20,7 +20,7 @@ export default async function PostDetailPage({
 
   return (
     <>
-      <h1>testing : {postId}</h1>
+      <h1>postId : {postId}</h1>
       <h2>{post[0].title}</h2>
       <p>{post[0].content}</p>
       <p>Author ID: {post[0].authorId}</p>
