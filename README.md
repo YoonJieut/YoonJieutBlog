@@ -36,7 +36,7 @@
 
 ```
 npm install
-npm run nextDev 혹은 npm run nextBuild && npm run start
+npm run dev
 ```
 
 ---
