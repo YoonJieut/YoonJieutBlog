@@ -1,52 +1,43 @@
-# 윤지읒의 개인 블로그 프로젝트
+# 윤지읒의 포트폴리오 프로젝트
 
-커맨드를 통해 엔트리하며, 메인 포트폴리오 사이트와 관리자로 접근했을 때는 관리자 전용 페이지가 나온다.
+설명 notion 링크 : [준비 중]
+
+커맨드를 통해 엔트리하며, 메인 포트폴리오 사이트와 관리자로 접근했을 때는 관리자 전용 페이지가 나온다. (현재는 모두 공개)
 
 사용자 측면을 고려한 로딩 환경을 구현해보았고, 추후에 animation 등 클릭을 유도하는 등의 모션에 대한 연구과제가 남아있다.
 
-현재 다양한 경험을 위해 디자인에 대한 연구를 하는 중
+컨셉 : 미니멀 | 정렬과 간격, 기본기를 다질 수 있다.
 
-컨셉 : 미니멀 | 정렬과 간격, 기본기를 다질 수 있으며 나의 성향과 가장 닮았다.
+시스템 : router 형식 | nextjs의 작성법과 react의 동작 방식, 사용법에 대해 익히며 ui 생성과정에 대해 익숙해질 수 있다.
 
-시스템 : router 형식 | nextjs의 작성법, 사용법에 대해 익히며 ui 생성과정에 대해 익숙해질 수 있다.
+## 주요 관점
 
-구조 :
+[페이지 넘김(app router 활용 방안) 관련 ui] - ui 관련한 것은 Atomic Design을 참고하여 컴포넌트를 쪼개보는 연습을 한다.
 
-[페이지 넘김(routerOnly 브랜치 | router 활용 방안) 관련 ui] - ui 관련한 것은 Atomic Design을 참고하여 컴포넌트를 쪼개보는 연습을 한다.
+[스크롤 방식(main 브랜치 | 스크롤 활용 방안) 관련 ui] - page에 따라 ui 컴포넌트를 저장, 현재는 상태
 
-[스크롤 방식(main 브랜치 | 스크롤 활용 방안) 관련 ui ] - page에 따라 ui 컴포넌트를 저장
+[리터럴 추출 작업] - \_contant 파일안에 ~Message.json 혹은 ts를 활용하여 모듈을 불러오고 관리에 용이하게 설계 및 리펙토링한다.
 
-## 현재 작업 관련 내용
+[애니메이션 직접 구현] - 애니메이션을 직접 구현함으로서, 커스텀 훅과 자바스크립트의 기초를 다진다. path, css animation, 이벤트 버블링 등의 이슈가 있었다.
+
+[데이터 핸들링] - DB 연동으로 게시물 또는 데이터를 기본적인 crud 단계에서 구성했다.
+
+[정보 보안] - .env로 개인 정보를 구분하고, 크롤링 되지 않도록, 자주 등장하는 footer의 개인 정보는 사진으로 대채해보았다.
+
+[아키텍쳐] - DB와 연동하는 라우트 함수는 커스텀 서버 기능(express)을 활용하여 next의 api를 활용하지 않고 구성해보았다.
+
+[디자인 기본 학습] - figma을 활용한 설계, 여러 레퍼런스를 보고 직접 html로 작성해보며 디자인의 안목도 높힐 수 있도록 노력하였다.
+
+## 작업 정보
 
 ```
-작업 중인 브랜치 : reworkPfPage
+기본 브랜치 : main
 ```
 
 ```
 npm install
 npm run dev
 ```
-
-## 개발 목표
-
-- **기본 목표**:
-  2일 내에 JavaScript와 Node.js를 기반으로 하는 Express 서버와 함께 Next.js 프론트엔드를 사용하여 CRUD 기능을 갖춘 블로그 플랫폼의 스켈레톤을 구축합니다.
-  이 초기 버전은 사용자가 블로그 포스트를 생성, 조회, 수정, 삭제할 수 있는 기본적인 기능을 포함합니다.
-- **중기 목표**:
-  5일 내에 사용자 인증 기능을 추가하고, 전체 애플리케이션을 AWS Elastic Beanstalk을 통해 배포합니다. 이 과정에서 AWS RDS를 사용하여 MySQL 데이터베이스를 설정하고 관리합니다.
-- **장기 목표**:
-  1주일 후에는 Express 기반의 백엔드를 Django로 전환하여 Python 및 Django의 강력한 백엔드 기능을 활용합니다.
-  추가적으로, 사용자 인터페이스를 개선하고, 챗봇 기능을 포함시켜 사용자 경험을 향상시키는 것을 목표로 합니다.
-
-## 기술 스택 선정
-
-| 구분         | 초기 및 중반                             | 후반(추후 완성 목표)                           |
-| ------------ | ---------------------------------------- | ---------------------------------------------- |
-| 프론트엔드   | Next.js                                  | Next.js (변경 없음)                            |
-| 백엔드       | Express                                  | Django                                         |
-| 데이터베이스 | MySQL (AWS RDS)                          | MySQL (AWS RDS, Django ORM 사용)               |
-| 배포         | AWS Elastic Beanstalk, AWS RDS for MySQL | AWS Elastic Beanstalk, AWS RDS for MySQL       |
-| 추가 기능    | -                                        | 챗봇 기능 (Python 오픈소스 AI 라이브러리 활용) |
 
 ---
 
@@ -87,38 +78,8 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method PATCH -Body 
 
 ```
 
----
-
 ### 포스트 삭제 API 테스트
 
 ```
 Invoke-RestMethod -Uri "http://localhost:3000/api/posts/10" -Method DELETE
-```
-
-### 기존 레이아웃 브랜치 만들어보기
-
-```
-브랜치 이름 : routeOnly / mergeDone
-```
-
-#### 생성 컴포넌트
-
-1. minimal footer [done : mainTest layout.tsx]
-
-2. 자기소개 ui [done : mainTest/introduce page.tsx]
-
-3. 인적사항 ui [done : mainTest/aboutme page.tsx]\
-
-   3-1. 스택 list [done : ui/Molecules PfList.tsx]
-
-4. 작업물 목록 [ done : mainTest/portfolio page.tsx]
-
-   4-1. 포폴 요약 컴포넌트 [ done : ui/Temp PortfolioTemp.tsx]
-
-   4-2. 작은 스택 ui [done : ui/Molecules StackOuter.tsx]
-
-### 테스트 layout 작성
-
-```
-/layoutTest/ blur.html, minimal.html ...
 ```

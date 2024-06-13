@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec ts-node server.ts",
-    "nextDev": "next dev",
+    "nodemon-dev": "nodemon --exec ts-node server.ts",
+    "dev": "next dev",
     "build": "next build",
     "tsc-build": "tsc && next build",
     "start": "set NODE_ENV=production&& node dist/server.js",
