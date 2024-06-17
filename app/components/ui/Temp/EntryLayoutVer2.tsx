@@ -1,9 +1,9 @@
-import { CustomInputArea } from "../Molecules/FetchInput/CustomInputArea";
+import { EntryInput } from "./EntryInput";
 
 const EntryLayoutVer2 = () => {
   return (
     <main className="w-screen h-screen flex flex-col justify-start overflow-hidden p-4 gap-20">
-      <CustomInputArea />
+      <EntryInput />
       <div className="font-thin font-serif self-start opacity-50">
         <p className="font-thin font-serif">해당 페이지는 수정 중입니다.</p>
         <p className="font-thin font-serif">
