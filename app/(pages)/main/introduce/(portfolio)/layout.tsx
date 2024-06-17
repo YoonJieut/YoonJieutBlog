@@ -3,8 +3,10 @@ import MenuComp from "./@menuComp/page";
 
 export default function PortfolioLayout({
   children,
-}: {
+}: // menuComp,
+{
   children: React.ReactNode;
+  // menuComp: React.ReactNode;
 }) {
   return (
     <div className="w-full h-11/12 flex">
