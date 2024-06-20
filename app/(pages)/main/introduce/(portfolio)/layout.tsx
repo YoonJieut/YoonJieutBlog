@@ -1,12 +1,13 @@
 import Section from "@/app/components/ui/atom/Basic/Section";
-import MenuComp from "./@menuComp/page";
+import dynamic from "next/dynamic";
+// import MenuComp from "./@menuComp/page";
+
+const MenuComp = dynamic(() => import("./@menuComp/page"), { ssr: false });
 
 export default function PortfolioLayout({
   children,
-}: // menuComp,
-{
+}: {
   children: React.ReactNode;
-  // menuComp: React.ReactNode;
 }) {
   return (
     <div className="w-full h-11/12 flex">
