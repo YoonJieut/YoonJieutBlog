@@ -11,7 +11,7 @@ export default function YoonJieutContent() {
           <ImgCard
             imgUrl="/images/pf_main.png"
             imgAlt="메인 이미지 모습"
-            imgTitle="ERP의 메인 페이지"
+            imgTitle="Yoonjieut 포트폴리오의 메인 페이지"
             imgWidth={950}
             imgHeight={440}
             className="mainPage-ImgCard"
